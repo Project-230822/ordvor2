@@ -1,0 +1,61 @@
+#maintenancebox
+	{
+	display: table;
+	position: relative;
+	float: none;
+	clear: both;
+	margin: 0 auto;
+	z-index: 4000;
+	width: 495px;	
+	}
+	
+#boxmaintenance
+	{
+	position: relative;
+	float: left;
+	clear: both;
+	padding: 23px 18px 13px 18px;
+	width: 495px;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	background: #f7f7f7;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	behavior: url(/lib/PIE.htc);
+	}
+	
+#maintenance_title
+	{
+	position: relative;
+	float: left;
+	clear: both;
+	width: 100%;
+	font: 24px/24px Tahoma, sans-serif;
+	color: #3c3c3c;
+	text-align: center;
+	}
+		
+#maintenance_comments
+	{
+	display: table;
+	position: relative;
+	float: none;
+	clear: both;
+	margin: 0 auto 0;
+	padding: 18px 0 0 0;
+	width: 100%;
+	font: 16px/24px Tahoma, sans-serif;
+	color: #7c7c7c;
+	text-align: center;
+	}
+	
+#maintenance_comments p
+	{
+	margin: 12px 0 12px 0;
+	}
+#maintenance_comments a { text-decoration: underline; color: #007dbd; }
+#maintenance_comments a:hover { text-decoration: none; }

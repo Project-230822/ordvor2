@@ -1,0 +1,1 @@
+© 1997 - <?=date("Y", time());?> Оружейный двор. Все права защищены / <a href="javascript:void(0);" class="privacy">Конфиденциальность</a> / <a target="_blank" href="/oferta/">Условия использования</a>

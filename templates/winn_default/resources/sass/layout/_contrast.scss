@@ -1,0 +1,8 @@
+.l-contrast {
+	transition: 0.25s;
+	transition-property: color;
+
+	&--light {
+		color: $white;
+	}
+}

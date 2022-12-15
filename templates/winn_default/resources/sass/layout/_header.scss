@@ -1,0 +1,85 @@
+.l-header {
+	display: flex;
+	justify-content: space-between;
+
+	@include media-breakpoint-up(lg) {
+		padding: 3rem 3rem 1rem;
+	}
+
+	@include media-breakpoint-up(xl) {
+		
+		.l-page--index & {
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+
+		&__right {
+			position: fixed;
+			right: 3rem;
+			top: 3rem;
+		}
+
+		&__hamburger {
+			left: 3rem;
+			position: fixed;
+			top: 3rem;
+		}
+
+		&__logo {
+			align-items: center;
+			display: flex;
+			height: 5.5rem;
+			margin-left: 5.5rem + map-get($map: $spacers, $key: 5);
+		}
+	}
+
+	&__left {
+		display: flex;
+		transition: top 0.25s;
+	}
+
+	&__right {
+		display: none;
+
+		@include media-breakpoint-up(lg) {
+
+			align-items: flex-start;
+			display: flex;
+			transition: top 0.25s;
+		}
+	}
+
+	&__left,
+	&__right {
+
+		& a {
+			color: inherit;
+		}
+
+		.btn-opacity-dark {
+			color: $white;
+		}
+	}
+
+	&__hamburger,
+	&__fab .fab__btn,
+	&__fab .btn-opacity-dark {
+		align-items: center;
+		display: flex;
+		height: 5rem;
+		justify-content: center;
+		padding: 0;
+		width: 5rem;
+
+		@include media-breakpoint-up(lg) {
+			height: 5.5rem;
+			width: 5.5rem;
+		}
+	}
+
+	&__hamburger {
+		background: theme-color('primary');
+	}
+}

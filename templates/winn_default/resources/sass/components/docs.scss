@@ -1,0 +1,75 @@
+@import '../variables';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import '../snippets/all';
+
+.doc {
+	&__type {
+		color: $white;
+		font-size: $font-size-sm;
+		left: 0;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		text-transform: uppercase;
+		top: 3.5rem;
+		white-space: nowrap;
+	}
+	&__icon {
+		
+		.icon-svg {
+			color: $secondary;
+			display: block;
+			font-size: 5.875rem;
+		}
+
+		&.icon-doc .icon-svg,
+		&.icon-docx .icon-svg {
+			color: $info;
+		}
+
+		&.icon-doc .icon-svg:hover,
+		&.icon-docx .icon-svg:hover {
+			color: #028DCD;
+		}
+
+		&.icon-xls .icon-svg,
+		&.icon-xlsx .icon-svg {
+			color: $success;
+		}
+
+		&.icon-xls .icon-svg:hover,
+		&.icon-xlsx .icon-svg:hover {
+			color: #3F9142;
+		}
+		
+		&.icon-pdf .icon-svg {
+			color: $danger;
+		}
+
+		&.icon-pdf .icon-svg:hover {
+			color: #CD382D;
+		}
+
+		&.icon-txt .icon-svg,
+		&.icon-jpg .icon-svg,
+		&.icon-jpeg .icon-svg,
+		&.icon-png .icon-svg {
+			color: $secondary;
+		}
+
+		&.icon-txt .icon-svg:hover,
+		&.icon-jpg .icon-svg:hover,
+		&.icon-jpeg .icon-svg:hover,
+		&.icon-png .icon-svg:hover {
+			color: #52595F;
+		}
+
+		
+	}
+
+	&__text-cont {
+		font-size: $font-size-lg;
+	}
+}

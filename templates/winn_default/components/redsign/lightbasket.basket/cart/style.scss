@@ -1,0 +1,26 @@
+@import '../../../../resources/sass/variables';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import '../../../../resources/sass/snippets/all';
+
+
+.product-item-line-list {
+	& + & {
+		margin-top: -1px;
+	}
+}
+
+.b-cart-ajax {
+	&__tools-remove {
+		width: 55px;
+		height: 55px;
+		background-color: $table-accent-bg;
+		color: $secondary;
+	}
+	&__tools-remove:hover,
+	&__tools-remove:active,
+	&__tools-remove:focus {
+		color: $primary;
+	}
+}

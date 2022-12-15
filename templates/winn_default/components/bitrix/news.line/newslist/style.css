@@ -1,0 +1,16 @@
+.newslist-item__title {
+  margin-left: -3rem;
+  padding-left: 3rem;
+  position: relative; }
+  .newslist-item__title:before {
+    background-color: #d5001c;
+    content: '';
+    display: inline-block;
+    height: 0.07em;
+    margin: 0.66667em auto;
+    position: absolute;
+    left: 0;
+    width: 1.2em;
+    vertical-align: baseline; }
+
+/*# sourceMappingURL=style.css.map */

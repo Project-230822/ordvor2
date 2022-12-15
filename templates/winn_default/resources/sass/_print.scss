@@ -1,0 +1,45 @@
+@media print {
+    body .l-head,
+    body .l-head__logo-hamburger,
+    body .l-head__minimize .l-head__logo-hamburger,
+    body .l-head__minimize-important .l-head__logo-hamburger {
+        margin-top: 0 !important;
+        position: absolute;
+    }
+    .l-head__minimize .l-head__logo-hamburger .l-head__logo,
+    .l-head__minimize-important .l-head__logo-hamburger .l-head__logo {
+        max-width: 83px;
+    }
+    .l-head__logo,
+    .wrapp-rs-button,
+    .product-detail__label {
+        -webkit-print-color-adjust: exact !important;
+    }
+    .l-head__logo *,
+    .wrapp-rs-button *,
+    .product-detail__label * {
+        -webkit-print-color-adjust: exact !important;
+    }
+    .l-head__hamburger,
+    .l-head__right-nav {
+        display: none;
+    }
+    .l-footer__print-text-center {
+        text-align: center;
+    }
+    .l-footer__print-block-center {
+        margin: 0 auto;
+    }
+    .l-footer__print-block-12 {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 100%;
+        -moz-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .l-footer {
+        page-break-inside: avoid;
+    }
+}

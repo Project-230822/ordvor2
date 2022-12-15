@@ -1,0 +1,311 @@
+#infinity-next-page {
+	margin-top:25px;
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.reviews-wrap {
+}
+.reviews-wrap .review {
+    padding: 20px 0 15px;
+    border-bottom: 1px solid #f2f2f2;
+}
+.reviews-wrap .review .review-name{
+	font-size: 18px;
+    color: #000;
+    margin-right: 30px;
+    margin-bottom: 6px;
+}
+.reviews-wrap .fa {
+	color:#a7a8a9;
+	transition: background .3s ease,color .3s ease;
+}
+.reviews-wrap .review-star {
+    margin-bottom: 8px;
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.reviews-wrap .review-star .fa-star {
+    margin-right: 3px;
+    font-size:14px;
+    color:#cacaca;
+    
+}
+.reviews-wrap .review-star .fa-star.active {
+	color:#ee332a;
+}
+.reviews-wrap .review-star span {
+	margin-left:3px;
+    color: #b2b2b2;
+    font-size:14px;
+}
+.reviews-wrap .review-rate .bttn-rate {
+    border-radius: 5px;
+    padding: 7px 5px 5px;
+    width:70px;
+    height:38px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: #f2f2f2;
+    text-align: center;
+    transition: background .3s ease,color .3s ease;
+    cursor: pointer;
+    border: none;
+    margin-left: 10px;
+    color: #000;
+    font-size:16px;
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.reviews-wrap .review-rate .bttn-rate .fa {
+    margin-top: -3px;
+    margin-right: 4px;
+    font-size: 15px;
+}
+.reviews-wrap .review-rate .bttn-rate:hover {
+    background: #ee332a;
+    transition: background .3s ease,color .3s ease;
+}
+.reviews-wrap .review-rate .bttn-rate:hover .fa {
+    color:#000;
+    transition: background .3s ease,color .3s ease;
+}
+.reviews-wrap .review-rate .bttn-rate.max {
+    padding: 7px 5px 2px;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.reviews-wrap .review-rate .bttn-rate.max .fa {
+    margin-right: 0px;
+}
+.reviews-wrap .review-text {
+	font-size: 15px;
+    margin-bottom: 5px;
+}
+.reviews-wrap .review-rate {
+	display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.reviews-wrap .review-footer {
+    color: #b2b2b2;
+    font-size:14px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+@media(max-width:991px) {	
+	.d-flex {
+	    display: -ms-flexbox;
+	    display: flex;
+	    -ms-flex-direction: column-reverse;
+    	flex-direction: column-reverse;
+	}
+}
+@media(max-width:767px) {
+	.reviews-wrap .review-text {
+	    margin-bottom: 10px;
+	}
+}
+
+/*Средний рейтинг*/
+.rating-board-wrap {
+    margin-bottom: 30px;
+    padding: 30px 20px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.06);
+}
+.rating-board-wrap .rating-board-title {
+    font-size: 18px;
+}
+.rating-board-wrap .rating-board-value {
+    color: #ee332a;
+    font-size: 30px;
+    font-weight: 700;
+}
+.rating-board-wrap .rating-board_description {
+	font-size:14px;
+}
+.rating-board-wrap ul.rating-board-diagram {
+	list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    padding: 10px;
+}
+.rating-board-wrap li.rating-diagram-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.rating-board-wrap .rating-diagram-label {
+	font-size: 18px;
+    font-weight: 700;
+    margin: 0 10px;
+    width: 8px;
+    color: #ee332a;
+}
+.rating-board-wrap .rating-diagram-value {
+	display: block;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 190px;
+    height: 12px;
+    background-color: #f2f2f2;
+    margin: 4px 0;
+    box-sizing: content-box;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.rating-board-wrap .rating-diagram-range {
+	height: 100%;
+    background-color: #ee332a;
+}
+.rating-board-wrap .rating-diagram-count {
+    margin: 0 8px;
+    width: 23px;
+}
+
+.rating-board-wrap .fa-star {
+    margin: 0 2px 8px;
+    font-size:14px;
+    color:#f2f2f2;
+    
+}
+.rating-board-wrap .fa-star.active {
+	color:#ee332a;
+}
+
+.add-review {
+    text-transform: uppercase;
+    cursor:pointer;
+    font-size: 14px;
+    background: #ee332a;
+    color: #fff;
+    text-transform: uppercase;
+    border: 2px solid #ee332a;
+    transition: 0.3s;
+    padding: 6px 15px 3px;
+    text-decoration: none;
+    font-weight: bold;
+    width: 160px;
+    display: block;
+    text-align: center;
+    margin: 0 auto 25px;
+    -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border-radius: 3px;
+}
+
+form.add-review-form {
+    display: none;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+form.add-review-form .mf-text{
+    margin-bottom: 5px;
+}
+
+form.add-review-form .star-wrap{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+form.add-review-form .star-wrap .fa{
+    margin:3px;
+    font-size:30px;
+    color:#ececec;
+    cursor:pointer;
+}
+
+form.add-review-form .star-wrap .fa.yellow{
+    color: #ee332a;
+}
+
+form.add-review-form input {
+    width: 100%;
+    outline:none;
+    height: 40px;
+    border: 1px solid #f2f2f2;
+    background: #f2f2f2;
+    padding-left: 15px;
+    margin-bottom:15px;
+}
+form.add-review-form textarea {
+	resize: none;
+    outline:none;
+    width: 100%;
+    min-height: 140px;
+    border: 1px solid #f2f2f2;
+    background: #f2f2f2;
+    padding: 10px 15px;
+    margin-bottom:15px;
+}
+
+form.add-review-form .mf-name.error {
+    color:#d61212;
+}
+form.add-review-form .mf-name.error input,
+form.add-review-form .mf-name.error textarea {
+    border-color:#d61212;
+}
+
+/*Сообщения об отправке*/
+.success-message-ok {
+	color:#7ac143;
+	text-align:center;
+	font-size:15px;
+    max-width: 212px;
+    margin:0 auto;
+    display:none;
+}
+.success-message-ok .fa {
+	font-size:22px;
+}
+.success-message-error {
+	color:#d61212;
+	text-align:center;
+	font-size:15px;
+    max-width: 198px;
+    margin:0 auto 20px;
+    display:none;
+}
+.success-message-error .fa {
+	font-size:22px;
+}

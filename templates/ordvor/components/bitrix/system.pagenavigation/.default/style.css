@@ -1,0 +1,49 @@
+.navigation {
+	text-align: center;
+	clear: both;
+}
+.navigation a {
+    /*display: block;*/
+    position: relative;
+    /*float: left;*/
+    clear: none;
+    margin: 0 0 0 7px;
+    padding: 2px 0 0 0;
+    width: 23px;
+    height: 23px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font: 18px/18px Tahoma, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+}
+.navigation b {
+    /*display: block;*/
+    position: relative;
+    /*float: left;*/
+    clear: none;
+    margin: 0 0 0 7px;
+    padding: 5px;
+    width: 23px;
+    height: 23px;
+    background: #edf2f7;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    behavior: url(/lib/PIE.htc);
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font: 18px/18px Tahoma, sans-serif;
+    text-align: center;
+    color: #000;
+}
+.navigation .arrows {
+    font: 12px/12px Tahoma, sans-serif;
+    position: relative;
+    bottom: 2px;
+}

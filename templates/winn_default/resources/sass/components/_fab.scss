@@ -1,0 +1,128 @@
+// Fixed Action Button
+
+// Floating buttons
+$button-floating-background: theme-color("secondary") !default;
+$button-floating-size: 40px !default;
+$button-floating-radius: 50% !default;
+
+.fab {
+	position: relative;
+
+	&.direction-top {
+		// padding-top: 1.5rem;
+	}
+
+	&.direction-bottom {
+		// padding-bottom: 1.5rem;
+	}
+
+	&.direction-left {
+		// padding-left: 1.5rem;
+	}
+
+	&.direction-right {
+		// padding-right: 1.5rem;
+	}
+
+	& &__menu--horizontal {
+		align-items: center;
+		display: flex;
+		justify-content: flex-end;
+		bottom: auto;
+		right: 100%;
+		top: 50%;
+		text-align: right;
+		transform: translateY(-50%);
+		height: 100%;
+		left: auto;
+		/*width 100% only goes to width of button container */
+		width: 500px;
+
+		li {
+			display: inline-block;
+			margin: 0 0.25rem 0 0;
+		}
+	}
+
+	& &__menu--vertical {
+		align-items: center;
+		bottom: auto;
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+		left: 0;
+		right: 0;
+		top: 100%;
+		// transform: translateX(50%);
+		width: 100%;
+
+		li {
+			display: inline-block;
+			margin: 0.25rem 0 0 0;
+		}
+	}
+
+	&.direction-left &__menu--vertical {
+		left: auto;
+		align-items: flex-end;
+	}
+
+	ul {
+		text-align: center;
+		position: absolute;
+		bottom: 100%;
+		margin: 0;
+		padding: 0;
+		// visibility: hidden;
+
+		> li {
+			margin-bottom: 1rem;
+			padding: 0;
+		}
+
+		[data-fab-menu-btn] {
+			opacity: 0;
+		}
+	}
+
+	
+	&:not(.active) {
+		ul {
+			display: none;
+		}
+	}
+
+	&__btn {
+		cursor: pointer;
+	}
+
+	&__menu-btn {
+		display: none;
+	}
+
+	&.active &__menu-btn {
+		display: block;
+	}
+
+	&__menu--vertical#{&}__menu--visible {
+		display: flex !important;
+	}
+
+	&__menu-btn--visible {
+		display: block !important;
+		opacity: 1 !important;
+		transform: none !important;
+	}
+
+	.fab-backdrop {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: $button-floating-size;
+		height: $button-floating-size;
+		background-color: $button-floating-background;
+		border-radius: $button-floating-radius;
+		transform: scale(0);
+	}
+}

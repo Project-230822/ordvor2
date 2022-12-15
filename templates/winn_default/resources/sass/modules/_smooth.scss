@@ -1,0 +1,111 @@
+$smooth-slide-background-duration: .5s;
+$smooth-slide-duration: .6s;
+$smooth-slide--progress-duration: .3s;
+
+.smooth {
+    &-preloader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: 99992;
+        background-color: rgba(0, 0, 0, 0);
+        transition: background-color $smooth-slide-background-duration cubic-bezier(.7, 0, 1, .9) $smooth-slide-duration + $smooth-slide--progress-duration;
+
+        &__progress-bar {
+            background: rgba(0, 0, 0, 1);
+            height: 1px;
+            left: 50%;
+            margin-left: -100px;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            transform: scale(0);
+            transition: transform $smooth-slide--progress-duration 0s;
+            width: 200px;
+            z-index: 2;
+
+            &__inner {
+                background: rgba(200, 200, 200, 1);                
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                transform-origin: 0 50%;
+                transform: scaleX(0);
+                width: 100%;
+                z-index: 3;
+            }
+        }
+
+        &#{&}--animate {
+            background-color: rgba(0, 0, 0, .8);
+            transition-delay: 0s;
+        }
+
+        &#{&}--animate &__progress-bar {
+            transform: scaleX(1);
+            transition-delay: $smooth-slide-background-duration + $smooth-slide-duration;
+        }
+
+        &--animate &__progress-bar__inner {
+            animation: smoothProgressBar 1.6s both infinite;
+            opacity: 1;
+        }
+
+        &:before,
+        &:after {
+            background: $white;
+            display: block;            
+            content: '';
+            height: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            transition: height $smooth-slide-duration ease $smooth-slide--progress-duration;
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &:after {
+            bottom: 0;
+        }
+
+        &--clipOut#{&}--animate:after,
+        &--clipOut#{&}--animate:before {
+            height: 50%;
+            transition-delay: $smooth-slide-background-duration;
+        }
+    }
+
+    &__content {
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        background-color: transparent;
+        z-index: 5;
+    }
+}
+
+@keyframes smoothProgressBar {
+    2% {
+        transform-origin: 0 50%;
+        transform: scaleX(0);
+    }
+    48% {
+        transform-origin: 0 50%;
+        transform: scaleX(1);
+    }
+    52% {
+        transform-origin: 100% 50%;
+        transform: scaleX(1);
+    }
+    98% {
+        transform-origin: 100% 50%;
+        transform: scaleX(0);
+    }
+  }

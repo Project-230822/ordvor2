@@ -1,0 +1,446 @@
+@import 'bootstrap/scss/functions';
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #202020 !default;
+$black:    #000 !default;
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$primary:       #3651be;
+$secondary:     $gray-600 !default;
+$success:       #4CAF50;
+$info:          #03A9F4;
+$warning:       #FBC02D;
+$danger:        #F44336;
+$light:         #F9F9F9;
+$dark:          #0B1226;
+
+$extra: 				#7d8698;
+$compact:				#e5e6ea;
+
+$primary-hover:       $primary;
+
+
+
+$theme-colors:  (
+);
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold:  150 ;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark:             $gray-900;
+$yiq-text-light:            $white;
+$primary-yiq:			color-yiq($primary);
+$primary-hover-yiq:		$primary-yiq;
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-rounded:                              true;
+$enable-shadows:                              false;
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem;
+
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 2),
+  6: ($spacer * 3),
+);
+
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   $white;
+$body-color:                $black;
+
+
+// Links
+//
+// Style anchor elements.
+
+
+$link-color:                              #0B6E9C;
+$link-hover-color:                        #0B6E9C;
+
+// Paragraphs
+//
+// Style p element.
+$paragraph-margin-bottom:   1.5rem;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 380px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1680px,
+  xxxl: 1820px,
+);
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  xl: 1180px
+);
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+
+$grid-gutter-width:		1.25rem;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$line-height-lg:              1.4;
+$line-height-sm:              1.4;
+
+$border-color:  		#D3DAE6;
+$border-color-active: 	$extra;
+
+$border-radius:					0;	//.125rem;
+$border-radius-sm:			0;	//.25rem;
+$border-radius-lg:			0;	//.375rem;
+
+
+
+
+
+
+$block-shadow-default:				0 12px 30px -15px rgba(61, 72, 81, 0.75);
+$block-shadow-hover:				0 10px 32px 0 rgba(84, 133, 169, 0.3);
+$block-shadow-2:					0 1px 10px 0 $border-color;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Montserrat", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+
+$font-size-base:        1rem;
+$font-size-lg:          ($font-size-base * 1.25);
+$font-size-sm:         ($font-size-base * .875);
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            500 !default;
+$font-weight-bolder:          700 !default;
+
+$line-height-base:            1.4;
+$line-height-computed:        $font-size-base * $line-height-base;
+
+$h1-font-size:                $font-size-base * 1.6;
+$h1-font-size-lg:             $h1-font-size;
+$h1-font-size-xxs:            $font-size-base * 2;
+$h1-font-size-xs:             $font-size-base * 2.875;
+$h1-font-size-md:             $font-size-base * 3.5;
+
+$h2-font-size:                $font-size-base * 1.4;
+$h3-font-size:                $font-size-base * 1.3;
+$h4-font-size:                $font-size-base * 1.2 !default;
+$h5-font-size:                $font-size-base * 1.1 !default;
+$h6-font-size:                $font-size-base !default;
+
+$headings-margin-bottom:      $spacer * 1.5;
+$headings-font-weight:        bold;
+
+$lead-font-size:             $font-size-base * 1.125;
+$lead-font-weight:            initial;
+
+$small-font-size:             75%;
+
+$text-muted:                  #D3DAE6;
+
+
+
+
+$dt-font-weight:              $font-weight-normal;
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-cell-padding:          1rem 1.5rem;
+
+$table-accent-bg:             #EFEFEF;
+$table-hover-bg:              rgba($gray-600, .3);
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+$input-btn-padding-y:         1rem;
+$input-btn-padding-x:         2rem;
+$input-btn-font-size:         $font-size-base * 1.125;
+$input-btn-line-height:       4/3;
+
+$input-btn-padding-y-lg:      1.5rem;
+$input-btn-padding-x-lg:      4rem;
+
+$input-btn-padding-y-sm:      .5rem;
+$input-btn-padding-x-sm:      1rem;
+$input-btn-line-height-sm:    4/3;
+
+
+$input-btn-line-height-lg:    4/3;
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-font-weight:             500;
+$btn-focus-width:             0;
+$btn-focus-box-shadow:				none;
+$btn-active-box-shadow:				none;
+$btn-font-size:               $input-btn-font-size !default;
+$btn-line-height:             $input-btn-line-height !default;
+
+$btn-font-weight:             500;
+$btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+
+// Forms
+
+$input-font-size:                       $input-btn-font-size !default;
+$input-line-height:                     $input-btn-line-height !default;
+
+$input-color:                           $body-color;
+$input-box-shadow:                      none;
+
+$input-focus-border-color:              $secondary;
+$input-focus-box-shadow:                none;
+
+$form-check-input-gutter:               1.75rem;
+
+$form-group-margin-bottom:              2.5rem;
+
+// Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+
+$sub-zindex:                        950;
+$zindex-dropdown:                   1000 - $sub-zindex;
+$zindex-sticky:                     1020 - $sub-zindex;
+$zindex-fixed:                      1030 - $sub-zindex;
+$zindex-modal-backdrop:             1040 - $sub-zindex;
+$zindex-modal:                      1050 - $sub-zindex;
+$zindex-popover:                    1060 - $sub-zindex;
+$zindex-tooltip:                    1070 - $sub-zindex;
+$zindex-topline:	            	    1000 - $sub-zindex;
+
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+$dropdown-padding-y: 				0;
+$dropdown-item-padding-y:           .8rem;
+$dropdown-item-padding-x:           1.5rem;
+$dropdown-link-hover-bg:			$compact;
+$dropdown-link-active-bg:			$compact;
+$dropdown-link-active-color:		$body-color;
+$dropdown-box-shadow:               $block-shadow-hover;
+
+
+
+// Pagination
+
+$pagination-color:                  $body-color;
+$pagination-font-size:                  $input-btn-font-size;
+$pagination-padding-y:              1rem;
+$pagination-padding-x:              1.5rem;
+$pagination-line-height:            1.4;
+
+$pagination-border-color:           $gray-600;
+
+$pagination-hover-color:            color-yiq(darken($primary, 7.5%));
+$pagination-hover-bg:               darken($primary, 7.5%);
+$pagination-hover-border-color:     darken($primary, 7.5%);
+
+$pagination-focus-box-shadow:       none;
+
+
+
+
+// Toasts
+
+$toast-max-width:                   27rem;
+$toast-font-size:                   $font-size-base;
+
+
+// Badges
+
+$badge-font-weight:                 $font-weight-bolder;
+
+
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+
+$alert-link-font-weight:            $font-weight-bolder;
+// Breadcrumbs
+
+$breadcrumb-padding-y:              0;
+$breadcrumb-padding-x:              0;
+$breadcrumb-item-padding:           .64285em;
+
+$breadcrumb-margin-bottom:          0.5rem;
+
+$breadcrumb-bg:                     transparent;
+$breadcrumb-text-color:				      $gray-900;
+$breadcrumb-divider-color:          $primary;
+$breadcrumb-active-color:           $secondary;
+$breadcrumb-divider:                '';
+
+$breadcrumb-border-radius:          $border-radius !default;
+
+
+
+// Close
+$close-font-weight:                 $font-weight-bolder;
+
+
+$outline-base:			$border-color;
+$outline-active:		$extra;
+$outline-disabled:		rgba($outline-base, .5);
+
+$border-radius-rounded:				3.125rem;
+
+// sidebar
+$outer-sidebar-width: 				260px;
+$inner-sidebar-width: 				260px;
+
+// Main menu
+$menu-base-height: 3.75rem;
+
+// header
+$logo-height:                       83px;
+$logo-height-lg:                    75px;
+$logo-height-sm:                    65px;
+$logo-height-xs:                    55px;
+$logo-height-xxs:                    45px;
+
+//$isHideSection13.68rem
+$page-padding-top:                  13.68rem;
+
+// inputs
+$inputs-padding:                    0.86rem;
+$btns-padding:                      $inputs-padding 1.5rem;
+$dropdown-width:                    15.54rem;
+
+// Box Shadow
+$box-shadow-color:                  rgba(170, 130, 130, 0.3);
+
+$price-economy-bg:	#fff6e5;
+
+$page-header-height: (
+  xxs: 5rem,
+  lg: 9.5rem,
+);
+
+// Bootstrap Material Deisgn
+$bmd-animation-curve-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1);
+$bmd-animation-curve-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1);
+$bmd-animation-curve-fast-out-linear-in: cubic-bezier(0.4, 0, 1, 1);
+$bmd-animation-curve-default: 		$bmd-animation-curve-fast-out-slow-in;
+
+$bmd-line-color:            $border-color !default;
+$bmd-label-color:             $border-color !default;
+$bmd-label-color-focus:         $secondary;
+$bmd-label-font-size:           $font-size-base !default;
+$bmd-label-static-top:          0;
+$bmd-label-placeholder-top:        2.1875rem;
+
+$bmd-input-font-size:          $font-size-base !default;
+$bmd-input-color:             $input-color !default;
+$bmd-input-bg:              transparent !default;
+$bmd-input-line-height:          $input-line-height !default;
+
+// inputs
+$bmd-bmd-label-static-size-ratio: 7 / 9 !default;
+$bmd-help-size-ratio: 75 / 100 !default;
+
+//$bmd-form-control-bg-repeat-y: repeat-y !default; // it could work with no-repeat, but on Safari it's bugged and repeat-y is needed, but repeat-y is bugged on the warning icon.
+$bmd-form-control-bg-repeat-y: no-repeat !default;
+$bmd-form-control-bg-position: center bottom, center calc(100% - 1px) !default;
+
+$bmd-form-control-bg-size:         0 100%, 100% 100% !default;
+$bmd-form-control-bg-size-active:     100% 100%, 100% 100% !default;
+
+// expandable
+$input-text-button-size: 32px !default;
+
+// sizing
+$bmd-form-line-height: $line-height-base !default; // set as 1x font-size so that padding is easier calculated to match the spec.
+$bmd-label-top-margin-base: 0 !default;
+
+$bmd-form-line-height-lg: $line-height-lg !default; // set as 1x font-size so that padding is easier calculated to match the spec.
+$bmd-label-top-margin-lg: 0 !default; // 16px
+
+$bmd-form-line-height-sm: $line-height-sm !default; // set as 1x font-size so that padding is easier calculated to match the spec.
+$bmd-label-top-margin-sm: 0 !default; // 12px
+$bmd-input-underline-bg-image: linear-gradient(0deg,$bmd-label-color-focus 1px,fade-out($bmd-label-color-focus, 1) 0),
+                                linear-gradient(0deg,$bmd-line-color 1px, fade-out($bmd-line-color, 1) 0);
+                               
+
+$bmd-input-underline-bg-image-invalid: linear-gradient(to top, $danger 1px, fade-out($danger, 1) 1px),
+                                       linear-gradient(to top, $bmd-line-color 1px, fade-out($bmd-line-color, 1) 1px) !default;
+
+$bmd-input-padding-x:          0;
+$bmd-input-padding-y:          .4375rem;
+
+$bmd-form-group-padding-top: 1.69rem;

@@ -1,0 +1,164 @@
+.form-group {
+	position: relative;
+}
+
+.form-control {
+
+	@each $state, $data in $form-validation-states {
+
+		.was-validated &:#{$state},
+		&.is-#{$state} {
+
+			&:focus {
+				box-shadow: none;
+			}
+		}
+	}
+}
+
+.bmd-form-group {
+
+	.bmd-label-floating,
+	.bmd-label-placeholder,
+	.bmd-label-static {
+		position: absolute;
+		color: $bmd-label-color;
+		pointer-events: none;
+		transition: $transition-base;
+	}
+
+	.bmd-label-floating {
+		color: $bmd-input-color;
+	}
+
+	.bmd-label-static {
+		color: $bmd-label-color-focus;
+		top: $bmd-label-static-top;
+		left: 0;
+	}
+
+	&.is-focused [class*="bmd-label"],
+	&.is-focused [class^=bmd-label],
+	&.is-filled [class*="bmd-label"],
+	&.is-filled [class^=bmd-label] {
+		color: $bmd-label-color-focus;
+	}
+
+	& .bmd-label-floating {
+		will-change: left, top, contents;
+	}
+
+	&.is-focused .bmd-label-floating,
+	&.is-filled .bmd-label-floating {
+		top: 1rem;
+		left: 0;
+		font-size: .75rem;
+	}
+
+	&.is-filled .bmd-label-placeholder {
+		display: none;
+	}
+
+	// default floating size/location with an bmd-form-group
+	@include bmd-form-size-variant($input-font-size, $bmd-label-top-margin-base, $input-padding-y, $bmd-form-line-height);
+
+	// sm floating size/location
+	&.bmd-form-group-sm {
+		@include bmd-form-size-variant($input-font-size-sm, $bmd-label-top-margin-sm, $input-padding-y-sm, $bmd-form-line-height-sm, "bmd-form-group sm");
+	}
+
+	// lg floating size/location
+	&.bmd-form-group-lg {
+		@include bmd-form-size-variant($input-font-size-lg, $bmd-label-top-margin-lg, $input-padding-y-lg, $bmd-form-line-height-sm, "bmd-form-group lg");
+	}
+
+	.form-control {
+		display: block;
+		width: 100%;
+		// padding: $bmd-input-padding-y $bmd-input-padding-x;
+		padding-right: $bmd-input-padding-x;
+		padding-left: $bmd-input-padding-x;
+		// font-size: $bmd-input-font-size;
+		// line-height: $bmd-input-line-height;
+		color: $bmd-input-color;
+		background-color: $bmd-input-bg;
+		background: no-repeat center calc(100% - 1px), 50% calc(100% - 1px);
+		// background: no-repeat bottom, 50% 100%;
+		background-image: $bmd-input-underline-bg-image;
+		background-size: $bmd-form-control-bg-size;
+		background-clip: padding-box;
+		border: 0;
+		border-radius: 0;
+		transition: background 0s ease-out;
+
+		@each $state, $data in $form-validation-states {
+
+			.was-validated &:#{$state},
+			&.is-#{$state} {
+
+				@if $state == 'valid'
+				{
+					background-image: $bmd-input-underline-bg-image;
+					background-size: $bmd-form-control-bg-size;
+
+					&:focus {
+						background-size: $bmd-form-control-bg-size-active;
+					}
+				}
+				@else
+				{
+					background-image: linear-gradient(to top, map-get($data, color) 1px, fade-out(map-get($data, color), 1) 1px),
+						linear-gradient(to top, $bmd-line-color 1px, fade-out($bmd-line-color, 1) 1px);
+					background-size: $bmd-form-control-bg-size-active;
+				}
+
+				background-position: center calc(100% - 1px), 50% calc(100% - 1px);
+			}
+		}
+	}
+
+	input.form-control:focus,
+	textarea.form-control:focus,
+	&.is-focused input.form-control,
+	&.is-focused textarea.form-control {
+		background-size: $bmd-form-control-bg-size-active;
+		transition-duration: .3s;
+	}
+
+	select.form-control {
+			padding-top: 0.375rem;
+			padding-bottom: 0.375rem;
+			background-position: 100%; 
+	}
+}
+
+// default floating size/location without a form-group (will skip form-group styles, and just render default sizing variation) - IMPORTANT for non-form-group spacing such as radio/checkbox/switch
+// @include bmd-form-size-variant($font-size-base, $bmd-label-top-margin-base, $input-padding-y, $bmd-form-line-height);
+
+.bmd-help {
+	position: absolute;
+	display: none;
+	font-size: .8rem;
+	font-weight: normal;
+	@extend .text-muted;
+
+	.bmd-form-group.is-focused & {
+		display: block;
+	}
+
+	&:nth-of-type(2) {
+		padding-top: 1rem;
+	}
+
+	+ .bmd-help {
+		position: relative;
+		margin-bottom: 0;
+	}
+}
+
+.bmd-custom-checkbox input[type="checkbox"] {
+	&:invalid ~ .invalid-feedback,
+	&:invalid ~ .invalid-tooltip {
+		display: block;
+	}
+}

@@ -1,0 +1,79 @@
+.company-in-numbers-main {
+	width:100%;
+}
+.company-in-numbers-main .b-about-achievements__number,
+.company-in-numbers-main .b-about-achievements__desc {
+    color: #fff;
+}
+.header-menu {
+	color: #3651be;
+	margin-left:7rem;
+}
+.b-about-achievements__line {
+    background-color: #3651be;
+}
+.product--card .product-title:before, .product--line .product-title:before {
+    background-color: #3651be;
+}
+.product--card .product-title:before, .product--line .product-title:before {
+    background-color: #3651be;
+}
+.full-container {
+	padding: 0 3rem;
+}
+.l-header__logo h1 svg path {
+	fill:#fff;
+}
+.text-primary {
+	color: #3651be;
+}
+@media (min-width: 768px) {
+	.product-title {
+	    font-size: 1rem;
+	}
+	.product--card .product-title {
+	    max-height: 4.6rem;
+	}
+}
+@media (min-width: 992px) {
+	.l-main__head {
+	    padding-bottom: 1rem;
+	    margin-bottom: 0;
+	}
+}
+@media(max-width:1169px) {
+	.header-menu {
+		margin-left:3rem;
+	}
+}
+@media(max-width:1119px) {
+	.menu-line > li:not(:last-child) {
+	    margin-right: 1rem!important;
+	}
+}
+@media(max-width:991px) {
+	.header-menu {
+		display:none!important;
+	}
+}
+@media(min-width:992px) {
+	.l-header__hamburger {
+	    display:none;
+	}
+}
+@media (min-width: 1200px) {
+	.l-header__logo {
+	    margin-left: 0;
+	}
+}
+@media(max-width:339px) {
+	.l-header__hamburger {
+	    margin-right: 1rem!important;
+	}
+}
+@media(max-width:409px) {
+	.product--card .product-title {
+	    max-height: 3rem;
+	    font-size: 0.8rem;
+	}
+}

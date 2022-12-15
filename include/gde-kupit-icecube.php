@@ -1,0 +1,107 @@
+<div class="content"><p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;"><span style="margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;">г. Хабаровск</span></p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;">Магазин "Мир приключений"<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+ул. Ленина 14<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+тел.: (4212) 912-000<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+shop.ordvor.ru<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+Магазин "Мир приключений"<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+ул. Ленинградская 81<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+тел.:&nbsp;(4212) 41-90-25, 41-90-26<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+shop.ordvor.ru</p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;">Магазин "Мир приключений"<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+ул. Краснореченская 44<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+тел.:&nbsp;(4212) 45-90-25<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+shop.ordvor.ru<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="margin: 0px; padding: 0px; box-sizing: border-box;"><span style="margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;">г. Комсомольск-на-Амуре</span></span><br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+Магазин "Мир приключений"<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+пр-т Первостроителей 21<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+тел.:&nbsp;(4217) 312-200<br style="margin: 0px; padding: 0px; box-sizing: border-box;">
+shop.ordvor.ru</p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;"><span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;"><span style="margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;">г. Омск</span></span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">Магазин Оружейный салон "Снайпер"</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+ул. Перелета 3/1 и Перелета 5<br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">тел.: (3812) 909-103</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+sniper-omsk@mail.ru&nbsp;<a href="https://www.sniper-omsk.ru/" rel="nofollow"><span style="color:#0000CD;">https://www.sniper-omsk.ru/</span></a></p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;"><span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">Магазин&nbsp;"Мир рыбалки"</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">ул. Лукашевича 10В</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">тел.: (3812) 30-89-30, (3812) 72-02-72</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">sniper-omsk@mail.ru&nbsp;</span><a href="https://www.sniper-omsk.ru/" rel="nofollow" style="color: rgb(7, 130, 193); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);"><span style="color:#0000CD;">https://www.sniper-omsk.ru/</span></a></p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;"><span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;"><span style="margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;">г. Якутск</span></span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">Магазин&nbsp; "Царская охота"</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">ул. Кальвица 14/1а</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">тел.: (4112) 47-43-01&nbsp;</span></p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;"><span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;"><span style="margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;">Республика Бурятия г. Улан-Удэ</span></span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">Магазин&nbsp; "Страсти и снасти"</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+пр-т 50 лет октября 25<br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">тел.: (3012) 44-28-86, 45-43-77</span></p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;"><span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">Магазин&nbsp; "Страсти и снасти"</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">пр-т Автомобилистов 3А</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">тел.: (3012) 24-24-90</span></p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;"><span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;"><span style="margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;">Иркутская область&nbsp;г. Иркутск&nbsp;</span></span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">Магазин&nbsp; "Страсти и снасти"</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+ул. Академическая 31<br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">тел.: (3952) 48-63-32</span></p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;"><span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;"><span style="margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;">Забайкальский край&nbsp;г. Чита&nbsp;</span></span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">Магазин&nbsp; "Страсти и снасти"</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">ул. 1-й микрорайон 9А</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">тел.: (3022) 32-64-22</span></p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;"><span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;"><span style="margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;">г. Самара</span></span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">Магазин Оружейный центр&nbsp;"Охотомания"</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">ул. Гастелло 35А</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">тел.: (8463) 21-00-01,&nbsp;(8463) 21-00-02</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">ohotomania163@mail.ru&nbsp;</span><a href="http://www.ohota-mania.ru/" rel="nofollow"><span style="color:#0000CD;">http://www.ohota-mania.ru/</span></a></p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;"><span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;"><span style="margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;">г. Екатеринбург</span></span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">Магазин "12 калибр"</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">ул. 8 марта 173</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">тел.: (3432) 66-66-61</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">12kalibr@isnet.ru&nbsp;</span><a href="http://12kalibr.com/" rel="nofollow"><span style="color:#0000CD;">http://12kalibr.com/</span></a></p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;"><span style="background-color: rgb(255, 255, 255);">Магазин "12 калибр"</span><br style="background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="background-color: rgb(255, 255, 255);">ул. Космонавтов 31 А</span><br style="background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="background-color: rgb(255, 255, 255);">тел.: (3432) 87-86-54</span><br style="background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="background-color: rgb(255, 255, 255);">12kalibr@isnet.ru&nbsp;</span><a href="http://12kalibr.com/" rel="nofollow" style="color: rgb(7, 130, 193);"><span style="color:#0000CD;">http://12kalibr.com/</span></a></p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;"><span style="background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;"><span style="margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;">г. Иркутск</span></span><br style="background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="background-color: rgb(255, 255, 255);">Магазин ООО "Кузина Охота"</span><br style="background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="background-color: rgb(255, 255, 255);">ул. Старокузьмихинская 62</span><br style="background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="background-color: rgb(255, 255, 255);">тел.: (3952) 42-00-00</span><br style="background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<a href="http://discovery-market.ru/" rel="nofollow"><span style="color:#0000CD;">http://discovery-market.ru/</span></a></p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;"><span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;"><span style="margin: 0px; padding: 0px; box-sizing: border-box; font-weight: 700;">г. Ангарск</span></span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">Магазин ООО "Кузина Охота"</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">ул. 254-й квартал</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<span style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);">тел.: (3955) 95-00-00</span><br style="color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255); margin: 0px; padding: 0px; box-sizing: border-box;">
+<a href="http://discovery-market.ru/" rel="nofollow" style="color: rgb(7, 130, 193); font-family: Roboto, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);"><span style="color:#0000CD;">http://discovery-market.ru/</span></a></p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;">&nbsp;</p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;">&nbsp;</p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;">&nbsp;</p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;">&nbsp;</p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;">&nbsp;</p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;">&nbsp;</p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;">&nbsp;</p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;">&nbsp;</p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;">&nbsp;</p>
+
+<p style="margin: 0px 0px 10px; padding: 0px; box-sizing: border-box; color: rgb(102, 102, 102); font-family: Roboto, sans-serif; font-size: 14px;">&nbsp;</p>
+</div>

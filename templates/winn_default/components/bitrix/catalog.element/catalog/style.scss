@@ -1,0 +1,107 @@
+@import '../../../../resources/sass/variables';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import '../../../../resources/sass/snippets/all';
+
+
+.product--detail {
+	.product__artnum {
+		background-color: #EFEFEF;
+	}
+
+	.product__head {
+		border-bottom: #3651be;
+		position: relative;
+
+		&:after {
+			background-color: #3651be;
+			bottom: -1px;
+			content: '';
+			display: inline-block;
+			height: 0.125rem;
+			left: 0;
+			position: absolute;
+			width: 2.25rem;
+		}
+	}
+
+
+	
+	&__slider-container {
+
+		@supports (position: sticky) {
+			position: sticky;
+			top: 0; //$compact-height + map-get($spacers, 5);;
+			z-index: $zindex-sticky;
+		}
+	}
+
+	&__slider-block {
+		border: 1px solid $border-color;
+		position: relative;
+		margin-bottom: map-get($spacers, 2);
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: map-get($spacers, 3);
+		}
+	}
+
+	&__slider-images-container {
+		overflow: hidden;
+
+		&.owl-loaded {
+			overflow: visible;
+		}
+	}
+
+	&__slider-images-container &__slider-image {
+		cursor: pointer;
+		height: 300px;
+
+		> img {
+
+			max-height: 300px;
+			max-width: 100%;
+			width: auto;
+
+
+		}
+
+		@include media-breakpoint-up(md) {
+			height: 38rem;
+			> img {
+				max-height: 38rem;
+			}
+		}
+	}
+
+	&__slider-container &__slider-zoom-btn {
+		display: none;
+		position: absolute;
+		right: map-get($spacers, 3);
+		top: map-get($spacers, 3);
+		z-index: 2;
+	}
+
+	.bx-touch &__slider-block:hover &__slider-zoom-btn,
+	.bx-touch &__slider-images-container.owl-carousel .owl-nav {
+		display: none;
+	}
+
+	&__slider-block:hover &__slider-zoom-btn {
+		display: block;
+	}
+
+	&__siblings {
+		opacity: .3;
+	}
+
+
+	@include media-breakpoint-up(xl) {
+		&__preview,
+		&__props {
+			max-width: 31rem;
+		}
+	}
+}

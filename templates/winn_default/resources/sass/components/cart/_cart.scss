@@ -1,0 +1,102 @@
+.b-cart {
+
+  &__item-img img {
+    max-height: 130px;
+    max-width: 130px;
+    padding: 0 25px 0 0;
+  } 
+  &__item-name {
+    white-space: normal;
+    font-size: $font-size-lg;
+    color: $gray-900;
+    &:hover,
+    &:active {
+      color: $gray-900;
+    }
+  }
+  &__item-description {
+    width: 25rem;
+    white-space: normal;
+    font-size: $small-font-size;
+  }
+
+  &__product-item-amount-field {
+    width: 4rem;
+    height: 3.6rem;
+  }
+  &__product-item-price-for1piece {
+    font-size: $font-size-sm;
+  }
+  &__product-item-amount .icon-svg {
+    color: $primary;
+  }
+  &__product-item-amount__minus,
+  &__product-item-amount__plus {
+    border: none;
+    background: $white;
+    &:focus {outline: none;}
+  }
+  &__cross {
+    color: $danger;
+  }
+  &__tools-remove {
+    width: 55px;
+    height: 55px;
+    background-color: $table-accent-bg;
+    color: $secondary;
+  }
+
+  &__tools-remove:hover,
+  &__tools-remove:active,
+  &__tools-remove:focus {
+    color: $primary;
+  }
+  &__bottom-link {
+    @include media-breakpoint-down(xs) {
+      width: 14rem;
+    }
+  }
+  &__continue-shopping {
+    font-size: $input-btn-font-size;
+    font-weight: $btn-font-weight;
+  }
+}
+
+/////////////////////
+.b-cart {
+  &__tools-remove-on-mobile {
+    left: 93%;
+  }
+  &__tools-remove-on-mobile svg {
+    color: $secondary;
+  }
+  &__product-image-wrapper {
+    width: 5.625rem;
+    height: 5.625rem;
+    display: block;
+    position: relative;
+    transition: all 300ms ease;
+  }
+  &__product-image-canvas {
+    display: block;
+    padding-bottom: 100%;
+    position: relative;
+  }
+  &__product-image {
+    max-height: 100%;
+    max-width: 100%;
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include media-breakpoint-down(xs) {
+      max-height: 10rem;
+      max-width: 10rem;
+      margin: 0;
+      position: relative;
+    }
+  }
+} 

@@ -1,0 +1,35 @@
+.site-menu {
+	min-height: 100%;
+	// height: auto !important;
+	
+	.search-form {
+		.bmd-label-floating {
+			display: none;
+		}
+	}
+
+	&__head {
+		margin-bottom: 0.75rem;
+
+		@include media-breakpoint-up(lg) {
+			align-items: center;
+			display: flex;
+			min-height: 5.5rem;
+		}
+
+		.recall-button,
+		.cart-button {
+			padding: 0.75rem 0.75rem;
+		}
+	}
+
+	&__search {
+		.form-group {
+			margin-bottom: 1rem;
+		}
+
+		.search-form__button {
+			bottom: $input-padding-y + 1rem;
+		}
+	}
+}

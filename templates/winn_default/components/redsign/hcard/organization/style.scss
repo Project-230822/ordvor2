@@ -1,0 +1,49 @@
+@import '../../../../resources/sass/variables';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import '../../../../resources/sass/snippets/all';
+
+.vcard {
+    
+    &__descr {
+        background-color: $table-accent-bg;
+    }
+
+    &__inner {
+        padding: 15.82% 0 15% 11%;
+    }
+
+    &__position {
+        color: $secondary;  
+    }
+
+    &__photo {
+        width: 100%;
+        
+        @include media-breakpoint-up(sm) {
+            height: 100%;
+            left: 0;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+    &__phone,
+    &__email {
+        color: $black;
+
+        &:hover {
+            color: $black;
+            text-decoration: none;
+        }
+
+        & > .icon-svg {
+            position: absolute;
+            font-size: 1.5rem;
+            left: -3.25rem;
+        }
+    }
+}

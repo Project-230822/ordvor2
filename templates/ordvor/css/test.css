@@ -1,0 +1,94 @@
+#testbox
+	{
+	display: table;
+	position: relative;
+	float: none;
+	clear: both;
+	margin: 0 auto;
+	z-index: 4000;
+	width: 765px;
+	height: 510px;
+	padding: 17px 18px 18px 18px;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	background: url(/img/test.jpg) 0 0 no-repeat;
+	}
+	
+#boxtest
+	{
+	position: relative;
+	float: left;
+	clear: both;
+	width: 100%;
+	}
+	
+#test_title
+	{
+	display: table;
+	position: relative;
+	float: none;
+	clear: both;
+	margin: 0 auto 0;
+	padding: 72px 0 0 0;
+	width: 100%;
+	font: 700 40px/40px Tahoma, sans-serif;
+	text-align: center;
+	color: #fff;
+	}
+		
+#test_comments
+	{
+	display: table;
+	position: relative;
+	float: none;
+	clear: both;
+	margin: 0 auto 0;
+	padding: 33px 15px 0 15px;
+	width: 100%;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	font: 23px/28px Tahoma, sans-serif;
+	text-align: center;
+	color: #fff;
+	}
+	
+#test_sign
+	{
+	display: table;
+	position: relative;
+	float: none;
+	clear: both;
+	margin: 0 auto 0;
+	padding: 38px 15px 42px 15px;
+	width: 100%;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	font: 18px/18px Tahoma, sans-serif;
+	text-align: center;
+	color: #fff;
+	}
+	
+#test_enter
+	{
+	display: table;
+	position: relative;
+	float: none;
+	clear: both;
+	margin: 0 auto 0;
+	padding: 9px 0 0 0;
+	width: 253px;
+	height: 45px;
+	background: #f30000;
+	cursor: pointer;
+	border: 1px #fff solid;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	font: 700 24px/24px Tahoma, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	}

@@ -1,0 +1,26 @@
+.snippet-descr-image {
+    &__outer {
+        background-color: $table-accent-bg;
+    }
+    &__inner {
+        padding: 18% 10% 18% 10%;
+    }
+    &__line {
+        width: 36px;
+        height: 2px;
+        background-color: $primary;
+    }
+    &__descr {
+        font-size: $h5-font-size;
+    }
+    &__img {
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        background-color: $table-accent-bg;
+        @include media-breakpoint-down(xs) {
+            position: relative;
+            max-width: 100%;
+        }  
+    }
+}   

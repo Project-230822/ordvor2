@@ -1,0 +1,20 @@
+.l-footer {
+
+  &--dark {
+    background-color: theme-color('dark');
+    color: theme-color('secondary');
+
+    a {
+      color: currentColor;
+    }
+
+    .menu-line a,
+    .up-float-button {
+      color: $white;
+    }
+
+    hr {
+      border-top-color: rgba($border-color, 0.1);
+    }
+  }
+}

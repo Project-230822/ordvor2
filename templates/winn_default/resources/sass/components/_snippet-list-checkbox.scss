@@ -1,0 +1,32 @@
+.snippet-list-checkbox {
+    list-style: none;
+    @media (max-width: 480px) {
+        margin-left: 0;
+    }
+    &__list-element {
+        min-width: 290px;
+        @include media-breakpoint-down(xs) {
+            min-width: auto;
+        }
+    }
+    &__box {
+        min-width: 58px;
+        min-height: 58px;
+        max-width: 58px;
+        max-height: 58px;
+        background-color: $table-accent-bg;
+    }
+    &__check {
+        width: 19px;
+        height: 10px;
+        border: 2px solid $primary;
+        transform: rotate(-45deg);
+        top: 20px;
+        left: 19px;
+        border-top: none;
+        border-right: none;
+    }
+    &__text {
+        max-width: 290px;
+    }
+}

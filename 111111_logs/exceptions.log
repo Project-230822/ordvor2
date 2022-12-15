@@ -1,0 +1,704 @@
+2021-10-15 13:39:13 - Host: vladivostok.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:13 - Host: zeya.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require(string)
+	/home/bitrix/www/bitrix/components/bitrix/catalog.element/ajax.php:10
+----------
+2021-10-15 13:39:15 - Host: komsomolsknaamure.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:15 - Host: abakan.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:15 - Host: yakutsk.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:15 - Host: komsomolsknaamure.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:17 - Host: komsomolsknaamure.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:18 - Host: ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:19 - Host: krasnoyarsk.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:21 - Host: komsomolsknaamure.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require(string)
+	/home/bitrix/www/bitrix/components/bitrix/sale.prediction.product.detail/ajax.php:20
+----------
+2021-10-15 13:39:21 - Host: komsomolsknaamure.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require(string)
+	/home/bitrix/www/bitrix/components/bitrix/catalog.element/ajax.php:10
+----------
+2021-10-15 13:39:21 - Host: kyzyl.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:22 - Host: barnaul.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:22 - Host: komsomolsknaamure.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/components/bitrix/catalog.section/ajax.php:13
+----------
+2021-10-15 13:39:23 - Host: perm.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:23 - Host: barnaul.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:24 - Host: ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:27 - Host: ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/components/bitrix/catalog.section/ajax.php:13
+----------
+2021-10-15 13:39:27 - Host: krasnodar.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/components/bitrix/catalog.section/ajax.php:13
+----------
+2021-10-15 13:39:28 - Host: krasnodar.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require(string)
+	/home/bitrix/www/bitrix/components/bitrix/catalog.element/ajax.php:10
+----------
+2021-10-15 13:39:29 - Host: ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/index.php:2
+----------
+2021-10-15 13:39:31 - Host: stavropol.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:31 - Host: ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/components/bitrix/catalog.section/ajax.php:13
+----------
+2021-10-15 13:39:32 - Host: syktyvkar.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:33 - Host: spb.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:34 - Host: arkhangelsk.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:35 - Host: yoshkar-ola.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:35 - Host: zeya.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require(string)
+	/home/bitrix/www/bitrix/components/bitrix/catalog.element/ajax.php:10
+----------
+2021-10-15 13:39:36 - Host: spb.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:36 - Host: zeya.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/components/bitrix/catalog.section/ajax.php:13
+----------
+2021-10-15 13:39:38 - Host: tula.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require(string)
+	/home/bitrix/www/bitrix/components/bitrix/catalog.element/ajax.php:10
+----------
+2021-10-15 13:39:38 - Host: nalchik.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:38 - Host: tula.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/components/bitrix/catalog.section/ajax.php:13
+----------
+2021-10-15 13:39:40 - Host: arkhangelsk.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:41 - Host: lesozavodsk.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/components/bitrix/catalog.section/ajax.php:13
+----------
+2021-10-15 13:39:41 - Host: ussuriysk.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/components/bitrix/catalog.section/ajax.php:13
+----------
+2021-10-15 13:39:42 - Host: rostov-na-donu.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:44 - Host: ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:44 - Host: rostov-na-donu.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:45 - Host: magadan.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/components/bitrix/catalog.section/ajax.php:13
+----------
+2021-10-15 13:39:45 - Host: rostov-na-donu.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:46 - Host: ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:47 - Host: chita.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:48 - Host: tula.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require(string)
+	/home/bitrix/www/bitrix/components/bitrix/sale.prediction.product.detail/ajax.php:20
+----------
+2021-10-15 13:39:48 - Host: maykop.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:48 - Host: ussuriysk.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:49 - Host: ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/components/bitrix/catalog.section/ajax.php:13
+----------
+2021-10-15 13:39:50 - Host: magadan.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require(string)
+	/home/bitrix/www/bitrix/components/bitrix/sale.prediction.product.detail/ajax.php:20
+----------
+2021-10-15 13:39:50 - Host: vladivostok.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require(string)
+	/home/bitrix/www/bitrix/components/bitrix/sale.prediction.product.detail/ajax.php:20
+----------
+2021-10-15 13:39:51 - Host: nn.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog.php:10
+#3: require_once(string)
+	/home/bitrix/www/bitrix/header.php:1
+#4: require(string)
+	/home/bitrix/www/catalog/index.php:3
+#5: include_once(string)
+	/home/bitrix/www/local/urlrewrite.php:159
+----------
+2021-10-15 13:39:51 - Host: vladivostok.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require_once(string)
+	/home/bitrix/www/bitrix/components/bitrix/catalog.section/ajax.php:13
+----------
+2021-10-15 13:39:52 - Host: vladivostok.ordvor.ru:443 - UNCAUGHT_EXCEPTION - [Bitrix\Main\SystemException] 
+Attention! The session_start function was called before the Bitrix Kernel was started. The session will be closed to avoid errors. It's strongly recommended to avoid session usage before initializing the Bitrix Kernel. (0)
+/home/bitrix/www/bitrix/modules/main/lib/session/legacy/healerearlysessionstart.php:17
+#0: Bitrix\Main\Session\Legacy\HealerEarlySessionStart->process(object)
+	/home/bitrix/www/bitrix/modules/main/include.php:163
+#1: require_once(string)
+	/home/bitrix/www/bitrix/modules/main/include/prolog_before.php:14
+#2: require(string)
+	/home/bitrix/www/bitrix/components/bitrix/catalog.element/ajax.php:10
+----------

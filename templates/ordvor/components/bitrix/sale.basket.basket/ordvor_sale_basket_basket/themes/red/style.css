@@ -1,0 +1,30 @@
+/* SCU */
+.bx-red .basket-item-scu-item:hover,
+.bx-red .basket-item-scu-item.selected,
+.bx-red .basket-item-scu-item.not-available:hover { border-color: #da3737; }
+
+/* Amount */
+.bx-red .basket-item-amount-filed:hover,
+.bx-red .basket-item-amount-filed:focus { border-color: #da3737; }
+
+/* BTN */
+div.bx-red .btn.btn-default {
+	outline: none;
+	border-color: #ee332a;
+	background-color: #ee332a;
+	color: #fff;
+	border-radius: 3px;
+}
+
+div.bx-red .btn.btn-default:hover {
+	outline: none;
+	border-color: #ee332a;
+	background-color: #ee332a;
+	color: #fff;
+}
+
+div.bx-red .btn.btn-default:active {
+	outline: none;
+	-webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+	box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}

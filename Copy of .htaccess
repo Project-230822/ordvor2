@@ -1,0 +1,2351 @@
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+<IfModule mod_php5.c>
+  php_flag session.use_trans_sid off
+  #php_flag default_charset UTF-8
+  #php_value display_errors 1
+</IfModule>
+
+<IfModule mod_php7.c>
+  php_flag session.use_trans_sid off
+  #php_flag default_charset UTF-8
+  #php_value display_errors 1
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymLinks
+  RewriteEngine On
+  
+
+RewriteRule ^compare$ /catalog/compare.php? [L,R=301]  
+RewriteRule ^compare/$ /catalog/compare.php? [L,R=301]  
+  
+RewriteRule ^basket$ /personal/cart/? [L,R=301]  
+RewriteRule ^basket/$ /personal/cart/? [L,R=301]  
+
+RewriteRule ^order$ /personal/order/make/? [L,R=301]  
+RewriteRule ^order/$ /personal/order/make/? [L,R=301]  
+
+
+# 301 --- /catalog/lodki => /catalog/lodki/
+RewriteRule ^catalog/lodki$ /catalog/lodki/? [L,R=301]
+
+# 301 --- /catalog/motory-i-komplektuyuschie => /catalog/motory_i_komplektuyushchie/
+RewriteRule ^catalog/motory\-i\-komplektuyuschie$ /catalog/motory_i_komplektuyushchie/? [L,R=301]
+
+# 301 --- /catalog/motory-vintovye => /catalog/motory_vintovye/
+RewriteRule ^catalog/motory\-vintovye$ /catalog/motory_vintovye/? [L,R=301]
+
+# 301 --- /catalog/elektromotory => /catalog/elektromotory/
+RewriteRule ^catalog/elektromotory$ /catalog/elektromotory/? [L,R=301]
+
+# 301 --- /catalog/vodomety => /catalog/vodomety/
+RewriteRule ^catalog/vodomety$ /catalog/vodomety/? [L,R=301]
+
+# 301 --- /catalog/komplektuyuschie-i-zapchasti-k-motoram => /catalog/komplektuyushchie_i_zapchasti_k_motoram/
+RewriteRule ^catalog/komplektuyuschie\-i\-zapchasti\-k\-motoram$ /catalog/komplektuyushchie_i_zapchasti_k_motoram/? [L,R=301]
+
+# 301 --- /catalog/rasprodazha1 => /catalog/rasprodazha_1/
+RewriteRule ^catalog/rasprodazha1$ /catalog/rasprodazha_1/? [L,R=301]
+
+# 301 --- /catalog/blesny-kitay => /catalog/blesny_kitay/
+RewriteRule ^catalog/blesny\-kitay$ /catalog/blesny_kitay/? [L,R=301]
+
+# 301 --- /catalog/kalyany-i-prinadlezhnosti-k-nim => /catalog/kalyany_i_prinadlezhnosti_k_nim/
+RewriteRule ^catalog/kalyany\-i\-prinadlezhnosti\-k\-nim$ /catalog/kalyany_i_prinadlezhnosti_k_nim/? [L,R=301]
+
+# 301 --- /catalog/morskaya-tema---makety-korabley => /catalog/morskaya_tema_makety_korabley/
+RewriteRule ^catalog/morskaya\-tema\-\-\-makety\-korabley$ /catalog/morskaya_tema_makety_korabley/? [L,R=301]
+
+# 301 --- /catalog/chasy => /catalog/chasy/
+RewriteRule ^catalog/chasy$ /catalog/chasy/? [L,R=301]
+
+# 301 --- /catalog/snegohodnaya-tehnika => /catalog/snegokhodnaya_tekhnika/
+RewriteRule ^catalog/snegohodnaya\-tehnika$ /catalog/snegokhodnaya_tekhnika/? [L,R=301]
+
+# 301 --- /catalog/snegohody--motosobaki => /catalog/snegokhody_motosobaki/
+RewriteRule ^catalog/snegohody\-\-motosobaki$ /catalog/snegokhody_motosobaki/? [L,R=301]
+
+# 301 --- /catalog/pricepy--sani-i-dr => /catalog/pritsepy_sani_i_dr/
+RewriteRule ^catalog/pricepy\-\-sani\-i\-dr$ /catalog/pritsepy_sani_i_dr/? [L,R=301]
+
+# 301 --- /catalog/komplektuyuschie-i-zapchasti => /catalog/komplektuyushchie_i_zapchasti/
+RewriteRule ^catalog/komplektuyuschie\-i\-zapchasti$ /catalog/komplektuyushchie_i_zapchasti/? [L,R=301]
+
+# 301 --- /catalog/gidrokostyumy => /catalog/gidrokostyumy/
+RewriteRule ^catalog/gidrokostyumy$ /catalog/gidrokostyumy/? [L,R=301]
+
+# 301 --- /catalog/obuv--noski--perchatki--shlemy => /catalog/obuv_noski_perchatki_shlemy/
+RewriteRule ^catalog/obuv\-\-noski\-\-perchatki\-\-shlemy$ /catalog/obuv_noski_perchatki_shlemy/? [L,R=301]
+
+# 301 --- /catalog/lasty => /catalog/lasty/
+RewriteRule ^catalog/lasty$ /catalog/lasty/? [L,R=301]
+
+# 301 --- /catalog/trubki-dlya-dayvinga-i-snorkelinga => /catalog/trubki_dlya_dayvinga_i_snorkelinga/
+RewriteRule ^catalog/trubki\-dlya\-dayvinga\-i\-snorkelinga$ /catalog/trubki_dlya_dayvinga_i_snorkelinga/? [L,R=301]
+
+# 301 --- /catalog/ballony--ventili => /catalog/ballony_ventili/
+RewriteRule ^catalog/ballony\-\-ventili$ /catalog/ballony_ventili/? [L,R=301]
+
+# 301 --- /catalog/kompensatory => /catalog/kompensatory/
+RewriteRule ^catalog/kompensatory$ /catalog/kompensatory/? [L,R=301]
+
+# 301 --- /catalog/pribory => /catalog/pribory/
+RewriteRule ^catalog/pribory$ /catalog/pribory/? [L,R=301]
+
+# 301 --- /catalog/regulyatory---oktopusy => /catalog/regulyatory_oktopusy/
+RewriteRule ^catalog/regulyatory\-\-\-oktopusy$ /catalog/regulyatory_oktopusy/? [L,R=301]
+
+# 301 --- /catalog/kompressory => /catalog/kompressory/
+RewriteRule ^catalog/kompressory$ /catalog/kompressory/? [L,R=301]
+
+# 301 --- /catalog/garpuny---trezubcy--lini--kukany--komplektuyuschie => /catalog/garpuny_trezubtsy_lini_kukany_komplektuyushchie/
+RewriteRule ^catalog/garpuny\-\-\-trezubcy\-\-lini\-\-kukany\-\-komplektuyuschie$ /catalog/garpuny_trezubtsy_lini_kukany_komplektuyushchie/? [L,R=301]
+
+# 301 --- /catalog/nozhi-i-instrumenty => /catalog/nozhi_i_instrumenty/
+RewriteRule ^catalog/nozhi\-i\-instrumenty$ /catalog/nozhi_i_instrumenty/? [L,R=301]
+
+# 301 --- /catalog/gruzovye-poyasa--gruzy => /catalog/gruzovye_poyasa_gruzy/
+RewriteRule ^catalog/gruzovye\-poyasa\-\-gruzy$ /catalog/gruzovye_poyasa_gruzy/? [L,R=301]
+
+# 301 --- /catalog/sumki1 => /catalog/sumki/
+RewriteRule ^catalog/sumki1$ /catalog/sumki/? [L,R=301]
+
+# 301 --- /catalog/fonari-podvodnye => /catalog/fonari_podvodnye/
+RewriteRule ^catalog/fonari\-podvodnye$ /catalog/fonari_podvodnye/? [L,R=301]
+
+# 301 --- /catalog/soputstvuyuschie-tovary--raznoe => /catalog/soputstvuyushchie_tovary_raznoe/
+RewriteRule ^catalog/soputstvuyuschie\-tovary\-\-raznoe$ /catalog/soputstvuyushchie_tovary_raznoe/? [L,R=301]
+
+# 301 --- /catalog/maski--komplekty-dlya-dayvinga-i-snorkelinga => /catalog/maski_komplekty_dlya_dayvinga_i_snorkelinga/
+RewriteRule ^catalog/maski\-\-komplekty\-dlya\-dayvinga\-i\-snorkelinga$ /catalog/maski_komplekty_dlya_dayvinga_i_snorkelinga/? [L,R=301]
+
+# 301 --- /catalog/plavanie => /catalog/plavanie/
+RewriteRule ^catalog/plavanie$ /catalog/plavanie/? [L,R=301]
+
+# 301 --- /catalog/kupalniki-vzroslye => /catalog/kupalniki_vzroslye/
+RewriteRule ^catalog/kupalniki\-vzroslye$ /catalog/kupalniki_vzroslye/? [L,R=301]
+
+# 301 --- /catalog/kupalniki-detskie => /catalog/kupalniki_detskie/
+RewriteRule ^catalog/kupalniki\-detskie$ /catalog/kupalniki_detskie/? [L,R=301]
+
+# 301 --- /catalog/plavki-vzroslye => /catalog/plavki_vzroslye/
+RewriteRule ^catalog/plavki\-vzroslye$ /catalog/plavki_vzroslye/? [L,R=301]
+
+# 301 --- /catalog/plavki-detskie => /catalog/plavki_detskie/
+RewriteRule ^catalog/plavki\-detskie$ /catalog/plavki_detskie/? [L,R=301]
+
+# 301 --- /catalog/obuv1 => /catalog/obuv/
+RewriteRule ^catalog/obuv1$ /catalog/obuv/? [L,R=301]
+
+# 301 --- /catalog/ochki => /catalog/ochki/
+RewriteRule ^catalog/ochki$ /catalog/ochki/? [L,R=301]
+
+# 301 --- /catalog/shapochki => /catalog/shapochki/
+RewriteRule ^catalog/shapochki$ /catalog/shapochki/? [L,R=301]
+
+# 301 --- /catalog/lasty-trenirovochnye => /catalog/lasty_trenirovochnye/
+RewriteRule ^catalog/lasty\-trenirovochnye$ /catalog/lasty_trenirovochnye/? [L,R=301]
+
+# 301 --- /catalog/soputstvuyuschie-tovary => /catalog/soputstvuyushchie_tovary/
+RewriteRule ^catalog/soputstvuyuschie\-tovary$ /catalog/soputstvuyushchie_tovary/? [L,R=301]
+
+# 301 --- /catalog/nozhi => /catalog/nozhi/
+RewriteRule ^catalog/nozhi$ /catalog/nozhi/? [L,R=301]
+
+# 301 --- /catalog/multituly => /catalog/multituly/
+RewriteRule ^catalog/multituly$ /catalog/multituly/? [L,R=301]
+
+# 301 --- /catalog/nozhi-holodnye => /catalog/nozhi_kholodnye/
+RewriteRule ^catalog/nozhi\-holodnye$ /catalog/nozhi_kholodnye/? [L,R=301]
+
+# 301 --- /catalog/nozhi-hozyaystvenno-bytovye--shkurosemnye => /catalog/nozhi_khozyaystvenno_bytovye_shkurosemnye/
+RewriteRule ^catalog/nozhi\-hozyaystvenno\-bytovye\-\-shkurosemnye$ /catalog/nozhi_khozyaystvenno_bytovye_shkurosemnye/? [L,R=301]
+
+# 301 --- /catalog/nozhi-skladnye => /catalog/nozhi_skladnye/
+RewriteRule ^catalog/nozhi\-skladnye$ /catalog/nozhi_skladnye/? [L,R=301]
+
+# 301 --- /catalog/nozhi-metatelnye => /catalog/nozhi_metatelnye/
+RewriteRule ^catalog/nozhi\-metatelnye$ /catalog/nozhi_metatelnye/? [L,R=301]
+
+# 301 --- /catalog/machete--kukri => /catalog/machete_kukri/
+RewriteRule ^catalog/machete\-\-kukri$ /catalog/machete_kukri/? [L,R=301]
+
+# 301 --- /catalog/shashki--sabli--kortiki => /catalog/shashki_sabli_kortiki/
+RewriteRule ^catalog/shashki\-\-sabli\-\-kortiki$ /catalog/shashki_sabli_kortiki/? [L,R=301]
+
+# 301 --- /catalog/nozhi-fileynye- => /catalog/nozhi_fileynye/
+RewriteRule ^catalog/nozhi\-fileynye\-$ /catalog/nozhi_fileynye/? [L,R=301]
+
+# 301 --- /catalog/prinadlezhnosti-dlya-zatochki => /catalog/prinadlezhnosti_dlya_zatochki/
+RewriteRule ^catalog/prinadlezhnosti\-dlya\-zatochki$ /catalog/prinadlezhnosti_dlya_zatochki/? [L,R=301]
+
+# 301 --- /catalog/nabory-i-zhidkosti-dlya-zatochki => /catalog/nabory_i_zhidkosti_dlya_zatochki/
+RewriteRule ^catalog/nabory\-i\-zhidkosti\-dlya\-zatochki$ /catalog/nabory_i_zhidkosti_dlya_zatochki/? [L,R=301]
+
+# 301 --- /catalog/kamni--musaty => /catalog/kamni_musaty/
+RewriteRule ^catalog/kamni\-\-musaty$ /catalog/kamni_musaty/? [L,R=301]
+
+# 301 --- /catalog/tochilki => /catalog/tochilki/
+RewriteRule ^catalog/tochilki$ /catalog/tochilki/? [L,R=301]
+
+# 301 --- /catalog/stanki-dlya-zatochki => /catalog/stanki_dlya_zatochki/
+RewriteRule ^catalog/stanki\-dlya\-zatochki$ /catalog/stanki_dlya_zatochki/? [L,R=301]
+
+# 301 --- /catalog/aksessuary => /catalog/aksessuary/
+RewriteRule ^catalog/aksessuary$ /catalog/aksessuary/? [L,R=301]
+
+# 301 --- /catalog/solncezaschitnye-ochki => /catalog/solntsezashchitnye_ochki/
+RewriteRule ^catalog/solncezaschitnye\-ochki$ /catalog/solntsezashchitnye_ochki/? [L,R=301]
+
+# 301 --- /catalog/propitki--sredstva-dlya-stirki => /catalog/propitki_sredstva_dlya_stirki/
+RewriteRule ^catalog/propitki\-\-sredstva\-dlya\-stirki$ /catalog/propitki_sredstva_dlya_stirki/? [L,R=301]
+
+# 301 --- /catalog/remni--podtyazhki => /catalog/remni_podtyazhki/
+RewriteRule ^catalog/remni\-\-podtyazhki$ /catalog/remni_podtyazhki/? [L,R=301]
+
+# 301 --- /catalog/shevrony => /catalog/shevrony/
+RewriteRule ^catalog/shevrony$ /catalog/shevrony/? [L,R=301]
+
+# 301 --- /catalog/obuv-dlya-ohotnikov-i-rybakov => /catalog/obuv_dlya_okhotnikov_i_rybakov/
+RewriteRule ^catalog/obuv\-dlya\-ohotnikov\-i\-rybakov$ /catalog/obuv_dlya_okhotnikov_i_rybakov/? [L,R=301]
+
+# 301 --- /catalog/bahily-ohotnichi-i-rybackie => /catalog/bakhily_okhotnichi_i_rybatskie/
+RewriteRule ^catalog/bahily\-ohotnichi\-i\-rybackie$ /catalog/bakhily_okhotnichi_i_rybatskie/? [L,R=301]
+
+# 301 --- /catalog/botinki => /catalog/botinki/
+RewriteRule ^catalog/botinki$ /catalog/botinki/? [L,R=301]
+
+# 301 --- /catalog/sapogi--unty => /catalog/sapogi_unty/
+RewriteRule ^catalog/sapogi\-\-unty$ /catalog/sapogi_unty/? [L,R=301]
+
+# 301 --- /catalog/obuv-rezinovaya--kauchukovaya--neopren => /catalog/obuv_rezinovaya_kauchukovaya_neopren/
+RewriteRule ^catalog/obuv\-rezinovaya\-\-kauchukovaya\-\-neopren$ /catalog/obuv_rezinovaya_kauchukovaya_neopren/? [L,R=301]
+
+# 301 --- /catalog/sapogi-korotkie => /catalog/sapogi_korotkie/
+RewriteRule ^catalog/sapogi\-korotkie$ /catalog/sapogi_korotkie/? [L,R=301]
+
+# 301 --- /catalog/sapogi-bolotnye => /catalog/sapogi_bolotnye/
+RewriteRule ^catalog/sapogi\-bolotnye$ /catalog/sapogi_bolotnye/? [L,R=301]
+
+# 301 --- /catalog/sapogi-rezinovye--kauchukovye => /catalog/sapogi_rezinovye_kauchukovye/
+RewriteRule ^catalog/sapogi\-rezinovye\-\-kauchukovye$ /catalog/sapogi_rezinovye_kauchukovye/? [L,R=301]
+
+# 301 --- /catalog/obuv-sportivnaya => /catalog/obuv_sportivnaya/
+RewriteRule ^catalog/obuv\-sportivnaya$ /catalog/obuv_sportivnaya/? [L,R=301]
+
+# 301 --- /catalog/krossovki-sportivnye => /catalog/krossovki_sportivnye/
+RewriteRule ^catalog/krossovki\-sportivnye$ /catalog/krossovki_sportivnye/? [L,R=301]
+
+# 301 --- /catalog/cheshki--kedy--borcovki => /catalog/cheshki_kedy_bortsovki/
+RewriteRule ^catalog/cheshki\-\-kedy\-\-borcovki$ /catalog/cheshki_kedy_bortsovki/? [L,R=301]
+
+# 301 --- /catalog/obuv-trekkingovaya => /catalog/obuv_trekkingovaya/
+RewriteRule ^catalog/obuv\-trekkingovaya$ /catalog/obuv_trekkingovaya/? [L,R=301]
+
+# 301 --- /catalog/botinki-trekkingovye => /catalog/botinki_trekkingovye/
+RewriteRule ^catalog/botinki\-trekkingovye$ /catalog/botinki_trekkingovye/? [L,R=301]
+
+# 301 --- /catalog/krossovki-trekkingovye => /catalog/krossovki_trekkingovye/
+RewriteRule ^catalog/krossovki\-trekkingovye$ /catalog/krossovki_trekkingovye/? [L,R=301]
+
+# 301 --- /catalog/sapogi-trekkingovye => /catalog/sapogi_trekkingovye/
+RewriteRule ^catalog/sapogi\-trekkingovye$ /catalog/sapogi_trekkingovye/? [L,R=301]
+
+# 301 --- /catalog/sandali-i-shlepancy => /catalog/sandali_i_shlepantsy/
+RewriteRule ^catalog/sandali\-i\-shlepancy$ /catalog/sandali_i_shlepantsy/? [L,R=301]
+
+# 301 --- /catalog/odezhda-dlya-ohotnikov-i-rybakov-holodnyy-sezon => /catalog/odezhda_dlya_okhotnikov_i_rybakov_kholodnyy_sezon/
+RewriteRule ^catalog/odezhda\-dlya\-ohotnikov\-i\-rybakov\-holodnyy\-sezon$ /catalog/odezhda_dlya_okhotnikov_i_rybakov_kholodnyy_sezon/? [L,R=301]
+
+# 301 --- /catalog/kurtki-uteplennye-gorod => /catalog/kurtki_uteplennye/
+RewriteRule ^catalog/kurtki\-uteplennye\-gorod$ /catalog/kurtki_uteplennye/? [L,R=301]
+
+# 301 --- /catalog/bryuki--polukombinezony-uteplennye => /catalog/bryuki_polukombinezony_uteplennye/
+RewriteRule ^catalog/bryuki\-\-polukombinezony\-uteplennye$ /catalog/bryuki_polukombinezony_uteplennye/? [L,R=301]
+
+# 301 --- /catalog/kostyumy-uteplennye => /catalog/kostyumy_uteplennye/
+RewriteRule ^catalog/kostyumy\-uteplennye$ /catalog/kostyumy_uteplennye/? [L,R=301]
+
+# 301 --- /catalog/maskirovochnye-kostyumy-zimnie => /catalog/maskirovochnye_kostyumy_zimnie/
+RewriteRule ^catalog/maskirovochnye\-kostyumy\-zimnie$ /catalog/maskirovochnye_kostyumy_zimnie/? [L,R=301]
+
+# 301 --- /catalog/kurtki-letnie--demisezonnye => /catalog/kurtki_letnie_demisezonnye/
+RewriteRule ^catalog/kurtki\-letnie\-\-demisezonnye$ /catalog/kurtki_letnie_demisezonnye/? [L,R=301]
+
+# 301 --- /catalog/bryuki--polukombinezony-letnie--demisezonnye => /catalog/bryuki_polukombinezony_letnie_demisezonnye/
+RewriteRule ^catalog/bryuki\-\-polukombinezony\-letnie\-\-demisezonnye$ /catalog/bryuki_polukombinezony_letnie_demisezonnye/? [L,R=301]
+
+# 301 --- /catalog/kostyumy-letnie-demisezonnye => /catalog/kostyumy_letnie_demisezonnye/
+RewriteRule ^catalog/kostyumy\-letnie\-demisezonnye$ /catalog/kostyumy_letnie_demisezonnye/? [L,R=301]
+
+# 301 --- /catalog/maskirovochnye-kostyumy-demisezonnye => /catalog/maskirovochnye_kostyumy_demisezonnye/
+RewriteRule ^catalog/maskirovochnye\-kostyumy\-demisezonnye$ /catalog/maskirovochnye_kostyumy_demisezonnye/? [L,R=301]
+
+# 301 --- /catalog/zhilety => /catalog/zhilety/
+RewriteRule ^catalog/zhilety$ /catalog/zhilety/? [L,R=301]
+
+# 301 --- /catalog/odezhda-iz-flisa--polarteka => /catalog/odezhda_iz_flisa_polarteka/
+RewriteRule ^catalog/odezhda\-iz\-flisa\-\-polarteka$ /catalog/odezhda_iz_flisa_polarteka/? [L,R=301]
+
+# 301 --- /catalog/svitery--poluvery--vodolazki => /catalog/svitery_poluvery_vodolazki/
+RewriteRule ^catalog/svitery\-\-poluvery\-\-vodolazki$ /catalog/svitery_poluvery_vodolazki/? [L,R=301]
+
+# 301 --- /catalog/perchatki--rukavicy--varezhki => /catalog/perchatki_rukavitsy_varezhki/
+RewriteRule ^catalog/perchatki\-\-rukavicy\-\-varezhki$ /catalog/perchatki_rukavitsy_varezhki/? [L,R=301]
+
+# 301 --- /catalog/Kurtkirybolovnye => /catalog/kurtki_rybolovnye/
+RewriteRule ^catalog/Kurtkirybolovnye$ /catalog/kurtki_rybolovnye/? [L,R=301]
+
+# 301 --- /catalog/dozhdeviki-i-plaschi => /catalog/dozhdeviki_i_plashchi/
+RewriteRule ^catalog/dozhdeviki\-i\-plaschi$ /catalog/dozhdeviki_i_plashchi/? [L,R=301]
+
+# 301 --- /catalog/mayki--futbolki--telnyashki => /catalog/mayki_futbolki_telnyashki/
+RewriteRule ^catalog/mayki\-\-futbolki\-\-telnyashki$ /catalog/mayki_futbolki_telnyashki/? [L,R=301]
+
+# 301 --- /catalog/termobele => /catalog/termobele/
+RewriteRule ^catalog/termobele$ /catalog/termobele/? [L,R=301]
+
+# 301 --- /catalog/noski-i-getry => /catalog/noski_i_getry/
+RewriteRule ^catalog/noski\-i\-getry$ /catalog/noski_i_getry/? [L,R=301]
+
+# 301 --- /catalog/golovnye-ubory1 => /catalog/golovnye_ubory/
+RewriteRule ^catalog/golovnye\-ubory1$ /catalog/golovnye_ubory/? [L,R=301]
+
+# 301 --- /catalog/protivomoskitnaya-odezhda => /catalog/protivomoskitnaya_odezhda/
+RewriteRule ^catalog/protivomoskitnaya\-odezhda$ /catalog/protivomoskitnaya_odezhda/? [L,R=301]
+
+# 301 --- /catalog/protivoencefalitnye-kostyumy => /catalog/protivoentsefalitnye_kostyumy/
+RewriteRule ^catalog/protivoencefalitnye\-kostyumy$ /catalog/protivoentsefalitnye_kostyumy/? [L,R=301]
+
+# 301 --- /catalog/odezhda-sportivno-gorodskaya => /catalog/odezhda_sportivno_gorodskaya/
+RewriteRule ^catalog/odezhda\-sportivno\-gorodskaya$ /catalog/odezhda_sportivno_gorodskaya/? [L,R=301]
+
+# 301 --- /catalog/kurtki-uteplennye-gorod => /catalog/kurtki_uteplennye_1/
+RewriteRule ^catalog/kurtki\-uteplennye\-gorod$ /catalog/kurtki_uteplennye_1/? [L,R=301]
+
+# 301 --- /catalog/kurtki-gornolyzhnye--snoubordicheskie => /catalog/kurtki_gornolyzhnye_snoubordicheskie/
+RewriteRule ^catalog/kurtki\-gornolyzhnye\-\-snoubordicheskie$ /catalog/kurtki_gornolyzhnye_snoubordicheskie/? [L,R=301]
+
+# 301 --- /catalog/bryuki--polukombinezony-gornolyzhnye => /catalog/bryuki_polukombinezony_gornolyzhnye/
+RewriteRule ^catalog/bryuki\-\-polukombinezony\-gornolyzhnye$ /catalog/bryuki_polukombinezony_gornolyzhnye/? [L,R=301]
+
+# 301 --- /catalog/vetrovki--dozhdeviki => /catalog/vetrovki_dozhdeviki/
+RewriteRule ^catalog/vetrovki\-\-dozhdeviki$ /catalog/vetrovki_dozhdeviki/? [L,R=301]
+
+# 301 --- /catalog/bryuki-i-shorty => /catalog/bryuki_i_shorty/
+RewriteRule ^catalog/bryuki\-i\-shorty$ /catalog/bryuki_i_shorty/? [L,R=301]
+
+# 301 --- /catalog/futbolki--rubashki => /catalog/futbolki_rubashki/
+RewriteRule ^catalog/futbolki\-\-rubashki$ /catalog/futbolki_rubashki/? [L,R=301]
+
+# 301 --- /catalog/odezhda-iz-flisa--softshell => /catalog/odezhda_iz_flisa_softshell/
+RewriteRule ^catalog/odezhda\-iz\-flisa\-\-softshell$ /catalog/odezhda_iz_flisa_softshell/? [L,R=301]
+
+# 301 --- /catalog/tolstovki--svitera => /catalog/tolstovki_svitera/
+RewriteRule ^catalog/tolstovki\-\-svitera$ /catalog/tolstovki_svitera/? [L,R=301]
+
+# 301 --- /catalog/termobele-sportivnoe => /catalog/termobele_sportivnoe/
+RewriteRule ^catalog/termobele\-sportivnoe$ /catalog/termobele_sportivnoe/? [L,R=301]
+
+# 301 --- /catalog/noski => /catalog/noski/
+RewriteRule ^catalog/noski$ /catalog/noski/? [L,R=301]
+
+# 301 --- /catalog/golovnye-ubory1 => /catalog/golovnye_ubory_1/
+RewriteRule ^catalog/golovnye\-ubory1$ /catalog/golovnye_ubory_1/? [L,R=301]
+
+# 301 --- /catalog/perchatki--rukavicy => /catalog/perchatki_rukavitsy/
+RewriteRule ^catalog/perchatki\-\-rukavicy$ /catalog/perchatki_rukavitsy/? [L,R=301]
+
+# 301 --- /catalog/sportivnye-kostyumy => /catalog/sportivnye_kostyumy/
+RewriteRule ^catalog/sportivnye\-kostyumy$ /catalog/sportivnye_kostyumy/? [L,R=301]
+
+# 301 --- /catalog/obuv-dlya-spec-podrazdeleniy-soputstvuyuschie-tovary => /catalog/obuv_dlya_spets_podrazdeleniy_soputstvuyushchie_tovary/
+RewriteRule ^catalog/obuv\-dlya\-spec\-podrazdeleniy\-soputstvuyuschie\-tovary$ /catalog/obuv_dlya_spets_podrazdeleniy_soputstvuyushchie_tovary/? [L,R=301]
+
+# 301 --- /catalog/bercy--tufli--polubotinki => /catalog/bertsy_tufli_polubotinki/
+RewriteRule ^catalog/bercy\-\-tufli\-\-polubotinki$ /catalog/bertsy_tufli_polubotinki/? [L,R=301]
+
+# 301 --- /catalog/sredstva-po-uhodu-za-obuvyu => /catalog/sredstva_po_ukhodu_za_obuvyu/
+RewriteRule ^catalog/sredstva\-po\-uhodu\-za\-obuvyu$ /catalog/sredstva_po_ukhodu_za_obuvyu/? [L,R=301]
+
+# 301 --- /catalog/aksessuary-dlya-obuvi => /catalog/aksessuary_dlya_obuvi/
+RewriteRule ^catalog/aksessuary\-dlya\-obuvi$ /catalog/aksessuary_dlya_obuvi/? [L,R=301]
+
+# 301 --- /catalog/novinka!-ekipirovka-shaman => /catalog/novinka_ekipirovka_shaman/
+RewriteRule ^catalog/novinka\!\-ekipirovka\-shaman$ /catalog/novinka_ekipirovka_shaman/? [L,R=301]
+
+# 301 --- /catalog/NOVINKA!-BESTGUARDER-pribory-nochnogo-videniya--ohotnichi-signalizacii! => /catalog/novinka_bestguarder_pribory_nochnogo_videniya_okhotnichi_signalizatsii/
+RewriteRule ^catalog/NOVINKA\!\-BESTGUARDER\-pribory\-nochnogo\-videniya\-\-ohotnichi\-signalizacii\!$ /catalog/novinka_bestguarder_pribory_nochnogo_videniya_okhotnichi_signalizatsii/? [L,R=301]
+
+# 301 --- /catalog/binokli => /catalog/binokli/
+RewriteRule ^catalog/binokli$ /catalog/binokli/? [L,R=301]
+
+# 301 --- /catalog/dalnomery => /catalog/dalnomery/
+RewriteRule ^catalog/dalnomery$ /catalog/dalnomery/? [L,R=301]
+
+# 301 --- /catalog/zritelnye-truby => /catalog/zritelnye_truby/
+RewriteRule ^catalog/zritelnye\-truby$ /catalog/zritelnye_truby/? [L,R=301]
+
+# 301 --- /catalog/teleskopy => /catalog/teleskopy/
+RewriteRule ^catalog/teleskopy$ /catalog/teleskopy/? [L,R=301]
+
+# 301 --- /catalog/mikroskopy => /catalog/mikroskopy/
+RewriteRule ^catalog/mikroskopy$ /catalog/mikroskopy/? [L,R=301]
+
+# 301 --- /catalog/podvodnye-kamery => /catalog/podvodnye_kamery/
+RewriteRule ^catalog/podvodnye\-kamery$ /catalog/podvodnye_kamery/? [L,R=301]
+
+# 301 --- /catalog/metallodetektory--metalloiskateli--komplektuyuschie => /catalog/metallodetektory_metalloiskateli_komplektuyushchie/
+RewriteRule ^catalog/metallodetektory\-\-metalloiskateli\-\-komplektuyuschie$ /catalog/metallodetektory_metalloiskateli_komplektuyushchie/? [L,R=301]
+
+# 301 --- /catalog/teplovizory => /catalog/teplovizory/
+RewriteRule ^catalog/teplovizory$ /catalog/teplovizory/? [L,R=301]
+
+# 301 --- /catalog/navigatory--komplektuyuschie => /catalog/navigatory_komplektuyushchie/
+RewriteRule ^catalog/navigatory\-\-komplektuyuschie$ /catalog/navigatory_komplektuyushchie/? [L,R=301]
+
+# 301 --- /catalog/pribory-nochnogo-videniya => /catalog/pribory_nochnogo_videniya/
+RewriteRule ^catalog/pribory\-nochnogo\-videniya$ /catalog/pribory_nochnogo_videniya/? [L,R=301]
+
+# 301 --- /catalog/pricely-nochnogo-videniya--monokulyary-nochnogo-videniya => /catalog/monokulyary_nochnogo_videniya/
+RewriteRule ^catalog/pricely\-nochnogo\-videniya\-\-monokulyary\-nochnogo\-videniya$ /catalog/monokulyary_nochnogo_videniya/? [L,R=301]
+
+# 301 --- /catalog/binokli-nochnogo-videniya--ochki-nochnogo-videniya => /catalog/binokli_nochnogo_videniya/
+RewriteRule ^catalog/binokli\-nochnogo\-videniya\-\-ochki\-nochnogo\-videniya$ /catalog/binokli_nochnogo_videniya/? [L,R=301]
+
+# 301 --- /catalog/shtativy--mikrofony-i-dr => /catalog/kronshteyny_shtativy/
+RewriteRule ^catalog/shtativy\-\-mikrofony\-i\-dr$ /catalog/kronshteyny_shtativy/? [L,R=301]
+
+# 301 --- /catalog/radiostancii-komplektuyuschie => /catalog/radiostantsii_komplektuyushchie/
+RewriteRule ^catalog/radiostancii\-komplektuyuschie$ /catalog/radiostantsii_komplektuyushchie/? [L,R=301]
+
+# 301 --- /catalog/fotolovushki => /catalog/fotolovushki/
+RewriteRule ^catalog/fotolovushki$ /catalog/fotolovushki/? [L,R=301]
+
+# 301 --- /catalog/arbalety-i-komplektuyuschie-k-nim => /catalog/arbalety_i_komplektuyushchie_k_nim/
+RewriteRule ^catalog/arbalety\-i\-komplektuyuschie\-k\-nim$ /catalog/arbalety_i_komplektuyushchie_k_nim/? [L,R=301]
+
+# 301 --- /catalog/arbalety => /catalog/arbalety/
+RewriteRule ^catalog/arbalety$ /catalog/arbalety/? [L,R=301]
+
+# 301 --- /catalog/komplektuyuschie-k-arbaletam => /catalog/komplektuyushchie_k_arbaletam/
+RewriteRule ^catalog/komplektuyuschie\-k\-arbaletam$ /catalog/komplektuyushchie_k_arbaletam/? [L,R=301]
+
+# 301 --- /catalog/plechi-dlya-arbaleta => /catalog/plechi_dlya_arbaleta/
+RewriteRule ^catalog/plechi\-dlya\-arbaleta$ /catalog/plechi_dlya_arbaleta/? [L,R=301]
+
+# 301 --- /catalog/pricely-dlya-arbaleta => /catalog/pritsely_dlya_arbaleta/
+RewriteRule ^catalog/pricely\-dlya\-arbaleta$ /catalog/pritsely_dlya_arbaleta/? [L,R=301]
+
+# 301 --- /catalog/tetiva-dlya-arbaleta-trosa => /catalog/tetiva_dlya_arbaleta_trosa/
+RewriteRule ^catalog/tetiva\-dlya\-arbaleta\-trosa$ /catalog/tetiva_dlya_arbaleta_trosa/? [L,R=301]
+
+# 301 --- /catalog/ballony-aerozolnye => /catalog/ballony_aerozolnye/
+RewriteRule ^catalog/ballony\-aerozolnye$ /catalog/ballony_aerozolnye/? [L,R=301]
+
+# 301 --- /catalog/percovye--slezotochivo-razdrazhayuschie--inye => /catalog/pertsovye_slezotochivo_razdrazhayushchie_inye/
+RewriteRule ^catalog/percovye\-\-slezotochivo\-razdrazhayuschie\-\-inye$ /catalog/pertsovye_slezotochivo_razdrazhayushchie_inye/? [L,R=301]
+
+# 301 --- /catalog/patrony-k-gazovomu-oruzhiyu => /catalog/patrony_k_gazovomu_oruzhiyu/
+RewriteRule ^catalog/patrony\-k\-gazovomu\-oruzhiyu$ /catalog/patrony_k_gazovomu_oruzhiyu/? [L,R=301]
+
+# 301 --- /catalog/patrony-k-gazovomu-oruzhiyu => /catalog/patrony_k_gazovomu_oruzhiyu_1/
+RewriteRule ^catalog/patrony\-k\-gazovomu\-oruzhiyu$ /catalog/patrony_k_gazovomu_oruzhiyu_1/? [L,R=301]
+
+# 301 --- /catalog/patrony-k-travmat--signalnomu-oruzhiyu => /catalog/patrony_k_travmat_signalnomu_oruzhiyu/
+RewriteRule ^catalog/patrony\-k\-travmat\-\-signalnomu\-oruzhiyu$ /catalog/patrony_k_travmat_signalnomu_oruzhiyu/? [L,R=301]
+
+# 301 --- /catalog/oruzhie-gazovoe => /catalog/oruzhie_gazovoe/
+RewriteRule ^catalog/oruzhie\-gazovoe$ /catalog/oruzhie_gazovoe/? [L,R=301]
+
+# 301 --- /catalog/gazovye-pistolety-i-revolvery => /catalog/gazovye_pistolety_i_revolvery/
+RewriteRule ^catalog/gazovye\-pistolety\-i\-revolvery$ /catalog/gazovye_pistolety_i_revolvery/? [L,R=301]
+
+# 301 --- /catalog/ruzhya-dlya-podvodnoy-ohoty => /catalog/ruzhya_dlya_podvodnoy_okhoty/
+RewriteRule ^catalog/ruzhya\-dlya\-podvodnoy\-ohoty$ /catalog/ruzhya_dlya_podvodnoy_okhoty/? [L,R=301]
+
+# 301 --- /catalog/luki-i-komplektuyuschie-k-nim => /catalog/luki_i_komplektuyushchie_k_nim/
+RewriteRule ^catalog/luki\-i\-komplektuyuschie\-k\-nim$ /catalog/luki_i_komplektuyushchie_k_nim/? [L,R=301]
+
+# 301 --- /catalog/pricely-dlya-luka => /catalog/pritsely_dlya_luka/
+RewriteRule ^catalog/pricely\-dlya\-luka$ /catalog/pritsely_dlya_luka/? [L,R=301]
+
+# 301 --- /catalog/luki => /catalog/luki/
+RewriteRule ^catalog/luki$ /catalog/luki/? [L,R=301]
+
+# 301 --- /catalog/komplektuyuschie-k-lukam => /catalog/komplektuyushchie_k_lukam/
+RewriteRule ^catalog/komplektuyuschie\-k\-lukam$ /catalog/komplektuyushchie_k_lukam/? [L,R=301]
+
+# 301 --- /catalog/tetiva-dlya-luka => /catalog/tetiva_dlya_luka/
+RewriteRule ^catalog/tetiva\-dlya\-luka$ /catalog/tetiva_dlya_luka/? [L,R=301]
+
+# 301 --- /catalog/luchnye-i-arbaletnye-strely-i-komplektuyuschie- => /catalog/luchnye_i_arbaletnye_strely_i_komplektuyushchie/
+RewriteRule ^catalog/luchnye\-i\-arbaletnye\-strely\-i\-komplektuyuschie\-$ /catalog/luchnye_i_arbaletnye_strely_i_komplektuyushchie/? [L,R=301]
+
+# 301 --- /catalog/nakonechniki-dlya-strel => /catalog/nakonechniki_dlya_strel/
+RewriteRule ^catalog/nakonechniki\-dlya\-strel$ /catalog/nakonechniki_dlya_strel/? [L,R=301]
+
+# 301 --- /catalog/hvostoviki-dlya-strel => /catalog/khvostoviki_dlya_strel/
+RewriteRule ^catalog/hvostoviki\-dlya\-strel$ /catalog/khvostoviki_dlya_strel/? [L,R=301]
+
+# 301 --- /catalog/opereniya-dlya-strel => /catalog/opereniya_dlya_strel/
+RewriteRule ^catalog/opereniya\-dlya\-strel$ /catalog/opereniya_dlya_strel/? [L,R=301]
+
+# 301 --- /catalog/komplektuyuschie-dlya-strel => /catalog/komplektuyushchie_dlya_strel/
+RewriteRule ^catalog/komplektuyuschie\-dlya\-strel$ /catalog/komplektuyushchie_dlya_strel/? [L,R=301]
+
+# 301 --- /catalog/strely => /catalog/strely/
+RewriteRule ^catalog/strely$ /catalog/strely/? [L,R=301]
+
+# 301 --- /catalog/makety-massogabaritnye => /catalog/makety_massogabaritnye/
+RewriteRule ^catalog/makety\-massogabaritnye$ /catalog/makety_massogabaritnye/? [L,R=301]
+
+# 301 --- /catalog/pulemety--vintovki--pistolety--revolvery => /catalog/pulemety_vintovki_pistolety_revolvery/
+RewriteRule ^catalog/pulemety\-\-vintovki\-\-pistolety\-\-revolvery$ /catalog/pulemety_vintovki_pistolety_revolvery/? [L,R=301]
+
+# 301 --- /catalog/zapchasti-oruzheynye => /catalog/zapchasti_oruzheynye/
+RewriteRule ^catalog/zapchasti\-oruzheynye$ /catalog/zapchasti_oruzheynye/? [L,R=301]
+
+# 301 --- /catalog/zapchasti-k-gazovomu--sluzhebnomu--signalnomu-oruzhiyu => /catalog/zapchasti_k_gazovomu_sluzhebnomu_signalnomu_oruzhiyu/
+RewriteRule ^catalog/zapchasti\-k\-gazovomu\-\-sluzhebnomu\-\-signalnomu\-oruzhiyu$ /catalog/zapchasti_k_gazovomu_sluzhebnomu_signalnomu_oruzhiyu/? [L,R=301]
+
+# 301 --- /catalog/zapchasti-k-ognestrelnomu-oruzhiyu => /catalog/zapchasti_k_ognestrelnomu_oruzhiyu/
+RewriteRule ^catalog/zapchasti\-k\-ognestrelnomu\-oruzhiyu$ /catalog/zapchasti_k_ognestrelnomu_oruzhiyu/? [L,R=301]
+
+# 301 --- /catalog/Tigr-Sayga => /catalog/tigr_sayga/
+RewriteRule ^catalog/Tigr\-Sayga$ /catalog/tigr_sayga/? [L,R=301]
+
+# 301 --- /catalog/komplektuyuschie-k-oruzhiyu => /catalog/komplektuyushchie_k_oruzhiyu/
+RewriteRule ^catalog/komplektuyuschie\-k\-oruzhiyu$ /catalog/komplektuyushchie_k_oruzhiyu/? [L,R=301]
+
+# 301 --- /catalog/Lenta-kamuflirovannaya => /catalog/lenta_kamuflirovannaya/
+RewriteRule ^catalog/Lenta\-kamuflirovannaya$ /catalog/lenta_kamuflirovannaya/? [L,R=301]
+
+# 301 --- /catalog/priklady--cevya--nakladki--rukoyatki-i-dr => /catalog/priklady_tsevya_nakladki_rukoyatki_i_dr/
+RewriteRule ^catalog/priklady\-\-cevya\-\-nakladki\-\-rukoyatki\-i\-dr$ /catalog/priklady_tsevya_nakladki_rukoyatki_i_dr/? [L,R=301]
+
+# 301 --- /catalog/-adaptery--bazy => /catalog/adaptery_bazy/
+RewriteRule ^catalog/\-adaptery\-\-bazy$ /catalog/adaptery_bazy/? [L,R=301]
+
+# 301 --- /catalog/magaziny-i-oboymy-ostalnye => /catalog/magaziny_i_oboymy_ostalnye/
+RewriteRule ^catalog/magaziny\-i\-oboymy\-ostalnye$ /catalog/magaziny_i_oboymy_ostalnye/? [L,R=301]
+
+# 301 --- /catalog/mushki--celiki => /catalog/mushki_tseliki/
+RewriteRule ^catalog/mushki\-\-celiki$ /catalog/mushki_tseliki/? [L,R=301]
+
+# 301 --- /catalog/nasadki--plamegasiteli--soshki--upory => /catalog/nasadki_plamegasiteli_soshki_upory/
+RewriteRule ^catalog/nasadki\-\-plamegasiteli\-\-soshki\-\-upory$ /catalog/nasadki_plamegasiteli_soshki_upory/? [L,R=301]
+
+# 301 --- /catalog/soshki--upory => /catalog/soshki_upory/
+RewriteRule ^catalog/soshki\-\-upory$ /catalog/soshki_upory/? [L,R=301]
+
+# 301 --- /catalog/stanki-pristrelochnye => /catalog/stanki_pristrelochnye/
+RewriteRule ^catalog/stanki\-pristrelochnye$ /catalog/stanki_pristrelochnye/? [L,R=301]
+
+# 301 --- /catalog/pricelnye-komleksy--patrony-lazernye => /catalog/pritselnye_kompleksy_patrony_lazernye/
+RewriteRule ^catalog/pricelnye\-komleksy\-\-patrony\-lazernye$ /catalog/pritselnye_kompleksy_patrony_lazernye/? [L,R=301]
+
+# 301 --- /catalog/nasosy-oruzheynye-vysokogo-davleniya => /catalog/nasosy_oruzheynye_vysokogo_davleniya/
+RewriteRule ^catalog/nasosy\-oruzheynye\-vysokogo\-davleniya$ /catalog/nasosy_oruzheynye_vysokogo_davleniya/? [L,R=301]
+
+# 301 --- /catalog/magaziny-k-pistoletam => /catalog/magaziny_k_pistoletam/
+RewriteRule ^catalog/magaziny\-k\-pistoletam$ /catalog/magaziny_k_pistoletam/? [L,R=301]
+
+# 301 --- /catalog/magaziny-k-ruzhyam => /catalog/magaziny_k_ruzhyam/
+RewriteRule ^catalog/magaziny\-k\-ruzhyam$ /catalog/magaziny_k_ruzhyam/? [L,R=301]
+
+# 301 --- /catalog/magaziny-k-vintovkam => /catalog/magaziny_k_vintovkam/
+RewriteRule ^catalog/magaziny\-k\-vintovkam$ /catalog/magaziny_k_vintovkam/? [L,R=301]
+
+# 301 --- /catalog/fonari-podstvolnye--kronshteyny-k-nim => /catalog/fonari_podstvolnye_kronshteyny_k_nim/
+RewriteRule ^catalog/fonari\-podstvolnye\-\-kronshteyny\-k\-nim$ /catalog/fonari_podstvolnye_kronshteyny_k_nim/? [L,R=301]
+
+# 301 --- /catalog/naushniki => /catalog/naushniki/
+RewriteRule ^catalog/naushniki$ /catalog/naushniki/? [L,R=301]
+
+# 301 --- /catalog/misheni-i-puleulavlivateli => /catalog/misheni_i_puleulavlivateli/
+RewriteRule ^catalog/misheni\-i\-puleulavlivateli$ /catalog/misheni_i_puleulavlivateli/? [L,R=301]
+
+# 301 --- /catalog/ochki => /catalog/ochki_1/
+RewriteRule ^catalog/ochki$ /catalog/ochki_1/? [L,R=301]
+
+# 301 --- /catalog/oruzhie-ogranichennogo-porazheniya => /catalog/oruzhie_ogranichennogo_porazheniya/
+RewriteRule ^catalog/oruzhie\-ogranichennogo\-porazheniya$ /catalog/oruzhie_ogranichennogo_porazheniya/? [L,R=301]
+
+# 301 --- /catalog/kompleksy- => /catalog/kompleksy/
+RewriteRule ^catalog/kompleksy\-$ /catalog/kompleksy/? [L,R=301]
+
+# 301 --- /catalog/travmaticheskie-pistolety-revolvery => /catalog/travmaticheskie_pistolety_revolvery/
+RewriteRule ^catalog/travmaticheskie\-pistolety\-revolvery$ /catalog/travmaticheskie_pistolety_revolvery/? [L,R=301]
+
+# 301 --- /catalog/oruzhie-ohotniche => /catalog/oruzhie_okhotniche/
+RewriteRule ^catalog/oruzhie\-ohotniche$ /catalog/oruzhie_okhotniche/? [L,R=301]
+
+# 301 --- /catalog/kombinirovannoe-oruzhie => /catalog/kombinirovannoe_oruzhie/
+RewriteRule ^catalog/kombinirovannoe\-oruzhie$ /catalog/kombinirovannoe_oruzhie/? [L,R=301]
+
+# 301 --- /catalog/nareznoe-oruzhie => /catalog/nareznoe_oruzhie/
+RewriteRule ^catalog/nareznoe\-oruzhie$ /catalog/nareznoe_oruzhie/? [L,R=301]
+
+# 301 --- /catalog/gladkostvolnoe-oruzhie => /catalog/gladkostvolnoe_oruzhie/
+RewriteRule ^catalog/gladkostvolnoe\-oruzhie$ /catalog/gladkostvolnoe_oruzhie/? [L,R=301]
+
+# 301 --- /catalog/gladkostvolnoe-oruzhie => /catalog/gladkostvolnoe_oruzhie_1/
+RewriteRule ^catalog/gladkostvolnoe\-oruzhie$ /catalog/gladkostvolnoe_oruzhie_1/? [L,R=301]
+
+# 301 --- /catalog/pnevmaticheskoe-oruzhie => /catalog/pnevmaticheskoe_oruzhie/
+RewriteRule ^catalog/pnevmaticheskoe\-oruzhie$ /catalog/pnevmaticheskoe_oruzhie/? [L,R=301]
+
+# 301 --- /catalog/Patrony => /catalog/patrony/
+RewriteRule ^catalog/Patrony$ /catalog/patrony/? [L,R=301]
+
+# 301 --- /catalog/Patronyknareznomuoruzhiyu => /catalog/patrony_k_nareznomu_oruzhiyu/
+RewriteRule ^catalog/Patronyknareznomuoruzhiyu$ /catalog/patrony_k_nareznomu_oruzhiyu/? [L,R=301]
+
+# 301 --- /catalog/Patronyotechestvennye => /catalog/patrony_k_pnevmaticheskomu_oruzhiyu/
+RewriteRule ^catalog/Patronyotechestvennye$ /catalog/patrony_k_pnevmaticheskomu_oruzhiyu/? [L,R=301]
+
+# 301 --- /catalog/Patronykgladkostvolnomuoruzhiyu => /catalog/patrony_k_gladkostvolnomu_oruzhiyu/
+RewriteRule ^catalog/Patronykgladkostvolnomuoruzhiyu$ /catalog/patrony_k_gladkostvolnomu_oruzhiyu/? [L,R=301]
+
+# 301 --- /catalog/Patronyknareznomuoruzhiyu => /catalog/patrony_k_nareznomu_oruzhiyu_1/
+RewriteRule ^catalog/Patronyknareznomuoruzhiyu$ /catalog/patrony_k_nareznomu_oruzhiyu_1/? [L,R=301]
+
+# 301 --- /catalog/poroha--zhevelo--kapsyulya => /catalog/porokha_zhevelo_kapsyulya/
+RewriteRule ^catalog/poroha\-\-zhevelo\-\-kapsyulya$ /catalog/porokha_zhevelo_kapsyulya/? [L,R=301]
+
+# 301 --- /catalog/Patronysvetozvukovye => /catalog/patrony_svetozvukovye/
+RewriteRule ^catalog/Patronysvetozvukovye$ /catalog/patrony_svetozvukovye/? [L,R=301]
+
+# 301 --- /catalog/Patronyktravmaticheskomuoruzhiyu => /catalog/patrony_k_travmaticheskomu_oruzhiyu/
+RewriteRule ^catalog/Patronyktravmaticheskomuoruzhiyu$ /catalog/patrony_k_travmaticheskomu_oruzhiyu/? [L,R=301]
+
+# 301 --- /catalog/pricely => /catalog/pritsely/
+RewriteRule ^catalog/pricely$ /catalog/pritsely/? [L,R=301]
+
+# 301 --- /catalog/kronshteyny-dlya-pricela => /catalog/kronshteyny_dlya_pritsela/
+RewriteRule ^catalog/kronshteyny\-dlya\-pricela$ /catalog/kronshteyny_dlya_pritsela/? [L,R=301]
+
+# 301 --- /catalog/kolca-dlya-pricela => /catalog/koltsa_dlya_pritsela/
+RewriteRule ^catalog/kolca\-dlya\-pricela$ /catalog/koltsa_dlya_pritsela/? [L,R=301]
+
+# 301 --- /catalog/krepleniya-dlya-pricela => /catalog/krepleniya_dlya_pritsela/
+RewriteRule ^catalog/krepleniya\-dlya\-pricela$ /catalog/krepleniya_dlya_pritsela/? [L,R=301]
+
+# 301 --- /catalog/pricelnye-planki => /catalog/pritselnye_planki/
+RewriteRule ^catalog/pricelnye\-planki$ /catalog/pritselnye_planki/? [L,R=301]
+
+# 301 --- /catalog/pricely-opticheskie => /catalog/pritsely_opticheskie/
+RewriteRule ^catalog/pricely\-opticheskie$ /catalog/pritsely_opticheskie/? [L,R=301]
+
+# 301 --- /catalog/pricely-kollimatornye => /catalog/pritsely_kollimatornye/
+RewriteRule ^catalog/pricely\-kollimatornye$ /catalog/pritsely_kollimatornye/? [L,R=301]
+
+# 301 --- /catalog/rogatkii => /catalog/rogatki/
+RewriteRule ^catalog/rogatkii$ /catalog/rogatki/? [L,R=301]
+
+# 301 --- /catalog/rogatkii => /catalog/rogatki_1/
+RewriteRule ^catalog/rogatkii$ /catalog/rogatki_1/? [L,R=301]
+
+# 301 --- /catalog/shariki--aksessuary => /catalog/shariki_aksessuary/
+RewriteRule ^catalog/shariki\-\-aksessuary$ /catalog/shariki_aksessuary/? [L,R=301]
+
+# 301 --- /catalog/fonari-takticheskie => /catalog/fonari_takticheskie/
+RewriteRule ^catalog/fonari\-takticheskie$ /catalog/fonari_takticheskie/? [L,R=301]
+
+# 301 --- /catalog/oruzhie-signalnoe => /catalog/oruzhie_signalnoe/
+RewriteRule ^catalog/oruzhie\-signalnoe$ /catalog/oruzhie_signalnoe/? [L,R=301]
+
+# 301 --- /catalog/pistolety--revolvery--raketnicy => /catalog/pistolety_revolvery_raketnitsy/
+RewriteRule ^catalog/pistolety\-\-revolvery\-\-raketnicy$ /catalog/pistolety_revolvery_raketnitsy/? [L,R=301]
+
+# 301 --- /catalog/Signalohotnika => /catalog/signal_okhotnika/
+RewriteRule ^catalog/Signalohotnika$ /catalog/signal_okhotnika/? [L,R=301]
+
+# 301 --- /catalog/oruzhie-sluzhebnoe => /catalog/oruzhie_sluzhebnoe/
+RewriteRule ^catalog/oruzhie\-sluzhebnoe$ /catalog/oruzhie_sluzhebnoe/? [L,R=301]
+
+# 301 --- /catalog/ruzhya--pistolety-revolvery => /catalog/ruzhya_pistolety_revolvery/
+RewriteRule ^catalog/ruzhya\-\-pistolety\-revolvery$ /catalog/ruzhya_pistolety_revolvery/? [L,R=301]
+
+# 301 --- /catalog/patrony-k-sluzhebnomu-oruzhiyu => /catalog/patrony_k_sluzhebnomu_oruzhiyu/
+RewriteRule ^catalog/patrony\-k\-sluzhebnomu\-oruzhiyu$ /catalog/patrony_k_sluzhebnomu_oruzhiyu/? [L,R=301]
+
+# 301 --- /catalog/patrony-k-nareznomu-sluzhebnomu-oruzhiyu => /catalog/patrony_k_nareznomu_sluzhebnomu_oruzhiyu/
+RewriteRule ^catalog/patrony\-k\-nareznomu\-sluzhebnomu\-oruzhiyu$ /catalog/patrony_k_nareznomu_sluzhebnomu_oruzhiyu/? [L,R=301]
+
+# 301 --- /catalog/patrony-k-travmaticheskomu-sluzhebnomu-oruzhiyu => /catalog/patrony_k_travmaticheskomu_sluzhebnomu_oruzhiyu/
+RewriteRule ^catalog/patrony\-k\-travmaticheskomu\-sluzhebnomu\-oruzhiyu$ /catalog/patrony_k_travmaticheskomu_sluzhebnomu_oruzhiyu/? [L,R=301]
+
+# 301 --- /catalog/snaryazhenie-dlya-nosheniya-oruzhiya => /catalog/snaryazhenie_dlya_nosheniya_oruzhiya/
+RewriteRule ^catalog/snaryazhenie\-dlya\-nosheniya\-oruzhiya$ /catalog/snaryazhenie_dlya_nosheniya_oruzhiya/? [L,R=301]
+
+# 301 --- /catalog/shnury-pistoletnye => /catalog/shnury_pistoletnye/
+RewriteRule ^catalog/shnury\-pistoletnye$ /catalog/shnury_pistoletnye/? [L,R=301]
+
+# 301 --- /catalog/keysy-oruzheynye => /catalog/keysy_oruzheynye/
+RewriteRule ^catalog/keysy\-oruzheynye$ /catalog/keysy_oruzheynye/? [L,R=301]
+
+# 301 --- /catalog/kobury => /catalog/kobury/
+RewriteRule ^catalog/kobury$ /catalog/kobury/? [L,R=301]
+
+# 301 --- /catalog/chehly-i-keysy-oruzheynye => /catalog/chekhly_i_keysy_oruzheynye/
+RewriteRule ^catalog/chehly\-i\-keysy\-oruzheynye$ /catalog/chekhly_i_keysy_oruzheynye/? [L,R=301]
+
+# 301 --- /catalog/tubusy--futlyary => /catalog/tubusy_futlyary/
+RewriteRule ^catalog/tubusy\-\-futlyary$ /catalog/tubusy_futlyary/? [L,R=301]
+
+# 301 --- /catalog/remni-pogonnye => /catalog/remni_pogonnye/
+RewriteRule ^catalog/remni\-pogonnye$ /catalog/remni_pogonnye/? [L,R=301]
+
+# 301 --- /catalog/raznoe => /catalog/razgruzochnye_zhilety/
+RewriteRule ^catalog/raznoe$ /catalog/razgruzochnye_zhilety/? [L,R=301]
+
+# 301 --- /catalog/oruzhie-sportivnoe => /catalog/oruzhie_sportivnoe/
+RewriteRule ^catalog/oruzhie\-sportivnoe$ /catalog/oruzhie_sportivnoe/? [L,R=301]
+
+# 301 --- /catalog/vintovki--pistolety-pnevmaticheskie => /catalog/vintovki_pistolety_pnevmaticheskie/
+RewriteRule ^catalog/vintovki\-\-pistolety\-pnevmaticheskie$ /catalog/vintovki_pistolety_pnevmaticheskie/? [L,R=301]
+
+# 301 --- /catalog/pistolety--revolvery-pnevmaticheskie => /catalog/pistolety_revolvery_pnevmaticheskie/
+RewriteRule ^catalog/pistolety\-\-revolvery\-pnevmaticheskie$ /catalog/pistolety_revolvery_pnevmaticheskie/? [L,R=301]
+
+# 301 --- /catalog/boepripasy-k-sportivnomu-oruzhiyu => /catalog/boepripasy_k_sportivnomu_oruzhiyu/
+RewriteRule ^catalog/boepripasy\-k\-sportivnomu\-oruzhiyu$ /catalog/boepripasy_k_sportivnomu_oruzhiyu/? [L,R=301]
+
+# 301 --- /catalog/ballonchiki-so2 => /catalog/ballonchiki_so2/
+RewriteRule ^catalog/ballonchiki\-so2$ /catalog/ballonchiki_so2/? [L,R=301]
+
+# 301 --- /catalog/pulki => /catalog/pulki/
+RewriteRule ^catalog/pulki$ /catalog/pulki/? [L,R=301]
+
+# 301 --- /catalog/shariki => /catalog/shariki/
+RewriteRule ^catalog/shariki$ /catalog/shariki/? [L,R=301]
+
+# 301 --- /catalog/elektroshokovye-ustroystva => /catalog/elektroshokovye_ustroystva/
+RewriteRule ^catalog/elektroshokovye\-ustroystva$ /catalog/elektroshokovye_ustroystva/? [L,R=301]
+
+# 301 --- /catalog/elektroshokery-i-iskrovye-razryadniki => /catalog/elektroshokery_i_iskrovye_razryadniki/
+RewriteRule ^catalog/elektroshokery\-i\-iskrovye\-razryadniki$ /catalog/elektroshokery_i_iskrovye_razryadniki/? [L,R=301]
+
+# 301 --- /catalog/naruchniki => /catalog/naruchniki/
+RewriteRule ^catalog/naruchniki$ /catalog/naruchniki/? [L,R=301]
+
+# 301 --- /catalog/palki-rezinovye => /catalog/palki_rezinovye/
+RewriteRule ^catalog/palki\-rezinovye$ /catalog/palki_rezinovye/? [L,R=301]
+
+# 301 --- /catalog/bronezhilety => /catalog/bronezhilety/
+RewriteRule ^catalog/bronezhilety$ /catalog/bronezhilety/? [L,R=301]
+
+# 301 --- /catalog/kapkany--zhivolovushki => /catalog/kapkany_zhivolovushki/
+RewriteRule ^catalog/kapkany\-\-zhivolovushki$ /catalog/kapkany_zhivolovushki/? [L,R=301]
+
+# 301 --- /catalog/lyzhi-promyslovye-i-aksessuary => /catalog/lyzhi_promyslovye_i_aksessuary/
+RewriteRule ^catalog/lyzhi\-promyslovye\-i\-aksessuary$ /catalog/lyzhi_promyslovye_i_aksessuary/? [L,R=301]
+
+# 301 --- /catalog/manki => /catalog/manki/
+RewriteRule ^catalog/manki$ /catalog/manki/? [L,R=301]
+
+# 301 --- /catalog/maskirovka => /catalog/maskirovka/
+RewriteRule ^catalog/maskirovka$ /catalog/maskirovka/? [L,R=301]
+
+# 301 --- /catalog/zasidki-maskirovochnye => /catalog/zasidki_maskirovochnye/
+RewriteRule ^catalog/zasidki\-maskirovochnye$ /catalog/zasidki_maskirovochnye/? [L,R=301]
+
+# 301 --- /catalog/kostyumy-maskirovochnye => /catalog/kostyumy_maskirovochnye/
+RewriteRule ^catalog/kostyumy\-maskirovochnye$ /catalog/kostyumy_maskirovochnye/? [L,R=301]
+
+# 301 --- /catalog/seti-maskirovochnye => /catalog/seti_maskirovochnye/
+RewriteRule ^catalog/seti\-maskirovochnye$ /catalog/seti_maskirovochnye/? [L,R=301]
+
+# 301 --- /catalog/nakidki-maskirovochnye => /catalog/nakidki_maskirovochnye/
+RewriteRule ^catalog/nakidki\-maskirovochnye$ /catalog/nakidki_maskirovochnye/? [L,R=301]
+
+# 301 --- /catalog/Ohotnichisignalizacii => /catalog/okhotnichi_signalizatsii/
+RewriteRule ^catalog/Ohotnichisignalizacii$ /catalog/okhotnichi_signalizatsii/? [L,R=301]
+
+# 301 --- /catalog/patrontashi => /catalog/patrontashi/
+RewriteRule ^catalog/patrontashi$ /catalog/patrontashi/? [L,R=301]
+
+# 301 --- /catalog/sumki-ohotnichi => /catalog/sumki_okhotnichi/
+RewriteRule ^catalog/sumki\-ohotnichi$ /catalog/sumki_okhotnichi/? [L,R=301]
+
+# 301 --- /catalog/yagdtashi-i-podsumki => /catalog/yagdtashi_i_podsumki/
+RewriteRule ^catalog/yagdtashi\-i\-podsumki$ /catalog/yagdtashi_i_podsumki/? [L,R=301]
+
+# 301 --- /catalog/yaschiki-dlya-ohotnikov => /catalog/yashchiki_dlya_okhotnikov/
+RewriteRule ^catalog/yaschiki\-dlya\-ohotnikov$ /catalog/yashchiki_dlya_okhotnikov/? [L,R=301]
+
+# 301 --- /catalog/gilzy--vesy--pyzhi--prokladki--drob--puli-i-dr => /catalog/gilzy_vesy_pyzhi_prokladki_drob_puli_i_dr/
+RewriteRule ^catalog/gilzy\-\-vesy\-\-pyzhi\-\-prokladki\-\-drob\-\-puli\-i\-dr$ /catalog/gilzy_vesy_pyzhi_prokladki_drob_puli_i_dr/? [L,R=301]
+
+# 301 --- /catalog/podsadnye-chuchela => /catalog/podsadnye_chuchela/
+RewriteRule ^catalog/podsadnye\-chuchela$ /catalog/podsadnye_chuchela/? [L,R=301]
+
+# 301 --- /catalog/chuchela-plastikovye--rezinovye => /catalog/chuchela_plastikovye_rezinovye/
+RewriteRule ^catalog/chuchela\-plastikovye\-\-rezinovye$ /catalog/chuchela_plastikovye_rezinovye/? [L,R=301]
+
+# 301 --- /catalog/flyugery--profili--vozdushnye-zmei => /catalog/flyugery_profili_vozdushnye_zmei/
+RewriteRule ^catalog/flyugery\-\-profili\-\-vozdushnye\-zmei$ /catalog/flyugery_profili_vozdushnye_zmei/? [L,R=301]
+
+# 301 --- /catalog/elektrogirlyandy => /catalog/elektrogirlyandy/
+RewriteRule ^catalog/elektrogirlyandy$ /catalog/elektrogirlyandy/? [L,R=301]
+
+# 301 --- /catalog/elektrogirlyandy-vitrinnye => /catalog/elektrogirlyandy_vitrinnye/
+RewriteRule ^catalog/elektrogirlyandy\-vitrinnye$ /catalog/elektrogirlyandy_vitrinnye/? [L,R=301]
+
+# 301 --- /catalog/elektrogirlyandy-elochnye => /catalog/elektrogirlyandy_elochnye/
+RewriteRule ^catalog/elektrogirlyandy\-elochnye$ /catalog/elektrogirlyandy_elochnye/? [L,R=301]
+
+# 301 --- /catalog/novogodnie-igrushki => /catalog/novogodnie_igrushki/
+RewriteRule ^catalog/novogodnie\-igrushki$ /catalog/novogodnie_igrushki/? [L,R=301]
+
+# 301 --- /catalog/shary--nabory--girlyandy--serpantin--dozhd => /catalog/shary_nabory_girlyandy_serpantin_dozhd/
+RewriteRule ^catalog/shary\-\-nabory\-\-girlyandy\-\-serpantin\-\-dozhd$ /catalog/shary_nabory_girlyandy_serpantin_dozhd/? [L,R=301]
+
+# 301 --- /catalog/elochnye-ukrasheniya-prochie => /catalog/elochnye_ukrasheniya_prochie/
+RewriteRule ^catalog/elochnye\-ukrasheniya\-prochie$ /catalog/elochnye_ukrasheniya_prochie/? [L,R=301]
+
+# 301 --- /catalog/eli => /catalog/eli/
+RewriteRule ^catalog/eli$ /catalog/eli/? [L,R=301]
+
+# 301 --- /catalog/supersalyuty--batarei-salyutov => /catalog/supersalyuty_batarei_salyutov/
+RewriteRule ^catalog/supersalyuty\-\-batarei\-salyutov$ /catalog/supersalyuty_batarei_salyutov/? [L,R=301]
+
+# 301 --- /catalog/bengalskie-svechi => /catalog/bengalskie_svechi/
+RewriteRule ^catalog/bengalskie\-svechi$ /catalog/bengalskie_svechi/? [L,R=301]
+
+# 301 --- /catalog/letayuschie-feyerverki => /catalog/letayushchie_feyerverki/
+RewriteRule ^catalog/letayuschie\-feyerverki$ /catalog/letayushchie_feyerverki/? [L,R=301]
+
+# 301 --- /catalog/nazemnye-feyerverki => /catalog/nazemnye_feyerverki/
+RewriteRule ^catalog/nazemnye\-feyerverki$ /catalog/nazemnye_feyerverki/? [L,R=301]
+
+# 301 --- /catalog/petardy => /catalog/petardy/
+RewriteRule ^catalog/petardy$ /catalog/petardy/? [L,R=301]
+
+# 301 --- /catalog/rakety => /catalog/rakety/
+RewriteRule ^catalog/rakety$ /catalog/rakety/? [L,R=301]
+
+# 301 --- /catalog/rimskie-svechi => /catalog/rimskie_svechi/
+RewriteRule ^catalog/rimskie\-svechi$ /catalog/rimskie_svechi/? [L,R=301]
+
+# 301 --- /catalog/salyuty-odinochnye--kombinirovannye => /catalog/salyuty_odinochnye_kombinirovannye/
+RewriteRule ^catalog/salyuty\-odinochnye\-\-kombinirovannye$ /catalog/salyuty_odinochnye_kombinirovannye/? [L,R=301]
+
+# 301 --- /catalog/solnca => /catalog/solntsa/
+RewriteRule ^catalog/solnca$ /catalog/solntsa/? [L,R=301]
+
+# 301 --- /catalog/feyerverki-dlya-zalov => /catalog/feyerverki_dlya_zalov/
+RewriteRule ^catalog/feyerverki\-dlya\-zalov$ /catalog/feyerverki_dlya_zalov/? [L,R=301]
+
+# 301 --- /catalog/feyerverki-malodymnye--dnevnye => /catalog/feyerverki_malodymnye_dnevnye/
+RewriteRule ^catalog/feyerverki\-malodymnye\-\-dnevnye$ /catalog/feyerverki_malodymnye_dnevnye/? [L,R=301]
+
+# 301 --- /catalog/festivalnye-shary => /catalog/festivalnye_shary/
+RewriteRule ^catalog/festivalnye\-shary$ /catalog/festivalnye_shary/? [L,R=301]
+
+# 301 --- /catalog/fontany => /catalog/fontany/
+RewriteRule ^catalog/fontany$ /catalog/fontany/? [L,R=301]
+
+# 301 --- /catalog/hlopushki => /catalog/khlopushki/
+RewriteRule ^catalog/hlopushki$ /catalog/khlopushki/? [L,R=301]
+
+# 301 --- /catalog/bary-globusy-zoffoli => /catalog/bary_globusy_zoffoli/
+RewriteRule ^catalog/bary\-globusy\-zoffoli$ /catalog/bary_globusy_zoffoli/? [L,R=301]
+
+# 301 --- /catalog/napolnye => /catalog/napolnye/
+RewriteRule ^catalog/napolnye$ /catalog/napolnye/? [L,R=301]
+
+# 301 --- /catalog/nastolnye => /catalog/nastolnye/
+RewriteRule ^catalog/nastolnye$ /catalog/nastolnye/? [L,R=301]
+
+# 301 --- /catalog/kartiny--skulptury => /catalog/kartiny_skulptury/
+RewriteRule ^catalog/kartiny\-\-skulptury$ /catalog/kartiny_skulptury/? [L,R=301]
+
+# 301 --- /catalog/kompozicii => /catalog/kompozitsii/
+RewriteRule ^catalog/kompozicii$ /catalog/kompozitsii/? [L,R=301]
+
+# 301 --- /catalog/knigi1 => /catalog/knigi/
+RewriteRule ^catalog/knigi1$ /catalog/knigi/? [L,R=301]
+
+# 301 --- /catalog/nozhi--shashki--sabli => /catalog/nozhi_shashki_sabli/
+RewriteRule ^catalog/nozhi\-\-shashki\-\-sabli$ /catalog/nozhi_shashki_sabli/? [L,R=301]
+
+# 301 --- /catalog/dekorativnoe-oruzhie => /catalog/dekorativnoe_oruzhie/
+RewriteRule ^catalog/dekorativnoe\-oruzhie$ /catalog/dekorativnoe_oruzhie/? [L,R=301]
+
+# 301 --- /catalog/katany--vakizachi--tanto => /catalog/katany_vakizachi_tanto/
+RewriteRule ^catalog/katany\-\-vakizachi\-\-tanto$ /catalog/katany_vakizachi_tanto/? [L,R=301]
+
+# 301 --- /catalog/ruzhya--pistolety-revolvery => /catalog/ruzhya_pistolety_revolvery_1/
+RewriteRule ^catalog/ruzhya\-\-pistolety\-revolvery$ /catalog/ruzhya_pistolety_revolvery_1/? [L,R=301]
+
+# 301 --- /catalog/gerby => /catalog/gerby/
+RewriteRule ^catalog/gerby$ /catalog/gerby/? [L,R=301]
+
+# 301 --- /catalog/mechi--sabli--nozhi => /catalog/mechi_sabli_nozhi/
+RewriteRule ^catalog/mechi\-\-sabli\-\-nozhi$ /catalog/mechi_sabli_nozhi/? [L,R=301]
+
+# 301 --- /catalog/krepleniya--podstavki => /catalog/krepleniya_podstavki/
+RewriteRule ^catalog/krepleniya\-\-podstavki$ /catalog/krepleniya_podstavki/? [L,R=301]
+
+# 301 --- /catalog/meteopribory => /catalog/meteopribory/
+RewriteRule ^catalog/meteopribory$ /catalog/meteopribory/? [L,R=301]
+
+# 301 --- /catalog/barometry => /catalog/barometry/
+RewriteRule ^catalog/barometry$ /catalog/barometry/? [L,R=301]
+
+# 301 --- /catalog/meteostancii => /catalog/meteostantsii/
+RewriteRule ^catalog/meteostancii$ /catalog/meteostantsii/? [L,R=301]
+
+# 301 --- /catalog/termometry => /catalog/termometry/
+RewriteRule ^catalog/termometry$ /catalog/termometry/? [L,R=301]
+
+# 301 --- /catalog/chasy-meteostancii => /catalog/chasy_meteostantsii/
+RewriteRule ^catalog/chasy\-meteostancii$ /catalog/chasy_meteostantsii/? [L,R=301]
+
+# 301 --- /catalog/pogodniki => /catalog/pogodniki/
+RewriteRule ^catalog/pogodniki$ /catalog/pogodniki/? [L,R=301]
+
+# 301 --- /catalog/nastolnye-i-drugie-igry => /catalog/nastolnye_i_drugie_igry/
+RewriteRule ^catalog/nastolnye\-i\-drugie\-igry$ /catalog/nastolnye_i_drugie_igry/? [L,R=301]
+
+# 301 --- /catalog/kartochnye-igry => /catalog/kartochnye_igry/
+RewriteRule ^catalog/kartochnye\-igry$ /catalog/kartochnye_igry/? [L,R=301]
+
+# 301 --- /catalog/shahmaty => /catalog/shakhmaty/
+RewriteRule ^catalog/shahmaty$ /catalog/shakhmaty/? [L,R=301]
+
+# 301 --- /catalog/nardy => /catalog/nardy/
+RewriteRule ^catalog/nardy$ /catalog/nardy/? [L,R=301]
+
+# 301 --- /catalog/nabory-dlya-golfa => /catalog/nabory_dlya_golfa/
+RewriteRule ^catalog/nabory\-dlya\-golfa$ /catalog/nabory_dlya_golfa/? [L,R=301]
+
+# 301 --- /catalog/drugie-igry => /catalog/drugie_igry/
+RewriteRule ^catalog/drugie\-igry$ /catalog/drugie_igry/? [L,R=301]
+
+# 301 --- /catalog/posuda-podarochnaya => /catalog/posuda_podarochnaya/
+RewriteRule ^catalog/posuda\-podarochnaya$ /catalog/posuda_podarochnaya/? [L,R=301]
+
+# 301 --- /catalog/posuda-premium => /catalog/posuda_premium/
+RewriteRule ^catalog/posuda\-premium$ /catalog/posuda_premium/? [L,R=301]
+
+# 301 --- /catalog/nabory-posudy => /catalog/nabory_posudy/
+RewriteRule ^catalog/nabory\-posudy$ /catalog/nabory_posudy/? [L,R=301]
+
+# 301 --- /catalog/kruzhki--stakany--ryumki => /catalog/kruzhki_stakany_ryumki/
+RewriteRule ^catalog/kruzhki\-\-stakany\-\-ryumki$ /catalog/kruzhki_stakany_ryumki/? [L,R=301]
+
+# 301 --- /catalog/tarelki1 => /catalog/tarelki/
+RewriteRule ^catalog/tarelki1$ /catalog/tarelki/? [L,R=301]
+
+# 301 --- /catalog/shtofy--grafiny => /catalog/shtofy_grafiny/
+RewriteRule ^catalog/shtofy\-\-grafiny$ /catalog/shtofy_grafiny/? [L,R=301]
+
+# 301 --- /catalog/nabory-dorozhnye => /catalog/nabory_dorozhnye/
+RewriteRule ^catalog/nabory\-dorozhnye$ /catalog/nabory_dorozhnye/? [L,R=301]
+
+# 301 --- /catalog/raznye-suveniry-i-podarki => /catalog/raznye_suveniry_i_podarki/
+RewriteRule ^catalog/raznye\-suveniry\-i\-podarki$ /catalog/raznye_suveniry_i_podarki/? [L,R=301]
+
+# 301 --- /catalog/portsigary-i-pepelnicy => /catalog/portsigary_i_pepelnitsy/
+RewriteRule ^catalog/portsigary\-i\-pepelnicy$ /catalog/portsigary_i_pepelnitsy/? [L,R=301]
+
+# 301 --- /catalog/brelki => /catalog/brelki/
+RewriteRule ^catalog/brelki$ /catalog/brelki/? [L,R=301]
+
+# 301 --- /catalog/prinimateli-resheniy--antistressy => /catalog/prinimateli_resheniy_antistressy/
+RewriteRule ^catalog/prinimateli\-resheniy\-\-antistressy$ /catalog/prinimateli_resheniy_antistressy/? [L,R=301]
+
+# 301 --- /catalog/fotoramki => /catalog/fotoramki/
+RewriteRule ^catalog/fotoramki$ /catalog/fotoramki/? [L,R=301]
+
+# 301 --- /catalog/turisticheskie-suveniry => /catalog/turisticheskie_suveniry/
+RewriteRule ^catalog/turisticheskie\-suveniry$ /catalog/turisticheskie_suveniry/? [L,R=301]
+
+# 301 --- /catalog/testr => /catalog/testr/
+RewriteRule ^catalog/testr$ /catalog/testr/? [L,R=301]
+
+# 301 --- /catalog/video-produkciya => /catalog/video_produktsiya/
+RewriteRule ^catalog/video\-produkciya$ /catalog/video_produktsiya/? [L,R=301]
+
+# 301 --- /catalog/dvd => /catalog/dvd/
+RewriteRule ^catalog/dvd$ /catalog/dvd/? [L,R=301]
+
+# 301 --- /catalog/elektrogeneratory => /catalog/elektrogeneratory/
+RewriteRule ^catalog/elektrogeneratory$ /catalog/elektrogeneratory/? [L,R=301]
+
+# 301 --- /catalog/generatory-benzinovye => /catalog/generatory_benzinovye/
+RewriteRule ^catalog/generatory\-benzinovye$ /catalog/generatory_benzinovye/? [L,R=301]
+
+# 301 --- /catalog/-vesy-i-bezmeny => /catalog/vesy_i_bezmeny/
+RewriteRule ^catalog/\-vesy\-i\-bezmeny$ /catalog/vesy_i_bezmeny/? [L,R=301]
+
+# 301 --- /catalog/lupy => /catalog/lupy/
+RewriteRule ^catalog/lupy$ /catalog/lupy/? [L,R=301]
+
+# 301 --- /catalog/pechatnaya-produkciya => /catalog/pechatnaya_produktsiya/
+RewriteRule ^catalog/pechatnaya\-produkciya$ /catalog/pechatnaya_produktsiya/? [L,R=301]
+
+# 301 --- /catalog/knigi1 => /catalog/knigi_1/
+RewriteRule ^catalog/knigi1$ /catalog/knigi_1/? [L,R=301]
+
+# 301 --- /catalog/atlasy--karty => /catalog/atlasy_karty/
+RewriteRule ^catalog/atlasy\-\-karty$ /catalog/atlasy_karty/? [L,R=301]
+
+# 301 --- /catalog/periodicheskie-izdaniya => /catalog/periodicheskie_izdaniya/
+RewriteRule ^catalog/periodicheskie\-izdaniya$ /catalog/periodicheskie_izdaniya/? [L,R=301]
+
+# 301 --- /catalog/personalnye-sireny => /catalog/personalnye_sireny/
+RewriteRule ^catalog/personalnye\-sireny$ /catalog/personalnye_sireny/? [L,R=301]
+
+# 301 --- /catalog/taksidermiya => /catalog/taksidermiya/
+RewriteRule ^catalog/taksidermiya$ /catalog/taksidermiya/? [L,R=301]
+
+# 301 --- /catalog/aksessuary => /catalog/aksessuary_1/
+RewriteRule ^catalog/aksessuary$ /catalog/aksessuary_1/? [L,R=301]
+
+# 301 --- /catalog/veydersy-i-botinki-k-nim => /catalog/veydersy_i_botinki_k_nim/
+RewriteRule ^catalog/veydersy\-i\-botinki\-k\-nim$ /catalog/veydersy_i_botinki_k_nim/? [L,R=301]
+
+# 301 --- /catalog/botinki-dlya-veydersov => /catalog/botinki_dlya_veydersov/
+RewriteRule ^catalog/botinki\-dlya\-veydersov$ /catalog/botinki_dlya_veydersov/? [L,R=301]
+
+# 301 --- /catalog/veydersy-i-polukombinezony-rybackie => /catalog/veydersy_i_polukombinezony_rybatskie/
+RewriteRule ^catalog/veydersy\-i\-polukombinezony\-rybackie$ /catalog/veydersy_i_polukombinezony_rybatskie/? [L,R=301]
+
+# 301 --- /catalog/blesny => /catalog/blesny/
+RewriteRule ^catalog/blesny$ /catalog/blesny/? [L,R=301]
+
+# 301 --- /catalog/blesny-vraschayuschiesya => /catalog/blesny_vrashchayushchiesya/
+RewriteRule ^catalog/blesny\-vraschayuschiesya$ /catalog/blesny_vrashchayushchiesya/? [L,R=301]
+
+# 301 --- /catalog/blesny-koleblyuschiesya => /catalog/blesny_koleblyushchiesya/
+RewriteRule ^catalog/blesny\-koleblyuschiesya$ /catalog/blesny_koleblyushchiesya/? [L,R=301]
+
+# 301 --- /catalog/prochie1 => /catalog/prochie/
+RewriteRule ^catalog/prochie1$ /catalog/prochie/? [L,R=301]
+
+# 301 --- /catalog/vertlyugi--zastezhki--kolca--karabiny => /catalog/vertlyugi_zastezhki_koltsa_karabiny/
+RewriteRule ^catalog/vertlyugi\-\-zastezhki\-\-kolca\-\-karabiny$ /catalog/vertlyugi_zastezhki_koltsa_karabiny/? [L,R=301]
+
+# 301 --- /catalog/vertlyugi--zastezhki--kolca => /catalog/vertlyugi_zastezhki_koltsa/
+RewriteRule ^catalog/vertlyugi\-\-zastezhki\-\-kolca$ /catalog/vertlyugi_zastezhki_koltsa/? [L,R=301]
+
+# 301 --- /catalog/karabiny-s-vertlyugom => /catalog/karabiny_s_vertlyugom/
+RewriteRule ^catalog/karabiny\-s\-vertlyugom$ /catalog/karabiny_s_vertlyugom/? [L,R=301]
+
+# 301 --- /catalog/prinadlezhnosti-dlya-vyazaniya-muh => /catalog/prinadlezhnosti_dlya_vyazaniya_mukh/
+RewriteRule ^catalog/prinadlezhnosti\-dlya\-vyazaniya\-muh$ /catalog/prinadlezhnosti_dlya_vyazaniya_mukh/? [L,R=301]
+
+# 301 --- /catalog/materialy => /catalog/materialy/
+RewriteRule ^catalog/materialy$ /catalog/materialy/? [L,R=301]
+
+# 301 --- /catalog/instrumenty1 => /catalog/instrumenty/
+RewriteRule ^catalog/instrumenty1$ /catalog/instrumenty/? [L,R=301]
+
+# 301 --- /catalog/voblery-poppery => /catalog/voblery_poppery/
+RewriteRule ^catalog/voblery\-poppery$ /catalog/voblery_poppery/? [L,R=301]
+
+# 301 --- /catalog/dzhergbeyty-ryvkovye-primanki => /catalog/dzhergbeyty_ryvkovye_primanki/
+RewriteRule ^catalog/dzhergbeyty\-ryvkovye\-primanki$ /catalog/dzhergbeyty_ryvkovye_primanki/? [L,R=301]
+
+# 301 --- /catalog/minnou--krenki--shedy => /catalog/minnou_krenki_shedy/
+RewriteRule ^catalog/minnou\-\-krenki\-\-shedy$ /catalog/minnou_krenki_shedy/? [L,R=301]
+
+# 301 --- /catalog/poverhnostnye-primanki => /catalog/poverkhnostnye_primanki/
+RewriteRule ^catalog/poverhnostnye\-primanki$ /catalog/poverkhnostnye_primanki/? [L,R=301]
+
+# 301 --- /catalog/ratliny => /catalog/ratliny/
+RewriteRule ^catalog/ratliny$ /catalog/ratliny/? [L,R=301]
+
+# 301 --- /catalog/gruzy--dzhig-golovki => /catalog/gruzy_dzhig_golovki/
+RewriteRule ^catalog/gruzy\-\-dzhig\-golovki$ /catalog/gruzy_dzhig_golovki/? [L,R=301]
+
+# 301 --- /catalog/gruzy--nabory-gruzov => /catalog/gruzy_nabory_gruzov/
+RewriteRule ^catalog/gruzy\-\-nabory\-gruzov$ /catalog/gruzy_nabory_gruzov/? [L,R=301]
+
+# 301 --- /catalog/dzhig-golovki => /catalog/dzhig_golovki/
+RewriteRule ^catalog/dzhig\-golovki$ /catalog/dzhig_golovki/? [L,R=301]
+
+# 301 --- /catalog/aksessuary-dlya-karpovoy-lovli => /catalog/aksessuary_dlya_karpovoy_lovli/
+RewriteRule ^catalog/aksessuary\-dlya\-karpovoy\-lovli$ /catalog/aksessuary_dlya_karpovoy_lovli/? [L,R=301]
+
+# 301 --- /catalog/protivozakruchivateli => /catalog/protivozakruchivateli/
+RewriteRule ^catalog/protivozakruchivateli$ /catalog/protivozakruchivateli/? [L,R=301]
+
+# 301 --- /catalog/kormushki => /catalog/kormushki/
+RewriteRule ^catalog/kormushki$ /catalog/kormushki/? [L,R=301]
+
+# 301 --- /catalog/signalizatory-poklevki => /catalog/signalizatory_poklevki/
+RewriteRule ^catalog/signalizatory\-poklevki$ /catalog/signalizatory_poklevki/? [L,R=301]
+
+# 301 --- /catalog/prochie1 => /catalog/prochie_1/
+RewriteRule ^catalog/prochie1$ /catalog/prochie_1/? [L,R=301]
+
+# 301 --- /catalog/rybolovnye-katushki => /catalog/rybolovnye_katushki/
+RewriteRule ^catalog/rybolovnye\-katushki$ /catalog/rybolovnye_katushki/? [L,R=301]
+
+# 301 --- /catalog/rybolovnye-katushki-bezinercionnye => /catalog/rybolovnye_katushki_bezynertsionnye/
+RewriteRule ^catalog/rybolovnye\-katushki\-bezinercionnye$ /catalog/rybolovnye_katushki_bezynertsionnye/? [L,R=301]
+
+# 301 --- /catalog/rybolovnye-katushki-inercionnye--multiplikatornye => /catalog/rybolovnye_katushki_inertsionnye_multiplikatornye/
+RewriteRule ^catalog/rybolovnye\-katushki\-inercionnye\-\-multiplikatornye$ /catalog/rybolovnye_katushki_inertsionnye_multiplikatornye/? [L,R=301]
+
+# 301 --- /catalog/katushki-nahlystovye => /catalog/katushki_nakhlystovye/
+RewriteRule ^catalog/katushki\-nahlystovye$ /catalog/katushki_nakhlystovye/? [L,R=301]
+
+# 301 --- /catalog/kryuchki => /catalog/kryuchki/
+RewriteRule ^catalog/kryuchki$ /catalog/kryuchki/? [L,R=301]
+
+# 301 --- /catalog/troyniki--dvoyniki--offsetnye => /catalog/troyniki_dvoyniki_offsetnye/
+RewriteRule ^catalog/troyniki\-\-dvoyniki\-\-offsetnye$ /catalog/troyniki_dvoyniki_offsetnye/? [L,R=301]
+
+# 301 --- /catalog/kryuchki-prostye => /catalog/kryuchki_prostye/
+RewriteRule ^catalog/kryuchki\-prostye$ /catalog/kryuchki_prostye/? [L,R=301]
+
+# 301 --- /catalog/kryuchki-dlya-muh => /catalog/kryuchki_dlya_mukh/
+RewriteRule ^catalog/kryuchki\-dlya\-muh$ /catalog/kryuchki_dlya_mukh/? [L,R=301]
+
+# 301 --- /catalog/ledobury-i-motobury => /catalog/ledobury_i_motobury/
+RewriteRule ^catalog/ledobury\-i\-motobury$ /catalog/ledobury_i_motobury/? [L,R=301]
+
+# 301 --- /catalog/ledobury => /catalog/ledobury/
+RewriteRule ^catalog/ledobury$ /catalog/ledobury/? [L,R=301]
+
+# 301 --- /catalog/motobury--shneki => /catalog/motobury_shneki/
+RewriteRule ^catalog/motobury\-\-shneki$ /catalog/motobury_shneki/? [L,R=301]
+
+# 301 --- /catalog/nozhi--komplektuyuschie => /catalog/nozhi_komplektuyushchie/
+RewriteRule ^catalog/nozhi\-\-komplektuyuschie$ /catalog/nozhi_komplektuyushchie/? [L,R=301]
+
+# 301 --- /catalog/sanki-ledyanki-rybackie => /catalog/sanki_ledyanki_rybatskie/
+RewriteRule ^catalog/sanki\-ledyanki\-rybackie$ /catalog/sanki_ledyanki_rybatskie/? [L,R=301]
+
+# 301 --- /catalog/rybolovnye-leski--shnury => /catalog/rybolovnye_leski_shnury/
+RewriteRule ^catalog/rybolovnye\-leski\-\-shnury$ /catalog/rybolovnye_leski_shnury/? [L,R=301]
+
+# 301 --- /catalog/leski => /catalog/leski/
+RewriteRule ^catalog/leski$ /catalog/leski/? [L,R=301]
+
+# 301 --- /catalog/shnury => /catalog/shnury/
+RewriteRule ^catalog/shnury$ /catalog/shnury/? [L,R=301]
+
+# 301 --- /catalog/povodki => /catalog/povodki/
+RewriteRule ^catalog/povodki$ /catalog/povodki/? [L,R=301]
+
+# 301 --- /catalog/rezinki => /catalog/rezinki/
+RewriteRule ^catalog/rezinki$ /catalog/rezinki/? [L,R=301]
+
+# 301 --- /catalog/snaryazhenie-dlya-morskoy-rybalki => /catalog/snaryazhenie_dlya_morskoy_rybalki/
+RewriteRule ^catalog/snaryazhenie\-dlya\-morskoy\-rybalki$ /catalog/snaryazhenie_dlya_morskoy_rybalki/? [L,R=301]
+
+# 301 --- /catalog/kalmarnicy => /catalog/kalmarnitsy/
+RewriteRule ^catalog/kalmarnicy$ /catalog/kalmarnitsy/? [L,R=301]
+
+# 301 --- /catalog/pilkery => /catalog/pilkery/
+RewriteRule ^catalog/pilkery$ /catalog/pilkery/? [L,R=301]
+
+# 301 --- /catalog/osnastki-morskie => /catalog/osnastki_morskie/
+RewriteRule ^catalog/osnastki\-morskie$ /catalog/osnastki_morskie/? [L,R=301]
+
+# 301 --- /catalog/muhi => /catalog/mukhi/
+RewriteRule ^catalog/muhi$ /catalog/mukhi/? [L,R=301]
+
+# 301 --- /catalog/muhi-suhie => /catalog/mukhi_sukhie/
+RewriteRule ^catalog/muhi\-suhie$ /catalog/mukhi_sukhie/? [L,R=301]
+
+# 301 --- /catalog/muhi-mokrye => /catalog/mukhi_mokrye/
+RewriteRule ^catalog/muhi\-mokrye$ /catalog/mukhi_mokrye/? [L,R=301]
+
+# 301 --- /catalog/nimfy => /catalog/nimfy/
+RewriteRule ^catalog/nimfy$ /catalog/nimfy/? [L,R=301]
+
+# 301 --- /catalog/strimery => /catalog/strimery/
+RewriteRule ^catalog/strimery$ /catalog/strimery/? [L,R=301]
+
+# 301 --- /catalog/myshi--i-dr-imitatory-myagkie-primanki => /catalog/myshi_i_dr_imitatory_myagkie_primanki/
+RewriteRule ^catalog/myshi\-\-i\-dr\-imitatory\-myagkie\-primanki$ /catalog/myshi_i_dr_imitatory_myagkie_primanki/? [L,R=301]
+
+# 301 --- /catalog/myshi--burunduki--belki--prochie => /catalog/myshi_burunduki_belki_prochie/
+RewriteRule ^catalog/myshi\-\-burunduki\-\-belki\-\-prochie$ /catalog/myshi_burunduki_belki_prochie/? [L,R=301]
+
+# 301 --- /catalog/tvistery => /catalog/tvistery/
+RewriteRule ^catalog/tvistery$ /catalog/tvistery/? [L,R=301]
+
+# 301 --- /catalog/vibrohvosty => /catalog/vibrokhvosty/
+RewriteRule ^catalog/vibrohvosty$ /catalog/vibrokhvosty/? [L,R=301]
+
+# 301 --- /catalog/primanki-poverhnostnye--prochie => /catalog/primanki_poverkhnostnye_prochie/
+RewriteRule ^catalog/primanki\-poverhnostnye\-\-prochie$ /catalog/primanki_poverkhnostnye_prochie/? [L,R=301]
+
+# 301 --- /catalog/naturalnye-nasadki => /catalog/naturalnye_nasadki/
+RewriteRule ^catalog/naturalnye\-nasadki$ /catalog/naturalnye_nasadki/? [L,R=301]
+
+# 301 --- /catalog/snaryazhenie-dlya-nahlysta => /catalog/snaryazhenie_dlya_nakhlysta/
+RewriteRule ^catalog/snaryazhenie\-dlya\-nahlysta$ /catalog/snaryazhenie_dlya_nakhlysta/? [L,R=301]
+
+# 301 --- /catalog/shnury--beking => /catalog/shnury_beking/
+RewriteRule ^catalog/shnury\-\-beking$ /catalog/shnury_beking/? [L,R=301]
+
+# 301 --- /catalog/podleski => /catalog/podleski/
+RewriteRule ^catalog/podleski$ /catalog/podleski/? [L,R=301]
+
+# 301 --- /catalog/aksessuary-nahlystovye => /catalog/aksessuary_nakhlystovye/
+RewriteRule ^catalog/aksessuary\-nahlystovye$ /catalog/aksessuary_nakhlystovye/? [L,R=301]
+
+# 301 --- /catalog/gotovye-osnastki => /catalog/gotovye_osnastki/
+RewriteRule ^catalog/gotovye\-osnastki$ /catalog/gotovye_osnastki/? [L,R=301]
+
+# 301 --- /catalog/osnastki-donnye => /catalog/osnastki_donnye/
+RewriteRule ^catalog/osnastki\-donnye$ /catalog/osnastki_donnye/? [L,R=301]
+
+# 301 --- /catalog/osnastki-dlya-poplavochnoy-udochki => /catalog/osnastki_dlya_poplavochnoy_udochki/
+RewriteRule ^catalog/osnastki\-dlya\-poplavochnoy\-udochki$ /catalog/osnastki_dlya_poplavochnoy_udochki/? [L,R=301]
+
+# 301 --- /catalog/eholoty--komplektuyuschie => /catalog/ekholoty_komplektuyushchie/
+RewriteRule ^catalog/eholoty\-\-komplektuyuschie$ /catalog/ekholoty_komplektuyushchie/? [L,R=301]
+
+# 301 --- /catalog/poplavki--kembriki--svetlyachki => /catalog/poplavki_kembriki_svetlyachki/
+RewriteRule ^catalog/poplavki\-\-kembriki\-\-svetlyachki$ /catalog/poplavki_kembriki_svetlyachki/? [L,R=301]
+
+# 301 --- /catalog/poplavki-matchevye => /catalog/poplavki_matchevye/
+RewriteRule ^catalog/poplavki\-matchevye$ /catalog/poplavki_matchevye/? [L,R=301]
+
+# 301 --- /catalog/bombardy--sbirulino => /catalog/bombardy_sbirulino/
+RewriteRule ^catalog/bombardy\-\-sbirulino$ /catalog/bombardy_sbirulino/? [L,R=301]
+
+# 301 --- /catalog/kembriki => /catalog/kembriki/
+RewriteRule ^catalog/kembriki$ /catalog/kembriki/? [L,R=301]
+
+# 301 --- /catalog/poplavki => /catalog/poplavki/
+RewriteRule ^catalog/poplavki$ /catalog/poplavki/? [L,R=301]
+
+# 301 --- /catalog/svetlyachki => /catalog/svetlyachki/
+RewriteRule ^catalog/svetlyachki$ /catalog/svetlyachki/? [L,R=301]
+
+# 301 --- /catalog/prikorm--aromatizatory => /catalog/prikorm_aromatizatory/
+RewriteRule ^catalog/prikorm\-\-aromatizatory$ /catalog/prikorm_aromatizatory/? [L,R=301]
+
+# 301 --- /catalog/aromatizatory--prikormochnye-smesi => /catalog/aromatizatory_prikormochnye_smesi/
+RewriteRule ^catalog/aromatizatory\-\-prikormochnye\-smesi$ /catalog/aromatizatory_prikormochnye_smesi/? [L,R=301]
+
+# 301 --- /catalog/prikomochnye-smesi--pelec => /catalog/prikomochnye_smesi_pelets/
+RewriteRule ^catalog/prikomochnye\-smesi\-\-pelec$ /catalog/prikomochnye_smesi_pelets/? [L,R=301]
+
+# 301 --- /catalog/nasadki => /catalog/nasadki/
+RewriteRule ^catalog/nasadki$ /catalog/nasadki/? [L,R=301]
+
+# 301 --- /catalog/primanki-zimnie => /catalog/primanki_zimnie/
+RewriteRule ^catalog/primanki\-zimnie$ /catalog/primanki_zimnie/? [L,R=301]
+
+# 301 --- /catalog/mormyshki => /catalog/mormyshki/
+RewriteRule ^catalog/mormyshki$ /catalog/mormyshki/? [L,R=301]
+
+# 301 --- /catalog/sapozhki => /catalog/sapozhki/
+RewriteRule ^catalog/sapozhki$ /catalog/sapozhki/? [L,R=301]
+
+# 301 --- /catalog/balansiry => /catalog/balansiry/
+RewriteRule ^catalog/balansiry$ /catalog/balansiry/? [L,R=301]
+
+# 301 --- /catalog/kraby--sigovki => /catalog/kraby_sigovki/
+RewriteRule ^catalog/kraby\-\-sigovki$ /catalog/kraby_sigovki/? [L,R=301]
+
+# 301 --- /catalog/sadki--podsaki => /catalog/sadki_podsaki/
+RewriteRule ^catalog/sadki\-\-podsaki$ /catalog/sadki_podsaki/? [L,R=301]
+
+# 301 --- /catalog/sadki => /catalog/sadki/
+RewriteRule ^catalog/sadki$ /catalog/sadki/? [L,R=301]
+
+# 301 --- /catalog/podsaki => /catalog/podsaki/
+RewriteRule ^catalog/podsaki$ /catalog/podsaki/? [L,R=301]
+
+# 301 --- /catalog/podstavki-pod-udilischa => /catalog/podstavki_pod_udilishcha/
+RewriteRule ^catalog/podstavki\-pod\-udilischa$ /catalog/podstavki_pod_udilishcha/? [L,R=301]
+
+# 301 --- /catalog/seti--vershi => /catalog/seti_vershi/
+RewriteRule ^catalog/seti\-\-vershi$ /catalog/seti_vershi/? [L,R=301]
+
+# 301 --- /catalog/seti => /catalog/seti/
+RewriteRule ^catalog/seti$ /catalog/seti/? [L,R=301]
+
+# 301 --- /catalog/vershi--podemniki => /catalog/vershi_podemniki/
+RewriteRule ^catalog/vershi\-\-podemniki$ /catalog/vershi_podemniki/? [L,R=301]
+
+# 301 --- /catalog/instrumenty-rybolovnye => /catalog/instrumenty_rybolovnye/
+RewriteRule ^catalog/instrumenty\-rybolovnye$ /catalog/instrumenty_rybolovnye/? [L,R=301]
+
+# 301 --- /catalog/nozhi-fileynye- => /catalog/nozhi_fileynye_1/
+RewriteRule ^catalog/nozhi\-fileynye\-$ /catalog/nozhi_fileynye_1/? [L,R=301]
+
+# 301 --- /catalog/solncezaschitnye-ochki-dlya-rybolovov => /catalog/solntsezashchitnye_ochki_dlya_rybolovov/
+RewriteRule ^catalog/solncezaschitnye\-ochki\-dlya\-rybolovov$ /catalog/solntsezashchitnye_ochki_dlya_rybolovov/? [L,R=301]
+
+# 301 --- /catalog/verevki-i-faly => /catalog/verevki_i_faly/
+RewriteRule ^catalog/verevki\-i\-faly$ /catalog/verevki_i_faly/? [L,R=301]
+
+# 301 --- /catalog/vedra-i-sito => /catalog/vedra_i_sito/
+RewriteRule ^catalog/vedra\-i\-sito$ /catalog/vedra_i_sito/? [L,R=301]
+
+# 301 --- /catalog/dlya-rybolovnyh-snastey => /catalog/dlya_rybolovnykh_snastey/
+RewriteRule ^catalog/dlya\-rybolovnyh\-snastey$ /catalog/dlya_rybolovnykh_snastey/? [L,R=301]
+
+# 301 --- /catalog/tubusy-i-boksy-rybolovnye => /catalog/tubusy_i_boksy_rybolovnye/
+RewriteRule ^catalog/tubusy\-i\-boksy\-rybolovnye$ /catalog/tubusy_i_boksy_rybolovnye/? [L,R=301]
+
+# 301 --- /catalog/korobki-rybolovnye => /catalog/korobki_rybolovnye/
+RewriteRule ^catalog/korobki\-rybolovnye$ /catalog/korobki_rybolovnye/? [L,R=301]
+
+# 301 --- /catalog/chehly-i-sumki-rybolovnye => /catalog/chekhly_i_sumki_rybolovnye/
+RewriteRule ^catalog/chehly\-i\-sumki\-rybolovnye$ /catalog/chekhly_i_sumki_rybolovnye/? [L,R=301]
+
+# 301 --- /catalog/yaschiki-rybolovnye => /catalog/yashchiki_rybolovnye/
+RewriteRule ^catalog/yaschiki\-rybolovnye$ /catalog/yashchiki_rybolovnye/? [L,R=301]
+
+# 301 --- /catalog/udilischa => /catalog/udilishcha/
+RewriteRule ^catalog/udilischa$ /catalog/udilishcha/? [L,R=301]
+
+# 301 --- /catalog/udilischa-mahovye => /catalog/udilishcha_makhovye/
+RewriteRule ^catalog/udilischa\-mahovye$ /catalog/udilishcha_makhovye/? [L,R=301]
+
+# 301 --- /catalog/udilischa-bolonskie--matchevye => /catalog/udilishcha_bolonskie_matchevye/
+RewriteRule ^catalog/udilischa\-bolonskie\-\-matchevye$ /catalog/udilishcha_bolonskie_matchevye/? [L,R=301]
+
+# 301 --- /catalog/udilischa-spinningovye => /catalog/udilishcha_spinningovye/
+RewriteRule ^catalog/udilischa\-spinningovye$ /catalog/udilishcha_spinningovye/? [L,R=301]
+
+# 301 --- /catalog/udilischa-kastingovye => /catalog/udilishcha_kastingovye/
+RewriteRule ^catalog/udilischa\-kastingovye$ /catalog/udilishcha_kastingovye/? [L,R=301]
+
+# 301 --- /catalog/udilischa-nahlystovye => /catalog/udilishcha_nakhlystovye/
+RewriteRule ^catalog/udilischa\-nahlystovye$ /catalog/udilishcha_nakhlystovye/? [L,R=301]
+
+# 301 --- /catalog/udilischa-dlya-donnoy-rybalki => /catalog/udilishcha_dlya_donnoy_rybalki/
+RewriteRule ^catalog/udilischa\-dlya\-donnoy\-rybalki$ /catalog/udilishcha_dlya_donnoy_rybalki/? [L,R=301]
+
+# 301 --- /catalog/rem-osnastka-dlya-udilisch => /catalog/rem_osnastka_dlya_udilishch/
+RewriteRule ^catalog/rem\-osnastka\-dlya\-udilisch$ /catalog/rem_osnastka_dlya_udilishch/? [L,R=301]
+
+# 301 --- /catalog/udilischa-karpovye => /catalog/udilishcha_karpovye/
+RewriteRule ^catalog/udilischa\-karpovye$ /catalog/udilishcha_karpovye/? [L,R=301]
+
+# 301 --- /catalog/udilischa-fidernye => /catalog/udilishcha_fidernye/
+RewriteRule ^catalog/udilischa\-fidernye$ /catalog/udilishcha_fidernye/? [L,R=301]
+
+# 301 --- /catalog/udilischa-zimnie => /catalog/udilishcha_zimnie/
+RewriteRule ^catalog/udilischa\-zimnie$ /catalog/udilishcha_zimnie/? [L,R=301]
+
+# 301 --- /catalog/storozhki => /catalog/storozhki/
+RewriteRule ^catalog/storozhki$ /catalog/storozhki/? [L,R=301]
+
+# 301 --- /catalog/akvafitnes => /catalog/akvafitnes/
+RewriteRule ^catalog/akvafitnes$ /catalog/akvafitnes/? [L,R=301]
+
+# 301 --- /catalog/ganteli--shtangi--palki => /catalog/ganteli_shtangi_palki/
+RewriteRule ^catalog/ganteli\-\-shtangi\-\-palki$ /catalog/ganteli_shtangi_palki/? [L,R=301]
+
+# 301 --- /catalog/obuv--perchatki => /catalog/obuv_perchatki/
+RewriteRule ^catalog/obuv\-\-perchatki$ /catalog/obuv_perchatki/? [L,R=301]
+
+# 301 --- /catalog/poyasa--utyazheliteli1 => /catalog/poyasa_utyazheliteli/
+RewriteRule ^catalog/poyasa\-\-utyazheliteli1$ /catalog/poyasa_utyazheliteli/? [L,R=301]
+
+# 301 --- /catalog/alpinizm-i-skalolazanie => /catalog/alpinizm_i_skalolazanie/
+RewriteRule ^catalog/alpinizm\-i\-skalolazanie$ /catalog/alpinizm_i_skalolazanie/? [L,R=301]
+
+# 301 --- /catalog/verevki => /catalog/verevki/
+RewriteRule ^catalog/verevki$ /catalog/verevki/? [L,R=301]
+
+# 301 --- /catalog/besedki--obvyazki => /catalog/besedki_obvyazki/
+RewriteRule ^catalog/besedki\-\-obvyazki$ /catalog/besedki_obvyazki/? [L,R=301]
+
+# 301 --- /catalog/karabiny--zazhimy--roliki => /catalog/karabiny_zazhimy_roliki/
+RewriteRule ^catalog/karabiny\-\-zazhimy\-\-roliki$ /catalog/karabiny_zazhimy_roliki/? [L,R=301]
+
+# 301 --- /catalog/kaski => /catalog/kaski/
+RewriteRule ^catalog/kaski$ /catalog/kaski/? [L,R=301]
+
+# 301 --- /catalog/ledoruby--koshki => /catalog/ledoruby_koshki/
+RewriteRule ^catalog/ledoruby\-\-koshki$ /catalog/ledoruby_koshki/? [L,R=301]
+
+# 301 --- /catalog/magneziya--meshochki => /catalog/magneziya_meshochki/
+RewriteRule ^catalog/magneziya\-\-meshochki$ /catalog/magneziya_meshochki/? [L,R=301]
+
+# 301 --- /catalog/strahovochnye-sistemy => /catalog/strakhovochnye_sistemy/
+RewriteRule ^catalog/strahovochnye\-sistemy$ /catalog/strakhovochnye_sistemy/? [L,R=301]
+
+# 301 --- /catalog/badminton => /catalog/badminton/
+RewriteRule ^catalog/badminton$ /catalog/badminton/? [L,R=301]
+
+# 301 --- /catalog/raketki-nabory => /catalog/raketki_nabory/
+RewriteRule ^catalog/raketki\-nabory$ /catalog/raketki_nabory/? [L,R=301]
+
+# 301 --- /catalog/volany => /catalog/volany/
+RewriteRule ^catalog/volany$ /catalog/volany/? [L,R=301]
+
+# 301 --- /catalog/soputstvuyuschie-tovary => /catalog/soputstvuyushchie_tovary_1/
+RewriteRule ^catalog/soputstvuyuschie\-tovary$ /catalog/soputstvuyushchie_tovary_1/? [L,R=301]
+
+# 301 --- /catalog/basketbol => /catalog/basketbol/
+RewriteRule ^catalog/basketbol$ /catalog/basketbol/? [L,R=301]
+
+# 301 --- /catalog/myachi-basketbolnye => /catalog/myachi_basketbolnye/
+RewriteRule ^catalog/myachi\-basketbolnye$ /catalog/myachi_basketbolnye/? [L,R=301]
+
+# 301 --- /catalog/bolshoy-tennis => /catalog/bolshoy_tennis/
+RewriteRule ^catalog/bolshoy\-tennis$ /catalog/bolshoy_tennis/? [L,R=301]
+
+# 301 --- /catalog/raketki => /catalog/raketki/
+RewriteRule ^catalog/raketki$ /catalog/raketki/? [L,R=301]
+
+# 301 --- /catalog/namotki-dlya-raketok => /catalog/namotki_dlya_raketok/
+RewriteRule ^catalog/namotki\-dlya\-raketok$ /catalog/namotki_dlya_raketok/? [L,R=301]
+
+# 301 --- /catalog/myachi-dlya-bolshogo-tennisa => /catalog/myachi_dlya_bolshogo_tennisa/
+RewriteRule ^catalog/myachi\-dlya\-bolshogo\-tennisa$ /catalog/myachi_dlya_bolshogo_tennisa/? [L,R=301]
+
+# 301 --- /catalog/obuv1 => /catalog/obuv_1/
+RewriteRule ^catalog/obuv1$ /catalog/obuv_1/? [L,R=301]
+
+# 301 --- /catalog/sumki1 => /catalog/sumki_1/
+RewriteRule ^catalog/sumki1$ /catalog/sumki_1/? [L,R=301]
+
+# 301 --- /catalog/soputstvuyuschie-tovary-dlya-bolshogo-tennisa => /catalog/soputstvuyushchie_tovary_dlya_bolshogo_tennisa/
+RewriteRule ^catalog/soputstvuyuschie\-tovary\-dlya\-bolshogo\-tennisa$ /catalog/soputstvuyushchie_tovary_dlya_bolshogo_tennisa/? [L,R=301]
+
+# 301 --- /catalog/veloaksessuary => /catalog/veloaksessuary/
+RewriteRule ^catalog/veloaksessuary$ /catalog/veloaksessuary/? [L,R=301]
+
+# 301 --- /catalog/bagazhniki => /catalog/bagazhniki/
+RewriteRule ^catalog/bagazhniki$ /catalog/bagazhniki/? [L,R=301]
+
+# 301 --- /catalog/butylki => /catalog/butylki/
+RewriteRule ^catalog/butylki$ /catalog/butylki/? [L,R=301]
+
+# 301 --- /catalog/derzhateli-dlya-butylok => /catalog/derzhateli_dlya_butylok/
+RewriteRule ^catalog/derzhateli\-dlya\-butylok$ /catalog/derzhateli_dlya_butylok/? [L,R=301]
+
+# 301 --- /catalog/zamki => /catalog/zamki/
+RewriteRule ^catalog/zamki$ /catalog/zamki/? [L,R=301]
+
+# 301 --- /catalog/zaschitnye-elementy => /catalog/zashchitnye_elementy/
+RewriteRule ^catalog/zaschitnye\-elementy$ /catalog/zashchitnye_elementy/? [L,R=301]
+
+# 301 --- /catalog/zvonki => /catalog/zvonki/
+RewriteRule ^catalog/zvonki$ /catalog/zvonki/? [L,R=301]
+
+# 301 --- /catalog/instrumenty1 => /catalog/instrumenty_1/
+RewriteRule ^catalog/instrumenty1$ /catalog/instrumenty_1/? [L,R=301]
+
+# 301 --- /catalog/kompyutery => /catalog/kompyutery/
+RewriteRule ^catalog/kompyutery$ /catalog/kompyutery/? [L,R=301]
+
+# 301 --- /catalog/krylya => /catalog/krylya/
+RewriteRule ^catalog/krylya$ /catalog/krylya/? [L,R=301]
+
+# 301 --- /catalog/remnabory-i-veloaptechki => /catalog/remnabory_i_veloaptechki/
+RewriteRule ^catalog/remnabory\-i\-veloaptechki$ /catalog/remnabory_i_veloaptechki/? [L,R=301]
+
+# 301 --- /catalog/sedla => /catalog/sedla/
+RewriteRule ^catalog/sedla$ /catalog/sedla/? [L,R=301]
+
+# 301 --- /catalog/sumki-podsedelnye => /catalog/sumki_podsedelnye/
+RewriteRule ^catalog/sumki\-podsedelnye$ /catalog/sumki_podsedelnye/? [L,R=301]
+
+# 301 --- /catalog/fonari-velosipednye => /catalog/fonari_velosipednye/
+RewriteRule ^catalog/fonari\-velosipednye$ /catalog/fonari_velosipednye/? [L,R=301]
+
+# 301 --- /catalog/velonasosy => /catalog/velonasosy/
+RewriteRule ^catalog/velonasosy$ /catalog/velonasosy/? [L,R=301]
+
+# 301 --- /catalog/velokosmetika => /catalog/velokosmetika/
+RewriteRule ^catalog/velokosmetika$ /catalog/velokosmetika/? [L,R=301]
+
+# 301 --- /catalog/derzhateli-velosipedov-kryuki => /catalog/derzhateli_velosipedov_kryuki/
+RewriteRule ^catalog/derzhateli\-velosipedov\-kryuki$ /catalog/derzhateli_velosipedov_kryuki/? [L,R=301]
+
+# 301 --- /catalog/detskie-kresla-dlya-velosipedov => /catalog/detskie_kresla_dlya_velosipedov/
+RewriteRule ^catalog/detskie\-kresla\-dlya\-velosipedov$ /catalog/detskie_kresla_dlya_velosipedov/? [L,R=301]
+
+# 301 --- /catalog/velozapchasti => /catalog/velozapchasti/
+RewriteRule ^catalog/velozapchasti$ /catalog/velozapchasti/? [L,R=301]
+
+# 301 --- /catalog/adaptery => /catalog/adaptery/
+RewriteRule ^catalog/adaptery$ /catalog/adaptery/? [L,R=301]
+
+# 301 --- /catalog/amortizatory => /catalog/amortizatory/
+RewriteRule ^catalog/amortizatory$ /catalog/amortizatory/? [L,R=301]
+
+# 301 --- /catalog/bolty--gayki--shayby => /catalog/bolty_gayki_shayby/
+RewriteRule ^catalog/bolty\-\-gayki\-\-shayby$ /catalog/bolty_gayki_shayby/? [L,R=301]
+
+# 301 --- /catalog/vilki => /catalog/vilki/
+RewriteRule ^catalog/vilki$ /catalog/vilki/? [L,R=301]
+
+# 301 --- /catalog/vtulki => /catalog/vtulki/
+RewriteRule ^catalog/vtulki$ /catalog/vtulki/? [L,R=301]
+
+# 301 --- /catalog/vynosy => /catalog/vynosy/
+RewriteRule ^catalog/vynosy$ /catalog/vynosy/? [L,R=301]
+
+# 301 --- /catalog/kamery--shiny--pokryshki => /catalog/kamery_shiny_pokryshki/
+RewriteRule ^catalog/kamery\-\-shiny\-\-pokryshki$ /catalog/kamery_shiny_pokryshki/? [L,R=301]
+
+# 301 --- /catalog/kassety--karetki-kartridzhi--petuhi => /catalog/kassety_karetki_kartridzhi_petukhi/
+RewriteRule ^catalog/kassety\-\-karetki\-kartridzhi\-\-petuhi$ /catalog/kassety_karetki_kartridzhi_petukhi/? [L,R=301]
+
+# 301 --- /catalog/kolesa => /catalog/kolesa/
+RewriteRule ^catalog/kolesa$ /catalog/kolesa/? [L,R=301]
+
+# 301 --- /catalog/manetki--shiftery--ruchki-pereklyucheniya-skorostey => /catalog/manetki_shiftery_ruchki_pereklyucheniya_skorostey/
+RewriteRule ^catalog/manetki\-\-shiftery\-\-ruchki\-pereklyucheniya\-skorostey$ /catalog/manetki_shiftery_ruchki_pereklyucheniya_skorostey/? [L,R=301]
+
+# 301 --- /catalog/oboda => /catalog/oboda/
+RewriteRule ^catalog/oboda$ /catalog/oboda/? [L,R=301]
+
+# 301 --- /catalog/osi => /catalog/osi/
+RewriteRule ^catalog/osi$ /catalog/osi/? [L,R=301]
+
+# 301 --- /catalog/pedali => /catalog/pedali/
+RewriteRule ^catalog/pedali$ /catalog/pedali/? [L,R=301]
+
+# 301 --- /catalog/pereklyuchateli => /catalog/pereklyuchateli/
+RewriteRule ^catalog/pereklyuchateli$ /catalog/pereklyuchateli/? [L,R=301]
+
+# 301 --- /catalog/podnozhki => /catalog/podnozhki/
+RewriteRule ^catalog/podnozhki$ /catalog/podnozhki/? [L,R=301]
+
+# 301 --- /catalog/ruli--rulevye-kolonki--roga--ruchki--gripsy => /catalog/ruli_rulevye_kolonki_roga_ruchki_gripsy/
+RewriteRule ^catalog/ruli\-\-rulevye\-kolonki\-\-roga\-\-ruchki\-\-gripsy$ /catalog/ruli_rulevye_kolonki_roga_ruchki_gripsy/? [L,R=301]
+
+# 301 --- /catalog/smazki => /catalog/smazki/
+RewriteRule ^catalog/smazki$ /catalog/smazki/? [L,R=301]
+
+# 301 --- /catalog/spicy => /catalog/spitsy/
+RewriteRule ^catalog/spicy$ /catalog/spitsy/? [L,R=301]
+
+# 301 --- /catalog/tormoza--kolodki--ruchki => /catalog/tormoza_kolodki_ruchki/
+RewriteRule ^catalog/tormoza\-\-kolodki\-\-ruchki$ /catalog/tormoza_kolodki_ruchki/? [L,R=301]
+
+# 301 --- /catalog/tormoznye-kolodki => /catalog/tormoznye_kolodki/
+RewriteRule ^catalog/tormoznye\-kolodki$ /catalog/tormoznye_kolodki/? [L,R=301]
+
+# 301 --- /catalog/trosiki--rubashki-dlya-velosipedov => /catalog/trosiki_rubashki_dlya_velosipedov/
+RewriteRule ^catalog/trosiki\-\-rubashki\-dlya\-velosipedov$ /catalog/trosiki_rubashki_dlya_velosipedov/? [L,R=301]
+
+# 301 --- /catalog/cepi => /catalog/tsepi/
+RewriteRule ^catalog/cepi$ /catalog/tsepi/? [L,R=301]
+
+# 301 --- /catalog/shatuny => /catalog/shatuny/
+RewriteRule ^catalog/shatuny$ /catalog/shatuny/? [L,R=301]
+
+# 301 --- /catalog/shtyri => /catalog/shtyri/
+RewriteRule ^catalog/shtyri$ /catalog/shtyri/? [L,R=301]
+
+# 301 --- /catalog/ekscentriki => /catalog/ekstsentriki/
+RewriteRule ^catalog/ekscentriki$ /catalog/ekstsentriki/? [L,R=301]
+
+# 301 --- /catalog/velosipedy => /catalog/velosipedy/
+RewriteRule ^catalog/velosipedy$ /catalog/velosipedy/? [L,R=301]
+
+# 301 --- /catalog/velosipedy-shosseynye => /catalog/velosipedy_shosseynye/
+RewriteRule ^catalog/velosipedy\-shosseynye$ /catalog/velosipedy_shosseynye/? [L,R=301]
+
+# 301 --- /catalog/velosipedy-gorodskie => /catalog/velosipedy_gorodskie/
+RewriteRule ^catalog/velosipedy\-gorodskie$ /catalog/velosipedy_gorodskie/? [L,R=301]
+
+# 301 --- /catalog/velosipedy-skladnye => /catalog/velosipedy_skladnye/
+RewriteRule ^catalog/velosipedy\-skladnye$ /catalog/velosipedy_skladnye/? [L,R=301]
+
+# 301 --- /catalog/velosipedy-detskie => /catalog/velosipedy_detskie/
+RewriteRule ^catalog/velosipedy\-detskie$ /catalog/velosipedy_detskie/? [L,R=301]
+
+# 301 --- /catalog/velosipedy-zhenskie => /catalog/velosipedy_zhenskie/
+RewriteRule ^catalog/velosipedy\-zhenskie$ /catalog/velosipedy_zhenskie/? [L,R=301]
+
+# 301 --- /catalog/velosipedy-gornye => /catalog/velosipedy_gornye/
+RewriteRule ^catalog/velosipedy\-gornye$ /catalog/velosipedy_gornye/? [L,R=301]
+
+# 301 --- /catalog/velosipedy-tryukovye => /catalog/velosipedy_tryukovye/
+RewriteRule ^catalog/velosipedy\-tryukovye$ /catalog/velosipedy_tryukovye/? [L,R=301]
+
+# 301 --- /catalog/vodnyy-sport-i-otdyh-na-vode => /catalog/vodnyy_sport_i_otdykh_na_vode/
+RewriteRule ^catalog/vodnyy\-sport\-i\-otdyh\-na\-vode$ /catalog/vodnyy_sport_i_otdykh_na_vode/? [L,R=301]
+
+# 301 --- /catalog/krugi-buksiruemye => /catalog/krugi_buksiruemye/
+RewriteRule ^catalog/krugi\-buksiruemye$ /catalog/krugi_buksiruemye/? [L,R=301]
+
+# 301 --- /catalog/lyzhi-vodnye => /catalog/lyzhi_vodnye/
+RewriteRule ^catalog/lyzhi\-vodnye$ /catalog/lyzhi_vodnye/? [L,R=301]
+
+# 301 --- /catalog/nibordy => /catalog/nibordy/
+RewriteRule ^catalog/nibordy$ /catalog/nibordy/? [L,R=301]
+
+# 301 --- /catalog/veykbordy => /catalog/veykbordy/
+RewriteRule ^catalog/veykbordy$ /catalog/veykbordy/? [L,R=301]
+
+# 301 --- /catalog/vindserfing-i-veykserfing => /catalog/vindserfing_i_veykserfing/
+RewriteRule ^catalog/vindserfing\-i\-veykserfing$ /catalog/vindserfing_i_veykserfing/? [L,R=301]
+
+# 301 --- /catalog/faly--krepleniya--rukoyatki => /catalog/faly_krepleniya_rukoyatki/
+RewriteRule ^catalog/faly\-\-krepleniya\-\-rukoyatki$ /catalog/faly_krepleniya_rukoyatki/? [L,R=301]
+
+# 301 --- /catalog/zhilety-spasatelnye => /catalog/zhilety_spasatelnye/
+RewriteRule ^catalog/zhilety\-spasatelnye$ /catalog/zhilety_spasatelnye/? [L,R=301]
+
+# 301 --- /catalog/gidromayki--gidroshorty--perchatki--botinki => /catalog/gidromayki_gidroshorty_perchatki_botinki/
+RewriteRule ^catalog/gidromayki\-\-gidroshorty\-\-perchatki\-\-botinki$ /catalog/gidromayki_gidroshorty_perchatki_botinki/? [L,R=301]
+
+# 301 --- /catalog/naduvnye-igrushki--matrasy => /catalog/naduvnye_igrushki_matrasy/
+RewriteRule ^catalog/naduvnye\-igrushki\-\-matrasy$ /catalog/naduvnye_igrushki_matrasy/? [L,R=301]
+
+# 301 --- /catalog/soputstvuyuschie-tovary => /catalog/soputstvuyushchie_tovary_2/
+RewriteRule ^catalog/soputstvuyuschie\-tovary$ /catalog/soputstvuyushchie_tovary_2/? [L,R=301]
+
+# 301 --- /catalog/zhilety-strahovochnye => /catalog/zhilety_strakhovochnye/
+RewriteRule ^catalog/zhilety\-strahovochnye$ /catalog/zhilety_strakhovochnye/? [L,R=301]
+
+# 301 --- /catalog/krepleniya-dlya-veykbordov => /catalog/krepleniya_dlya_veykbordov/
+RewriteRule ^catalog/krepleniya\-dlya\-veykbordov$ /catalog/krepleniya_dlya_veykbordov/? [L,R=301]
+
+# 301 --- /catalog/krepleniya-dlya-vodnyh-lyzh => /catalog/krepleniya_dlya_vodnykh_lyzh/
+RewriteRule ^catalog/krepleniya\-dlya\-vodnyh\-lyzh$ /catalog/krepleniya_dlya_vodnykh_lyzh/? [L,R=301]
+
+# 301 --- /catalog/novinka!-sapbordy => /catalog/novinka_sapbordy/
+RewriteRule ^catalog/novinka\!\-sapbordy$ /catalog/novinka_sapbordy/? [L,R=301]
+
+# 301 --- /catalog/voleybol => /catalog/voleybol/
+RewriteRule ^catalog/voleybol$ /catalog/voleybol/? [L,R=301]
+
+# 301 --- /catalog/myachi-voleybolnye => /catalog/myachi_voleybolnye/
+RewriteRule ^catalog/myachi\-voleybolnye$ /catalog/myachi_voleybolnye/? [L,R=301]
+
+# 301 --- /catalog/setki => /catalog/setki/
+RewriteRule ^catalog/setki$ /catalog/setki/? [L,R=301]
+
+# 301 --- /catalog/nasosy-mehanicheskie--elektricheskie => /catalog/nasosy_mekhanicheskie_elektricheskie/
+RewriteRule ^catalog/nasosy\-mehanicheskie\-\-elektricheskie$ /catalog/nasosy_mekhanicheskie_elektricheskie/? [L,R=301]
+
+# 301 --- /catalog/ekipirovka-dlya-igrokov => /catalog/ekipirovka_dlya_igrokov/
+RewriteRule ^catalog/ekipirovka\-dlya\-igrokov$ /catalog/ekipirovka_dlya_igrokov/? [L,R=301]
+
+# 301 --- /catalog/gimnastika => /catalog/gimnastika/
+RewriteRule ^catalog/gimnastika$ /catalog/gimnastika/? [L,R=301]
+
+# 301 --- /catalog/bulavy-gimnasticheskie--myachi--palki--lenty => /catalog/bulavy_gimnasticheskie_myachi_palki_lenty/
+RewriteRule ^catalog/bulavy\-gimnasticheskie\-\-myachi\-\-palki\-\-lenty$ /catalog/bulavy_gimnasticheskie_myachi_palki_lenty/? [L,R=301]
+
+# 301 --- /catalog/obruchi--skakalki => /catalog/obruchi_skakalki/
+RewriteRule ^catalog/obruchi\-\-skakalki$ /catalog/obruchi_skakalki/? [L,R=301]
+
+# 301 --- /catalog/odezhda-dlya-gimnastiki => /catalog/odezhda_dlya_gimnastiki/
+RewriteRule ^catalog/odezhda\-dlya\-gimnastiki$ /catalog/odezhda_dlya_gimnastiki/? [L,R=301]
+
+# 301 --- /catalog/darts => /catalog/darts/
+RewriteRule ^catalog/darts$ /catalog/darts/? [L,R=301]
+
+# 301 --- /catalog/misheni => /catalog/misheni/
+RewriteRule ^catalog/misheni$ /catalog/misheni/? [L,R=301]
+
+# 301 --- /catalog/drotiki => /catalog/drotiki/
+RewriteRule ^catalog/drotiki$ /catalog/drotiki/? [L,R=301]
+
+# 301 --- /catalog/igly--nakonechniki => /catalog/igly_nakonechniki/
+RewriteRule ^catalog/igly\-\-nakonechniki$ /catalog/igly_nakonechniki/? [L,R=301]
+
+# 301 --- /catalog/opereniya--hvostoviki => /catalog/opereniya_khvostoviki/
+RewriteRule ^catalog/opereniya\-\-hvostoviki$ /catalog/opereniya_khvostoviki/? [L,R=301]
+
+# 301 --- /catalog/soputstvuyuschie-tovary => /catalog/soputstvuyushchie_tovary_3/
+RewriteRule ^catalog/soputstvuyuschie\-tovary$ /catalog/soputstvuyushchie_tovary_3/? [L,R=301]
+
+# 301 --- /catalog/edinoborstva => /catalog/edinoborstva/
+RewriteRule ^catalog/edinoborstva$ /catalog/edinoborstva/? [L,R=301]
+
+# 301 --- /catalog/kimono--poyasy => /catalog/kimono_poyasy/
+RewriteRule ^catalog/kimono\-\-poyasy$ /catalog/kimono_poyasy/? [L,R=301]
+
+# 301 --- /catalog/bandazhi--binty => /catalog/bandazhi_binty/
+RewriteRule ^catalog/bandazhi\-\-binty$ /catalog/bandazhi_binty/? [L,R=301]
+
+# 301 --- /catalog/perchatki--nakladki--obuv => /catalog/perchatki_nakladki_obuv/
+RewriteRule ^catalog/perchatki\-\-nakladki\-\-obuv$ /catalog/perchatki_nakladki_obuv/? [L,R=301]
+
+# 301 --- /catalog/rakoviny--kapy--shlemy--zaschita => /catalog/rakoviny_kapy_shlemy_zashchita/
+RewriteRule ^catalog/rakoviny\-\-kapy\-\-shlemy\-\-zaschita$ /catalog/rakoviny_kapy_shlemy_zashchita/? [L,R=301]
+
+# 301 --- /catalog/igry-inye => /catalog/igry_inye/
+RewriteRule ^catalog/igry\-inye$ /catalog/igry_inye/? [L,R=301]
+
+# 301 --- /catalog/bumerangi => /catalog/bumerangi/
+RewriteRule ^catalog/bumerangi$ /catalog/bumerangi/? [L,R=301]
+
+# 301 --- /catalog/vozdushnye-zmei => /catalog/vozdushnye_zmei/
+RewriteRule ^catalog/vozdushnye\-zmei$ /catalog/vozdushnye_zmei/? [L,R=301]
+
+# 301 --- /catalog/letayuschie-tarelki => /catalog/letayushchie_tarelki/
+RewriteRule ^catalog/letayuschie\-tarelki$ /catalog/letayushchie_tarelki/? [L,R=301]
+
+# 301 --- /catalog/bity => /catalog/bity/
+RewriteRule ^catalog/bity$ /catalog/bity/? [L,R=301]
+
+# 301 --- /catalog/kegli => /catalog/kegli/
+RewriteRule ^catalog/kegli$ /catalog/kegli/? [L,R=301]
+
+# 301 --- /catalog/igry-nastolnye => /catalog/igry_nastolnye/
+RewriteRule ^catalog/igry\-nastolnye$ /catalog/igry_nastolnye/? [L,R=301]
+
+# 301 --- /catalog/nabory-igrovye => /catalog/nabory_igrovye/
+RewriteRule ^catalog/nabory\-igrovye$ /catalog/nabory_igrovye/? [L,R=301]
+
+# 301 --- /catalog/nardy => /catalog/nardy_1/
+RewriteRule ^catalog/nardy$ /catalog/nardy_1/? [L,R=301]
+
+# 301 --- /catalog/shahmaty => /catalog/shakhmaty_1/
+RewriteRule ^catalog/shahmaty$ /catalog/shakhmaty_1/? [L,R=301]
+
+# 301 --- /catalog/shashki--domino--loto => /catalog/shashki_domino_loto/
+RewriteRule ^catalog/shashki\-\-domino\-\-loto$ /catalog/shashki_domino_loto/? [L,R=301]
+
+# 301 --- /catalog/nagradnaya-produkciya => /catalog/nagradnaya_produktsiya/
+RewriteRule ^catalog/nagradnaya\-produkciya$ /catalog/nagradnaya_produktsiya/? [L,R=301]
+
+# 301 --- /catalog/kubki => /catalog/kubki/
+RewriteRule ^catalog/kubki$ /catalog/kubki/? [L,R=301]
+
+# 301 --- /catalog/medali => /catalog/medali/
+RewriteRule ^catalog/medali$ /catalog/medali/? [L,R=301]
+
+# 301 --- /catalog/komplektuyuschie => /catalog/komplektuyushchie/
+RewriteRule ^catalog/komplektuyuschie$ /catalog/komplektuyushchie/? [L,R=301]
+
+# 301 --- /catalog/nastolnyy-tennis => /catalog/nastolnyy_tennis/
+RewriteRule ^catalog/nastolnyy\-tennis$ /catalog/nastolnyy_tennis/? [L,R=301]
+
+# 301 --- /catalog/raketki-dlya-nastolnogo-tennisa => /catalog/raketki_dlya_nastolnogo_tennisa/
+RewriteRule ^catalog/raketki\-dlya\-nastolnogo\-tennisa$ /catalog/raketki_dlya_nastolnogo_tennisa/? [L,R=301]
+
+# 301 --- /catalog/aksessuary--komplektuyuschie => /catalog/aksessuary_komplektuyushchie/
+RewriteRule ^catalog/aksessuary\-\-komplektuyuschie$ /catalog/aksessuary_komplektuyushchie/? [L,R=301]
+
+# 301 --- /catalog/setki-dlya-nastolnogo-tennisa => /catalog/setki_dlya_nastolnogo_tennisa/
+RewriteRule ^catalog/setki\-dlya\-nastolnogo\-tennisa$ /catalog/setki_dlya_nastolnogo_tennisa/? [L,R=301]
+
+# 301 --- /catalog/myachi-dlya-nastolnogo-tennisa => /catalog/myachi_dlya_nastolnogo_tennisa/
+RewriteRule ^catalog/myachi\-dlya\-nastolnogo\-tennisa$ /catalog/myachi_dlya_nastolnogo_tennisa/? [L,R=301]
+
+# 301 --- /catalog/skeytbordy--rolikovye-konki--samokaty => /catalog/skeytbordy_rolikovye_konki_samokaty/
+RewriteRule ^catalog/skeytbordy\-\-rolikovye\-konki\-\-samokaty$ /catalog/skeytbordy_rolikovye_konki_samokaty/? [L,R=301]
+
+# 301 --- /catalog/skeytbordy => /catalog/skeytbordy/
+RewriteRule ^catalog/skeytbordy$ /catalog/skeytbordy/? [L,R=301]
+
+# 301 --- /catalog/konki-rolikovye => /catalog/konki_rolikovye/
+RewriteRule ^catalog/konki\-rolikovye$ /catalog/konki_rolikovye/? [L,R=301]
+
+# 301 --- /catalog/samokaty => /catalog/samokaty/
+RewriteRule ^catalog/samokaty$ /catalog/samokaty/? [L,R=301]
+
+# 301 --- /catalog/komplektuyuschie-k-rolikam--skeytam--samokatam => /catalog/komplektuyushchie_k_rolikam_skeytam_samokatam/
+RewriteRule ^catalog/komplektuyuschie\-k\-rolikam\-\-skeytam\-\-samokatam$ /catalog/komplektuyushchie_k_rolikam_skeytam_samokatam/? [L,R=301]
+
+# 301 --- /catalog/zaschita--shlemy => /catalog/zashchita_shlemy/
+RewriteRule ^catalog/zaschita\-\-shlemy$ /catalog/zashchita_shlemy/? [L,R=301]
+
+# 301 --- /catalog/sumki--chehly => /catalog/sumki_chekhly/
+RewriteRule ^catalog/sumki\-\-chehly$ /catalog/sumki_chekhly/? [L,R=301]
+
+# 301 --- /catalog/tyazhelaya-atletika => /catalog/tyazhelaya_atletika/
+RewriteRule ^catalog/tyazhelaya\-atletika$ /catalog/tyazhelaya_atletika/? [L,R=301]
+
+# 301 --- /catalog/ganteli--giri--shtangi => /catalog/ganteli_giri_shtangi/
+RewriteRule ^catalog/ganteli\-\-giri\-\-shtangi$ /catalog/ganteli_giri_shtangi/? [L,R=301]
+
+# 301 --- /catalog/poyasa--utyazheliteli1 => /catalog/poyasa_utyazheliteli_1/
+RewriteRule ^catalog/poyasa\-\-utyazheliteli1$ /catalog/poyasa_utyazheliteli_1/? [L,R=301]
+
+# 301 --- /catalog/soputstvuyuschie-tovary => /catalog/soputstvuyushchie_tovary_4/
+RewriteRule ^catalog/soputstvuyuschie\-tovary$ /catalog/soputstvuyushchie_tovary_4/? [L,R=301]
+
+# 301 --- /catalog/fitnes => /catalog/fitnes/
+RewriteRule ^catalog/fitnes$ /catalog/fitnes/? [L,R=301]
+
+# 301 --- /catalog/diski-zdorovya--step-doski => /catalog/diski_zdorovya_step_doski/
+RewriteRule ^catalog/diski\-zdorovya\-\-step\-doski$ /catalog/diski_zdorovya_step_doski/? [L,R=301]
+
+# 301 --- /catalog/myachi-dlya-fitnesa => /catalog/myachi_dlya_fitnesa/
+RewriteRule ^catalog/myachi\-dlya\-fitnesa$ /catalog/myachi_dlya_fitnesa/? [L,R=301]
+
+# 301 --- /catalog/kovriki--maty => /catalog/kovriki_maty/
+RewriteRule ^catalog/kovriki\-\-maty$ /catalog/kovriki_maty/? [L,R=301]
+
+# 301 --- /catalog/massazhery => /catalog/massazhery/
+RewriteRule ^catalog/massazhery$ /catalog/massazhery/? [L,R=301]
+
+# 301 --- /catalog/espandery--supporty => /catalog/espandery_supporty/
+RewriteRule ^catalog/espandery\-\-supporty$ /catalog/espandery_supporty/? [L,R=301]
+
+# 301 --- /catalog/skakalki => /catalog/skakalki/
+RewriteRule ^catalog/skakalki$ /catalog/skakalki/? [L,R=301]
+
+# 301 --- /catalog/turniki--roliki => /catalog/turniki_roliki/
+RewriteRule ^catalog/turniki\-\-roliki$ /catalog/turniki_roliki/? [L,R=301]
+
+# 301 --- /catalog/sekundomery--shagomery--vesy => /catalog/sekundomery_shagomery_vesy/
+RewriteRule ^catalog/sekundomery\-\-shagomery\-\-vesy$ /catalog/sekundomery_shagomery_vesy/? [L,R=301]
+
+# 301 --- /catalog/trenazhery => /catalog/trenazhery/
+RewriteRule ^catalog/trenazhery$ /catalog/trenazhery/? [L,R=301]
+
+# 301 --- /catalog/futbol => /catalog/futbol/
+RewriteRule ^catalog/futbol$ /catalog/futbol/? [L,R=301]
+
+# 301 --- /catalog/myachi-futbolnye => /catalog/myachi_futbolnye/
+RewriteRule ^catalog/myachi\-futbolnye$ /catalog/myachi_futbolnye/? [L,R=301]
+
+# 301 --- /catalog/ekipirovka-dlya-igrokov => /catalog/ekipirovka_dlya_igrokov_1/
+RewriteRule ^catalog/ekipirovka\-dlya\-igrokov$ /catalog/ekipirovka_dlya_igrokov_1/? [L,R=301]
+
+# 301 --- /catalog/kompasy--kurvimetry => /catalog/kompasy_kurvimetry/
+RewriteRule ^catalog/kompasy\-\-kurvimetry$ /catalog/kompasy_kurvimetry/? [L,R=301]
+
+# 301 --- /catalog/kovriki-i-sidushki-turisticheskie => /catalog/kovriki_i_sidushki_turisticheskie/
+RewriteRule ^catalog/kovriki\-i\-sidushki\-turisticheskie$ /catalog/kovriki_i_sidushki_turisticheskie/? [L,R=301]
+
+# 301 --- /catalog/kovriki-i-sidushki-samonaduvayuschiesya => /catalog/kovriki_i_sidushki_samonaduvayushchiesya/
+RewriteRule ^catalog/kovriki\-i\-sidushki\-samonaduvayuschiesya$ /catalog/kovriki_i_sidushki_samonaduvayushchiesya/? [L,R=301]
+
+# 301 --- /catalog/kovriki-i-sidushki-penopropilenovye => /catalog/kovriki_i_sidushki_penopropilenovye/
+RewriteRule ^catalog/kovriki\-i\-sidushki\-penopropilenovye$ /catalog/kovriki_i_sidushki_penopropilenovye/? [L,R=301]
+
+# 301 --- /catalog/remnabory-i-aksessuary-dlya-turisticheskih-kovrikov => /catalog/remnabory_i_aksessuary_dlya_turisticheskikh_kovrikov/
+RewriteRule ^catalog/remnabory\-i\-aksessuary\-dlya\-turisticheskih\-kovrikov$ /catalog/remnabory_i_aksessuary_dlya_turisticheskikh_kovrikov/? [L,R=301]
+
+# 301 --- /catalog/elementy-pitaniya => /catalog/elementy_pitaniya/
+RewriteRule ^catalog/elementy\-pitaniya$ /catalog/elementy_pitaniya/? [L,R=301]
+
+# 301 --- /catalog/akkumulyatory--batareyki => /catalog/akkumulyatory_batareyki/
+RewriteRule ^catalog/akkumulyatory\-\-batareyki$ /catalog/akkumulyatory_batareyki/? [L,R=301]
+
+# 301 --- /catalog/zaryadnye-ustroystva => /catalog/zaryadnye_ustroystva/
+RewriteRule ^catalog/zaryadnye\-ustroystva$ /catalog/zaryadnye_ustroystva/? [L,R=301]
+
+# 301 --- /catalog/biotualety => /catalog/biotualety_i_zhidkosti_dlya_biotualetov/
+RewriteRule ^catalog/biotualety$ /catalog/biotualety_i_zhidkosti_dlya_biotualetov/? [L,R=301]
+
+# 301 --- /catalog/zhidkosti-dlya-biotualetov => /catalog/zhidkosti_dlya_biotualetov/
+RewriteRule ^catalog/zhidkosti\-dlya\-biotualetov$ /catalog/zhidkosti_dlya_biotualetov/? [L,R=301]
+
+# 301 --- /catalog/bio-biotualety => /catalog/biotualety/
+RewriteRule ^catalog/bio\-biotualety$ /catalog/biotualety/? [L,R=301]
+
+# 301 --- /catalog/germomeshki--germosumki-i-germoryukzaki => /catalog/germomeshki_germosumki_i_germoryukzaki/
+RewriteRule ^catalog/germomeshki\-\-germosumki\-i\-germoryukzaki$ /catalog/germomeshki_germosumki_i_germoryukzaki/? [L,R=301]
+
+# 301 --- /catalog/gorelki-i-plity-turisticheskie => /catalog/gorelki_i_plity_turisticheskie/
+RewriteRule ^catalog/gorelki\-i\-plity\-turisticheskie$ /catalog/gorelki_i_plity_turisticheskie/? [L,R=301]
+
+# 301 --- /catalog/benzinovye-gorelki => /catalog/benzinovye_gorelki/
+RewriteRule ^catalog/benzinovye\-gorelki$ /catalog/benzinovye_gorelki/? [L,R=301]
+
+# 301 --- /catalog/gazovye-plity => /catalog/gazovye_plity/
+RewriteRule ^catalog/gazovye\-plity$ /catalog/gazovye_plity/? [L,R=301]
+
+# 301 --- /catalog/gazovye-gorelki => /catalog/gazovye_gorelki/
+RewriteRule ^catalog/gazovye\-gorelki$ /catalog/gazovye_gorelki/? [L,R=301]
+
+# 301 --- /catalog/gazovye-payalnye-gorelki--nasadki-k-nim => /catalog/gazovye_payalnye_gorelki_nasadki_k_nim/
+RewriteRule ^catalog/gazovye\-payalnye\-gorelki\-\-nasadki\-k\-nim$ /catalog/gazovye_payalnye_gorelki_nasadki_k_nim/? [L,R=301]
+
+# 301 --- /catalog/gazovye-kartridzhi--emkosti-dlya-topliva => /catalog/gazovye_kartridzhi_emkosti_dlya_topliva/
+RewriteRule ^catalog/gazovye\-kartridzhi\-\-emkosti\-dlya\-topliva$ /catalog/gazovye_kartridzhi_emkosti_dlya_topliva/? [L,R=301]
+
+# 301 --- /catalog/perehodniki-i-aksessuary => /catalog/perekhodniki_i_aksessuary/
+RewriteRule ^catalog/perehodniki\-i\-aksessuary$ /catalog/perekhodniki_i_aksessuary/? [L,R=301]
+
+# 301 --- /catalog/naduvnye-matrasy-i-krovati => /catalog/naduvnye_matrasy_i_krovati/
+RewriteRule ^catalog/naduvnye\-matrasy\-i\-krovati$ /catalog/naduvnye_matrasy_i_krovati/? [L,R=301]
+
+# 301 --- /catalog/podushki--pledy-i-odeyala => /catalog/podushki_pledy_i_odeyala/
+RewriteRule ^catalog/podushki\-\-pledy\-i\-odeyala$ /catalog/podushki_pledy_i_odeyala/? [L,R=301]
+
+# 301 --- /catalog/izotermicheskoe-oborudovanie => /catalog/izotermicheskoe_oborudovanie/
+RewriteRule ^catalog/izotermicheskoe\-oborudovanie$ /catalog/izotermicheskoe_oborudovanie/? [L,R=301]
+
+# 301 --- /catalog/izotermicheskie-konteynery => /catalog/izotermicheskie_konteynery/
+RewriteRule ^catalog/izotermicheskie\-konteynery$ /catalog/izotermicheskie_konteynery/? [L,R=301]
+
+# 301 --- /catalog/izotermicheskie-sumki => /catalog/izotermicheskie_sumki/
+RewriteRule ^catalog/izotermicheskie\-sumki$ /catalog/izotermicheskie_sumki/? [L,R=301]
+
+# 301 --- /catalog/akkumulyatory-holoda-i-soputstvuyuschie-tovary => /catalog/akkumulyatory_kholoda_i_soputstvuyushchie_tovary/
+RewriteRule ^catalog/akkumulyatory\-holoda\-i\-soputstvuyuschie\-tovary$ /catalog/akkumulyatory_kholoda_i_soputstvuyushchie_tovary/? [L,R=301]
+
+# 301 --- /catalog/novinka!-kompressornye-avtomobilnye-holodilniki => /catalog/kompressornye_avtomobilnye_kholodilniki/
+RewriteRule ^catalog/novinka\!\-kompressornye\-avtomobilnye\-holodilniki$ /catalog/kompressornye_avtomobilnye_kholodilniki/? [L,R=301]
+
+# 301 --- /catalog/avtomobilnye-holodilniki => /catalog/avtomobilnye_kholodilniki/
+RewriteRule ^catalog/avtomobilnye\-holodilniki$ /catalog/avtomobilnye_kholodilniki/? [L,R=301]
+
+# 301 --- /catalog/termosy => /catalog/termosy/
+RewriteRule ^catalog/termosy$ /catalog/termosy/? [L,R=301]
+
+# 301 --- /catalog/instrumenty1 => /catalog/instrumenty_2/
+RewriteRule ^catalog/instrumenty1$ /catalog/instrumenty_2/? [L,R=301]
+
+# 301 --- /catalog/topory => /catalog/topory/
+RewriteRule ^catalog/topory$ /catalog/topory/? [L,R=301]
+
+# 301 --- /catalog/pily => /catalog/pily/
+RewriteRule ^catalog/pily$ /catalog/pily/? [L,R=301]
+
+# 301 --- /catalog/lopaty--grabli => /catalog/lopaty_grabli/
+RewriteRule ^catalog/lopaty\-\-grabli$ /catalog/lopaty_grabli/? [L,R=301]
+
+# 301 --- /catalog/drugie-instrumenty--nozhnicy--sekachi => /catalog/drugie_instrumenty_nozhnitsy_sekachi/
+RewriteRule ^catalog/drugie\-instrumenty\-\-nozhnicy\-\-sekachi$ /catalog/drugie_instrumenty_nozhnitsy_sekachi/? [L,R=301]
+
+# 301 --- /catalog/zonty--gamaki--kacheli => /catalog/zonty_gamaki_kacheli/
+RewriteRule ^catalog/zonty\-\-gamaki\-\-kacheli$ /catalog/zonty_gamaki_kacheli/? [L,R=301]
+
+# 301 --- /catalog/dush-perenosnoy--umyvalniki => /catalog/dush_perenosnoy_umyvalniki/
+RewriteRule ^catalog/dush\-perenosnoy\-\-umyvalniki$ /catalog/dush_perenosnoy_umyvalniki/? [L,R=301]
+
+# 301 --- /catalog/filtry-dlya-vody => /catalog/filtry_dlya_vody/
+RewriteRule ^catalog/filtry\-dlya\-vody$ /catalog/filtry_dlya_vody/? [L,R=301]
+
+# 301 --- /catalog/prigotovlenie-shashlyka-i-barbekyu => /catalog/prigotovlenie_shashlyka_i_barbekyu/
+RewriteRule ^catalog/prigotovlenie\-shashlyka\-i\-barbekyu$ /catalog/prigotovlenie_shashlyka_i_barbekyu/? [L,R=301]
+
+# 301 --- /catalog/barbekyu--mangaly--koptilni => /catalog/barbekyu_mangaly_koptilni/
+RewriteRule ^catalog/barbekyu\-\-mangaly\-\-koptilni$ /catalog/barbekyu_mangaly_koptilni/? [L,R=301]
+
+# 301 --- /catalog/reshetki--shampury => /catalog/reshetki_shampury/
+RewriteRule ^catalog/reshetki\-\-shampury$ /catalog/reshetki_shampury/? [L,R=301]
+
+# 301 --- /catalog/nabory-dlya-barbekyu--aksessuary => /catalog/nabory_dlya_barbekyu_aksessuary/
+RewriteRule ^catalog/nabory\-dlya\-barbekyu\-\-aksessuary$ /catalog/nabory_dlya_barbekyu_aksessuary/? [L,R=301]
+
+# 301 --- /catalog/trenogi--podstavki => /catalog/trenogi_podstavki/
+RewriteRule ^catalog/trenogi\-\-podstavki$ /catalog/trenogi_podstavki/? [L,R=301]
+
+# 301 --- /catalog/kryuki--trosiki => /catalog/kryuki_trosiki/
+RewriteRule ^catalog/kryuki\-\-trosiki$ /catalog/kryuki_trosiki/? [L,R=301]
+
+# 301 --- /catalog/spichki--suhoe-goryuchee--ognivo => /catalog/spichki_sukhoe_goryuchee_ognivo/
+RewriteRule ^catalog/spichki\-\-suhoe\-goryuchee\-\-ognivo$ /catalog/spichki_sukhoe_goryuchee_ognivo/? [L,R=301]
+
+# 301 --- /catalog/ugol--zhidkost-dlya-rozzhiga--drova => /catalog/ugol_zhidkost_dlya_rozzhiga_drova/
+RewriteRule ^catalog/ugol\-\-zhidkost\-dlya\-rozzhiga\-\-drova$ /catalog/ugol_zhidkost_dlya_rozzhiga_drova/? [L,R=301]
+
+# 301 --- /catalog/schepa-dlya-kopcheniya => /catalog/shchepa_dlya_kopcheniya/
+RewriteRule ^catalog/schepa\-dlya\-kopcheniya$ /catalog/shchepa_dlya_kopcheniya/? [L,R=301]
+
+# 301 --- /catalog/lampy-na-zhidkom-toplive => /catalog/lampy_na_zhidkom_toplive/
+RewriteRule ^catalog/lampy\-na\-zhidkom\-toplive$ /catalog/lampy_na_zhidkom_toplive/? [L,R=301]
+
+# 301 --- /catalog/komplektuyuschie--remnabory => /catalog/komplektuyushchie_remnabory/
+RewriteRule ^catalog/komplektuyuschie\-\-remnabory$ /catalog/komplektuyushchie_remnabory/? [L,R=301]
+
+# 301 --- /catalog/mebel-turisticheskaya => /catalog/mebel_turisticheskaya/
+RewriteRule ^catalog/mebel\-turisticheskaya$ /catalog/mebel_turisticheskaya/? [L,R=301]
+
+# 301 --- /catalog/shezlongi--kresla--stulya--taburety => /catalog/shezlongi_kresla_stulya_taburety/
+RewriteRule ^catalog/shezlongi\-\-kresla\-\-stulya\-\-taburety$ /catalog/shezlongi_kresla_stulya_taburety/? [L,R=301]
+
+# 301 --- /catalog/stoly => /catalog/stoly/
+RewriteRule ^catalog/stoly$ /catalog/stoly/? [L,R=301]
+
+# 301 --- /catalog/krovati => /catalog/krovati/
+RewriteRule ^catalog/krovati$ /catalog/krovati/? [L,R=301]
+
+# 301 --- /catalog/shkafy--kuhni => /catalog/shkafy_kukhni/
+RewriteRule ^catalog/shkafy\-\-kuhni$ /catalog/shkafy_kukhni/? [L,R=301]
+
+# 301 --- /catalog/nabory-mebelnye => /catalog/nabory_mebelnye/
+RewriteRule ^catalog/nabory\-mebelnye$ /catalog/nabory_mebelnye/? [L,R=301]
+
+# 301 --- /catalog/obogrevateli-turisticheskie => /catalog/obogrevateli_turisticheskie/
+RewriteRule ^catalog/obogrevateli\-turisticheskie$ /catalog/obogrevateli_turisticheskie/? [L,R=301]
+
+# 301 --- /catalog/palatki => /catalog/palatki/
+RewriteRule ^catalog/palatki$ /catalog/palatki/? [L,R=301]
+
+# 301 --- /catalog/remnabory-i-aksessuary-k-palatkam => /catalog/remnabory_i_aksessuary_k_palatkam/
+RewriteRule ^catalog/remnabory\-i\-aksessuary\-k\-palatkam$ /catalog/remnabory_i_aksessuary_k_palatkam/? [L,R=301]
+
+# 301 --- /catalog/sredstva-podachi-signalov => /catalog/sredstva_podachi_signalov/
+RewriteRule ^catalog/sredstva\-podachi\-signalov$ /catalog/sredstva_podachi_signalov/? [L,R=301]
+
+# 301 --- /catalog/mobilnye-signalizacii => /catalog/mobilnye_signalizatsii/
+RewriteRule ^catalog/mobilnye\-signalizacii$ /catalog/mobilnye_signalizatsii/? [L,R=301]
+
+# 301 --- /catalog/signal-ohotnika--raketnicy => /catalog/signal_okhotnika_raketnitsy/
+RewriteRule ^catalog/signal\-ohotnika\-\-raketnicy$ /catalog/signal_okhotnika_raketnitsy/? [L,R=301]
+
+# 301 --- /catalog/posuda-turisticheskaya => /catalog/posuda_turisticheskaya/
+RewriteRule ^catalog/posuda\-turisticheskaya$ /catalog/posuda_turisticheskaya/? [L,R=301]
+
+# 301 --- /catalog/kotly => /catalog/kotly/
+RewriteRule ^catalog/kotly$ /catalog/kotly/? [L,R=301]
+
+# 301 --- /catalog/kastryuli--chayniki--skovorody => /catalog/kastryuli_chayniki_skovorody/
+RewriteRule ^catalog/kastryuli\-\-chayniki\-\-skovorody$ /catalog/kastryuli_chayniki_skovorody/? [L,R=301]
+
+# 301 --- /catalog/tarelki1 => /catalog/tarelki_1/
+RewriteRule ^catalog/tarelki1$ /catalog/tarelki_1/? [L,R=301]
+
+# 301 --- /catalog/kruzhki--stakany--stopki => /catalog/kruzhki_stakany_stopki/
+RewriteRule ^catalog/kruzhki\-\-stakany\-\-stopki$ /catalog/kruzhki_stakany_stopki/? [L,R=301]
+
+# 301 --- /catalog/stolovye-pribory => /catalog/stolovye_pribory/
+RewriteRule ^catalog/stolovye\-pribory$ /catalog/stolovye_pribory/? [L,R=301]
+
+# 301 --- /catalog/flyazhki => /catalog/flyazhki/
+RewriteRule ^catalog/flyazhki$ /catalog/flyazhki/? [L,R=301]
+
+# 301 --- /catalog/vedra--kanistry => /catalog/vedra_kanistry/
+RewriteRule ^catalog/vedra\-\-kanistry$ /catalog/vedra_kanistry/? [L,R=301]
+
+# 301 --- /catalog/konteynery--sudki => /catalog/konteynery_sudki/
+RewriteRule ^catalog/konteynery\-\-sudki$ /catalog/konteynery_sudki/? [L,R=301]
+
+# 301 --- /catalog/nabory-piknikovye => /catalog/nabory_piknikovye/
+RewriteRule ^catalog/nabory\-piknikovye$ /catalog/nabory_piknikovye/? [L,R=301]
+
+# 301 --- /catalog/repellenty-i-lovushki => /catalog/repellenty_i_lovushki/
+RewriteRule ^catalog/repellenty\-i\-lovushki$ /catalog/repellenty_i_lovushki/? [L,R=301]
+
+# 301 --- /catalog/aerozoli--kremy => /catalog/aerozoli_kremy/
+RewriteRule ^catalog/aerozoli\-\-kremy$ /catalog/aerozoli_kremy/? [L,R=301]
+
+# 301 --- /catalog/fumigatory--kartridzhi--spirali => /catalog/fumigatory_kartridzhi_spirali/
+RewriteRule ^catalog/fumigatory\-\-kartridzhi\-\-spirali$ /catalog/fumigatory_kartridzhi_spirali/? [L,R=301]
+
+# 301 --- /catalog/lenty--setki--lovushki => /catalog/lenty_setki_lovushki/
+RewriteRule ^catalog/lenty\-\-setki\-\-lovushki$ /catalog/lenty_setki_lovushki/? [L,R=301]
+
+# 301 --- /catalog/otpugivateli-gazovye => /catalog/otpugivateli_gazovye/
+RewriteRule ^catalog/otpugivateli\-gazovye$ /catalog/otpugivateli_gazovye/? [L,R=301]
+
+# 301 --- /catalog/otpugivateli-elektronnye => /catalog/otpugivateli_elektronnye/
+RewriteRule ^catalog/otpugivateli\-elektronnye$ /catalog/otpugivateli_elektronnye/? [L,R=301]
+
+# 301 --- /catalog/ryukzaki => /catalog/ryukzaki/
+RewriteRule ^catalog/ryukzaki$ /catalog/ryukzaki/? [L,R=301]
+
+# 301 --- /catalog/ryukzaki-gorodskie => /catalog/ryukzaki_gorodskie/
+RewriteRule ^catalog/ryukzaki\-gorodskie$ /catalog/ryukzaki_gorodskie/? [L,R=301]
+
+# 301 --- /catalog/ryukzaki-sportivnye => /catalog/ryukzaki_sportivnye/
+RewriteRule ^catalog/ryukzaki\-sportivnye$ /catalog/ryukzaki_sportivnye/? [L,R=301]
+
+# 301 --- /catalog/ryukzaki-ekspedicionnye => /catalog/ryukzaki_ekspeditsionnye/
+RewriteRule ^catalog/ryukzaki\-ekspedicionnye$ /catalog/ryukzaki_ekspeditsionnye/? [L,R=301]
+
+# 301 --- /catalog/ryukzaki-dlya-ohoty--rybalki--specialnye => /catalog/ryukzaki_dlya_okhoty_rybalki_spetsialnye/
+RewriteRule ^catalog/ryukzaki\-dlya\-ohoty\-\-rybalki\-\-specialnye$ /catalog/ryukzaki_dlya_okhoty_rybalki_spetsialnye/? [L,R=301]
+
+# 301 --- /catalog/aksessuary-dlya-ryukzakov => /catalog/aksessuary_dlya_ryukzakov/
+RewriteRule ^catalog/aksessuary\-dlya\-ryukzakov$ /catalog/aksessuary_dlya_ryukzakov/? [L,R=301]
+
+# 301 --- /catalog/fonari-i-osvetitelnye-pribory => /catalog/fonari_i_osvetitelnye_pribory/
+RewriteRule ^catalog/fonari\-i\-osvetitelnye\-pribory$ /catalog/fonari_i_osvetitelnye_pribory/? [L,R=301]
+
+# 301 --- /catalog/gazovye-lampy => /catalog/gazovye_lampy/
+RewriteRule ^catalog/gazovye\-lampy$ /catalog/gazovye_lampy/? [L,R=301]
+
+# 301 --- /catalog/prozhektory => /catalog/fonari_avtomobilnye/
+RewriteRule ^catalog/prozhektory$ /catalog/fonari_avtomobilnye/? [L,R=301]
+
+# 301 --- /catalog/fonari-nalobnye => /catalog/fonari_nalobnye/
+RewriteRule ^catalog/fonari\-nalobnye$ /catalog/fonari_nalobnye/? [L,R=301]
+
+# 301 --- /catalog/fonari-ruchnye => /catalog/fonari_ruchnye/
+RewriteRule ^catalog/fonari\-ruchnye$ /catalog/fonari_ruchnye/? [L,R=301]
+
+# 301 --- /catalog/fonari-brelki => /catalog/fonari_brelki/
+RewriteRule ^catalog/fonari\-brelki$ /catalog/fonari_brelki/? [L,R=301]
+
+# 301 --- /catalog/fonari-kempingovye => /catalog/fonari_kempingovye/
+RewriteRule ^catalog/fonari\-kempingovye$ /catalog/fonari_kempingovye/? [L,R=301]
+
+# 301 --- /catalog/zapasnye-chasti-k-nim => /catalog/komplektuyushchie_k_fonaryam/
+RewriteRule ^catalog/zapasnye\-chasti\-k\-nim$ /catalog/komplektuyushchie_k_fonaryam/? [L,R=301]
+
+# 301 --- /catalog/svetilniki-na-solnechnyh-batareyah => /catalog/svetilniki_na_solnechnykh_batareyakh/
+RewriteRule ^catalog/svetilniki\-na\-solnechnyh\-batareyah$ /catalog/svetilniki_na_solnechnykh_batareyakh/? [L,R=301]
+
+# 301 --- /catalog/novinka!-palki-dlya-skandinavskoy-hodby => /catalog/palki_dlya_skandinavskoy_khodby/
+RewriteRule ^catalog/novinka\!\-palki\-dlya\-skandinavskoy\-hodby$ /catalog/palki_dlya_skandinavskoy_khodby/? [L,R=301]
+
+# 301 --- /catalog/spalnye-meshki => /catalog/spalnye_meshki/
+RewriteRule ^catalog/spalnye\-meshki$ /catalog/spalnye_meshki/? [L,R=301]
+
+# 301 --- /catalog/sumki-i-aksessuary-dlya-turistov => /catalog/sumki_i_aksessuary_dlya_turistov/
+RewriteRule ^catalog/sumki\-i\-aksessuary\-dlya\-turistov$ /catalog/sumki_i_aksessuary_dlya_turistov/? [L,R=301]
+
+# 301 --- /catalog/polotenca--salfetki => /catalog/polotentsa_salfetki/
+RewriteRule ^catalog/polotenca\-\-salfetki$ /catalog/polotentsa_salfetki/? [L,R=301]
+
+# 301 --- /catalog/moyuschie-sredstva => /catalog/moyushchie_sredstva/
+RewriteRule ^catalog/moyuschie\-sredstva$ /catalog/moyushchie_sredstva/? [L,R=301]
+
+# 301 --- /catalog/grelki-dlya-tela => /catalog/grelki_dlya_tela/
+RewriteRule ^catalog/grelki\-dlya\-tela$ /catalog/grelki_dlya_tela/? [L,R=301]
+
+# 301 --- /catalog/sumki-dorozhnye => /catalog/sumki_dorozhnye/
+RewriteRule ^catalog/sumki\-dorozhnye$ /catalog/sumki_dorozhnye/? [L,R=301]
+
+# 301 --- /catalog/kosmetichki--sumki-poyasnye-i-pr => /catalog/kosmetichki_sumki_poyasnye_i_pr/
+RewriteRule ^catalog/kosmetichki\-\-sumki\-poyasnye\-i\-pr$ /catalog/kosmetichki_sumki_poyasnye_i_pr/? [L,R=301]
+
+# 301 --- /catalog/aptechki => /catalog/aptechki/
+RewriteRule ^catalog/aptechki$ /catalog/aptechki/? [L,R=301]
+
+# 301 --- /catalog/tenty-i-shatry => /catalog/tenty_i_shatry/
+RewriteRule ^catalog/tenty\-i\-shatry$ /catalog/tenty_i_shatry/? [L,R=301]
+
+# 301 --- /catalog/ekspedicionnye-yaschiki-iris => /catalog/ekspeditsionnye_yashchiki_iris/
+RewriteRule ^catalog/ekspedicionnye\-yaschiki\-iris$ /catalog/ekspeditsionnye_yashchiki_iris/? [L,R=301]
+
+# 301 --- /catalog/nasosy-elektricheskie--nozhnye => /catalog/nasosy_elektricheskie_nozhnye/
+RewriteRule ^catalog/nasosy\-elektricheskie\-\-nozhnye$ /catalog/nasosy_elektricheskie_nozhnye/? [L,R=301]
+
+# 301 --- /catalog/Solnechnyebatarei => /catalog/solnechnye_batarei/
+RewriteRule ^catalog/Solnechnyebatarei$ /catalog/solnechnye_batarei/? [L,R=301]
+
+# 301 --- /catalog/begovye-lyzhi => /catalog/begovye_lyzhi/
+RewriteRule ^catalog/begovye\-lyzhi$ /catalog/begovye_lyzhi/? [L,R=301]
+
+# 301 --- /catalog/Akkumulyatorydlyasolnechnyhbatarey => /catalog/akkumulyatory_dlya_vozobonvlyaemykh_istochnikov_energii/
+RewriteRule ^catalog/Akkumulyatorydlyasolnechnyhbatarey$ /catalog/akkumulyatory_dlya_vozobonvlyaemykh_istochnikov_energii/? [L,R=301]
+
+# 301 --- /catalog/Kabelyaikonnektorysolnechnye => /catalog/kabeli_konnektory_dlya_solnechnykh_paneley/
+RewriteRule ^catalog/Kabelyaikonnektorysolnechnye$ /catalog/kabeli_konnektory_dlya_solnechnykh_paneley/? [L,R=301]
+
+# 301 --- /catalog/Invertorysolnechnye => /catalog/invertory/
+RewriteRule ^catalog/Invertorysolnechnye$ /catalog/invertory/? [L,R=301]
+
+# 301 --- /catalog/Kontrolleryzaryada => /catalog/kontrollery_dlya_solnechnykh_paneley/
+RewriteRule ^catalog/Kontrolleryzaryada$ /catalog/kontrollery_dlya_solnechnykh_paneley/? [L,R=301]
+
+# 301 --- /catalog/Lampysvetodiodnye => /catalog/lampy_osveshchenie_ot_solnechnykh_paneley/
+RewriteRule ^catalog/Lampysvetodiodnye$ /catalog/lampy_osveshchenie_ot_solnechnykh_paneley/? [L,R=301]
+
+# 301 --- /catalog/Solnechnyezaryadnyeustroystva => /catalog/zaryadnye_ustroystva_dlya_solnechnykh_paneley/
+RewriteRule ^catalog/Solnechnyezaryadnyeustroystva$ /catalog/zaryadnye_ustroystva_dlya_solnechnykh_paneley/? [L,R=301]
+
+# 301 --- /catalog/gornye-lyzhi => /catalog/gornye_lyzhi/
+RewriteRule ^catalog/gornye\-lyzhi$ /catalog/gornye_lyzhi/? [L,R=301]
+
+# 301 --- /catalog/lyzhi-gornye => /catalog/lyzhi_gornye/
+RewriteRule ^catalog/lyzhi\-gornye$ /catalog/lyzhi_gornye/? [L,R=301]
+
+# 301 --- /catalog/botinki-gornolyzhnye => /catalog/botinki_gornolyzhnye/
+RewriteRule ^catalog/botinki\-gornolyzhnye$ /catalog/botinki_gornolyzhnye/? [L,R=301]
+
+# 301 --- /catalog/krepleniya-gornolyzhnye => /catalog/krepleniya_gornolyzhnye/
+RewriteRule ^catalog/krepleniya\-gornolyzhnye$ /catalog/krepleniya_gornolyzhnye/? [L,R=301]
+
+# 301 --- /catalog/palki-gornolyzhnye => /catalog/palki_gornolyzhnye/
+RewriteRule ^catalog/palki\-gornolyzhnye$ /catalog/palki_gornolyzhnye/? [L,R=301]
+
+# 301 --- /catalog/smazki--aksessuary--instrumenty => /catalog/smazki_aksessuary_instrumenty/
+RewriteRule ^catalog/smazki\-\-aksessuary\-\-instrumenty$ /catalog/smazki_aksessuary_instrumenty/? [L,R=301]
+
+# 301 --- /catalog/chehly-sumki-dlya-snow => /catalog/chekhly_sumki/
+RewriteRule ^catalog/chehly\-sumki\-dlya\-snow$ /catalog/chekhly_sumki/? [L,R=301]
+
+# 301 --- /catalog/shlema-gornolyzhnye => /catalog/shlema_gornolyzhnye/
+RewriteRule ^catalog/shlema\-gornolyzhnye$ /catalog/shlema_gornolyzhnye/? [L,R=301]
+
+# 301 --- /catalog/maski-gornolyzhnye => /catalog/maski_gornolyzhnye/
+RewriteRule ^catalog/maski\-gornolyzhnye$ /catalog/maski_gornolyzhnye/? [L,R=301]
+
+# 301 --- /catalog/zaschita-dlya-gornolyzhnikov => /catalog/zashchita_dlya_gornolyzhnikov/
+RewriteRule ^catalog/zaschita\-dlya\-gornolyzhnikov$ /catalog/zashchita_dlya_gornolyzhnikov/? [L,R=301]
+
+# 301 --- /catalog/aksessuary-k-maskam-gornolyzhnym => /catalog/aksessuary_k_maskam_gornolyzhnym/
+RewriteRule ^catalog/aksessuary\-k\-maskam\-gornolyzhnym$ /catalog/aksessuary_k_maskam_gornolyzhnym/? [L,R=301]
+
+# 301 --- /catalog/konki => /catalog/konki/
+RewriteRule ^catalog/konki$ /catalog/konki/? [L,R=301]
+
+# 301 --- /catalog/konki-hokkeynye => /catalog/konki_khokkeynye/
+RewriteRule ^catalog/konki\-hokkeynye$ /catalog/konki_khokkeynye/? [L,R=301]
+
+# 301 --- /catalog/konki-figurnye => /catalog/konki_figurnye/
+RewriteRule ^catalog/konki\-figurnye$ /catalog/konki_figurnye/? [L,R=301]
+
+# 301 --- /catalog/konki-razdvizhnye--dvuhpoloznye => /catalog/konki_razdvizhnye_dvukhpoloznye/
+RewriteRule ^catalog/konki\-razdvizhnye\-\-dvuhpoloznye$ /catalog/konki_razdvizhnye_dvukhpoloznye/? [L,R=301]
+
+# 301 --- /catalog/chehly--aksessuary-dlya-konkov => /catalog/chekhly_aksessuary_dlya_konkov/
+RewriteRule ^catalog/chehly\-\-aksessuary\-dlya\-konkov$ /catalog/chekhly_aksessuary_dlya_konkov/? [L,R=301]
+
+# 301 --- /catalog/sanki--snegokaty => /catalog/sanki_snegokaty/
+RewriteRule ^catalog/sanki\-\-snegokaty$ /catalog/sanki_snegokaty/? [L,R=301]
+
+# 301 --- /catalog/snegokaty => /catalog/snegokaty/
+RewriteRule ^catalog/snegokaty$ /catalog/snegokaty/? [L,R=301]
+
+# 301 --- /catalog/tyubingi-i-vatrushki => /catalog/tyubingi_i_vatrushki/
+RewriteRule ^catalog/tyubingi\-i\-vatrushki$ /catalog/tyubingi_i_vatrushki/? [L,R=301]
+
+# 301 --- /catalog/ledyanki => /catalog/ledyanki/
+RewriteRule ^catalog/ledyanki$ /catalog/ledyanki/? [L,R=301]
+
+# 301 --- /catalog/sanki => /catalog/sanki/
+RewriteRule ^catalog/sanki$ /catalog/sanki/? [L,R=301]
+
+# 301 --- /catalog/aksessuary-dlya-sanok--snegokatov => /catalog/aksessuary_dlya_sanok_snegokatov/
+RewriteRule ^catalog/aksessuary\-dlya\-sanok\-\-snegokatov$ /catalog/aksessuary_dlya_sanok_snegokatov/? [L,R=301]
+
+# 301 --- /catalog/snoubordy => /catalog/snoubordy/
+RewriteRule ^catalog/snoubordy$ /catalog/snoubordy/? [L,R=301]
+
+# 301 --- /catalog/snoubord-doski => /catalog/snoubord_doski/
+RewriteRule ^catalog/snoubord\-doski$ /catalog/snoubord_doski/? [L,R=301]
+
+# 301 --- /catalog/botinki-snoubordicheskie => /catalog/botinki_snoubordicheskie/
+RewriteRule ^catalog/botinki\-snoubordicheskie$ /catalog/botinki_snoubordicheskie/? [L,R=301]
+
+# 301 --- /catalog/krepleniya-snoubordicheskie => /catalog/krepleniya_snoubordicheskie/
+RewriteRule ^catalog/krepleniya\-snoubordicheskie$ /catalog/krepleniya_snoubordicheskie/? [L,R=301]
+
+# 301 --- /catalog/instrumenty--aksessuary => /catalog/instrumenty_aksessuary/
+RewriteRule ^catalog/instrumenty\-\-aksessuary$ /catalog/instrumenty_aksessuary/? [L,R=301]
+
+# 301 --- /catalog/chehly-sumki-dlya-snow => /catalog/chekhly_sumki_1/
+RewriteRule ^catalog/chehly\-sumki\-dlya\-snow$ /catalog/chekhly_sumki_1/? [L,R=301]
+
+# 301 --- /catalog/shlema-snoubordicheskie => /catalog/shlemy_snoubordicheskie/
+RewriteRule ^catalog/shlema\-snoubordicheskie$ /catalog/shlemy_snoubordicheskie/? [L,R=301]
+
+# 301 --- /catalog/maski-snoubordicheskie => /catalog/maski_snoubordicheskie/
+RewriteRule ^catalog/maski\-snoubordicheskie$ /catalog/maski_snoubordicheskie/? [L,R=301]
+
+# 301 --- /catalog/zaschita-dlya-snoubordistov => /catalog/zashchita_dlya_snoubordistov/
+RewriteRule ^catalog/zaschita\-dlya\-snoubordistov$ /catalog/zashchita_dlya_snoubordistov/? [L,R=301]
+
+# 301 --- /catalog/aksessuary-k-maskam-snoubordicheskim => /catalog/aksessuary_k_maskam_snoubordicheskim/
+RewriteRule ^catalog/aksessuary\-k\-maskam\-snoubordicheskim$ /catalog/aksessuary_k_maskam_snoubordicheskim/? [L,R=301]
+
+# 301 --- /catalog/hokkey => /catalog/khokkey/
+RewriteRule ^catalog/hokkey$ /catalog/khokkey/? [L,R=301]
+
+# 301 --- /catalog/klyushki => /catalog/klyushki/
+RewriteRule ^catalog/klyushki$ /catalog/klyushki/? [L,R=301]
+
+# 301 --- /catalog/shayby--myachi => /catalog/shayby_myachi/
+RewriteRule ^catalog/shayby\-\-myachi$ /catalog/shayby_myachi/? [L,R=301]
+
+# 301 --- /catalog/ekipirovka-dlya-igrokov => /catalog/ekipirovka_dlya_igrokov_2/
+RewriteRule ^catalog/ekipirovka\-dlya\-igrokov$ /catalog/ekipirovka_dlya_igrokov_2/? [L,R=301]
+
+# 301 --- /catalog/sredstva-dlya-uhoda-za-oruzhiem => /catalog/sredstva_dlya_ukhoda_za_oruzhiem/
+RewriteRule ^catalog/sredstva\-dlya\-uhoda\-za\-oruzhiem$ /catalog/sredstva_dlya_ukhoda_za_oruzhiem/? [L,R=301]
+
+# 301 --- /catalog/masla-ruzheynye => /catalog/masla_ruzheynye/
+RewriteRule ^catalog/masla\-ruzheynye$ /catalog/masla_ruzheynye/? [L,R=301]
+
+# 301 --- /catalog/zhidkosti-i-masla-dlya-uhoda-za-oruzhiem => /catalog/zhidkosti_i_masla_dlya_ukhoda_za_oruzhiem/
+RewriteRule ^catalog/zhidkosti\-i\-masla\-dlya\-uhoda\-za\-oruzhiem$ /catalog/zhidkosti_i_masla_dlya_ukhoda_za_oruzhiem/? [L,R=301]
+
+# 301 --- /catalog/ershi--nabory-ershey => /catalog/ershi_nabory_ershey/
+RewriteRule ^catalog/ershi\-\-nabory\-ershey$ /catalog/ershi_nabory_ershey/? [L,R=301]
+
+# 301 --- /catalog/shompoly => /catalog/shompoly/
+RewriteRule ^catalog/shompoly$ /catalog/shompoly/? [L,R=301]
+
+# 301 --- /catalog/nabory-dlya-chistki => /catalog/nabory_dlya_chistki/
+RewriteRule ^catalog/nabory\-dlya\-chistki$ /catalog/nabory_dlya_chistki/? [L,R=301]
+
+# 301 --- /catalog/falsh-patrony => /catalog/falsh_patrony/
+RewriteRule ^catalog/falsh\-patrony$ /catalog/falsh_patrony/? [L,R=301]
+
+# 301 --- /catalog/seyfy => /catalog/seyfy/
+RewriteRule ^catalog/seyfy$ /catalog/seyfy/? [L,R=301]
+
+# 301 --- /catalog/oruzhie--boepripasy--specsredstva => /catalog/oruzhie_boepripasy_spetssredstva/
+RewriteRule ^catalog/oruzhie\-\-boepripasy\-\-specsredstva$ /catalog/oruzhie_boepripasy_spetssredstva/? [L,R=301]
+
+# 301 --- /catalog/tovary-dlya-ohoty => /catalog/tovary_dlya_okhoty/
+RewriteRule ^catalog/tovary\-dlya\-ohoty$ /catalog/tovary_dlya_okhoty/? [L,R=301]
+
+# 301 --- /catalog/hranenie-i-uhod-za-oruzhiem => /catalog/khranenie_i_ukhod_za_oruzhiem/
+RewriteRule ^catalog/hranenie\-i\-uhod\-za\-oruzhiem$ /catalog/khranenie_i_ukhod_za_oruzhiem/? [L,R=301]
+
+# 301 --- /catalog/optika-i-elektronika => /catalog/optika_i_elektronika/
+RewriteRule ^catalog/optika\-i\-elektronika$ /catalog/optika_i_elektronika/? [L,R=301]
+
+# 301 --- /catalog/nozhi-i-tochilki => /catalog/nozhi_i_tochilki/
+RewriteRule ^catalog/nozhi\-i\-tochilki$ /catalog/nozhi_i_tochilki/? [L,R=301]
+
+# 301 --- /catalog/tovary-dlya-turizma-i-kempinga => /catalog/tovary_dlya_turizma_i_kempinga/
+RewriteRule ^catalog/tovary\-dlya\-turizma\-i\-kempinga$ /catalog/tovary_dlya_turizma_i_kempinga/? [L,R=301]
+
+# 301 --- /catalog/rybolovnye-tovary => /catalog/rybolovnye_tovary/
+RewriteRule ^catalog/rybolovnye\-tovary$ /catalog/rybolovnye_tovary/? [L,R=301]
+
+# 301 --- /catalog/lodki-i-motory => /catalog/lodki_i_motory/
+RewriteRule ^catalog/lodki\-i\-motory$ /catalog/lodki_i_motory/? [L,R=301]
+
+# 301 --- /catalog/velotovary-i-letniy-sport => /catalog/velotovary_i_letniy_sport/
+RewriteRule ^catalog/velotovary\-i\-letniy\-sport$ /catalog/velotovary_i_letniy_sport/? [L,R=301]
+
+# 301 --- /catalog/dayving--podvodnaya-ohota--snorkeling => /catalog/dayving_podvodnaya_okhota_snorkeling/
+RewriteRule ^catalog/dayving\-\-podvodnaya\-ohota\-\-snorkeling$ /catalog/dayving_podvodnaya_okhota_snorkeling/? [L,R=301]
+
+# 301 --- /catalog/zimniy-sport-i-otdyh => /catalog/zimniy_sport_i_otdykh/
+RewriteRule ^catalog/zimniy\-sport\-i\-otdyh$ /catalog/zimniy_sport_i_otdykh/? [L,R=301]
+
+# 301 --- /catalog/odezhda-i-obuv => /catalog/odezhda_i_obuv/
+RewriteRule ^catalog/odezhda\-i\-obuv$ /catalog/odezhda_i_obuv/? [L,R=301]
+
+# 301 --- /catalog/suveniry-i-podarki => /catalog/suveniry_i_podarki/
+RewriteRule ^catalog/suveniry\-i\-podarki$ /catalog/suveniry_i_podarki/? [L,R=301]
+
+# 301 --- /catalog/pirotehnika => /catalog/pirotekhnika/
+RewriteRule ^catalog/pirotehnika$ /catalog/pirotekhnika/? [L,R=301]
+
+# 301 --- /catalog/raznoe-tovari => /catalog/raznoe/
+RewriteRule ^catalog/raznoe\-tovari$ /catalog/raznoe/? [L,R=301]
+
+# 301 --- /catalog/rasprodazha1 => /catalog/rasprodazha/
+RewriteRule ^catalog/rasprodazha1$ /catalog/rasprodazha/? [L,R=301]
+
+
+
+RewriteRule ^catalog/(\w+)/LodkaNavigator380NDNDTurist$ /catalog/lodki/lodka_navigator_400_ndnd_turist/? [L,R=301]
+
+  
+
+  
+  
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+  RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+  RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+  DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+  ExpiresByType image/jpeg "access plus 3 day"
+  ExpiresByType image/gif "access plus 3 day"
+  ExpiresByType image/png "access plus 3 day"
+  ExpiresByType text/css "access plus 3 day"
+  ExpiresByType application/javascript "access plus 3 day"  
+</IfModule>
+

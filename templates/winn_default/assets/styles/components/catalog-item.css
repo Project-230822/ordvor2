@@ -1,0 +1,51 @@
+.product-price-old {
+  text-decoration: line-through;
+  white-space: nowrap; }
+
+.product-price-current {
+  white-space: nowrap; }
+
+.product {
+  /* Button */
+  /*Amount*/
+  /* Price */ }
+  .product-button-container .btn-rounded {
+    padding: 1rem; }
+  .product-button-container .icon-cart {
+    float: left; }
+  .product-amount-field-btn-plus, .product-amount-field-btn-minus {
+    color: #3651be;
+    cursor: pointer;
+    opacity: .8;
+    transition: color 300ms ease, opacity 300ms ease; }
+  .product-amount-field-btn-disabled.product-amount-field-btn-plus, .product-amount-field-btn-disabled.product-amount-field-btn-minus {
+    opacity: .3 !important;
+    cursor: default; }
+  .product-amount-field-btn-disabled.product-amount-field-btn-plus:hover, .product-amount-field-btn-disabled.product-amount-field-btn-minus:hover {
+    color: #f2f2f2; }
+  .product-amount-field-btn-plus:hover, .product-amount-field-btn-minus:hover {
+    opacity: 1; }
+  .product-amount-field.form-control:focus {
+    border-color: #ced4da;
+    box-shadow: none; }
+  .product-amount-field::-webkit-outer-spin-button, .product-amount-field::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */ }
+  .product-amount .product-amount-field {
+    -moz-appearance: textfield;
+    text-align: center;
+    width: 4.2rem; }
+  .product-amount .product-amount-field:disabled {
+    background: #fff;
+    color: rgba(0, 0, 0, 0.5); }
+  .product-amount-field:focus {
+    outline: none !important; }
+  .product .bx-no-touch input.product-amount-field::-webkit-outer-spin-button,
+  .product .bx-no-touch input.product-amount-field::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+    appearance: none; }
+
+/*# sourceMappingURL=catalog-item.css.map */

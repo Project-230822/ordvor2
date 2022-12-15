@@ -1,0 +1,38 @@
+@import 'scrollbar';
+@import 'bmd/forms';
+
+@mixin mx-bg-img($link)
+{
+  -webkit-mask: url($link) no-repeat center center;
+  mask: url($link) no-repeat center center;
+  background-color: $body-color;
+}
+
+@mixin hide-size($size)
+{
+  @include media-breakpoint-down($size)
+  {
+    display: none !important;
+  }
+}
+
+@mixin border-left-none($size)
+{
+  @include media-breakpoint-down($size)
+  {
+    border-left: none !important;
+  }
+}
+
+$browser-context: 16;
+@function rem($pixels, $context: $browser-context)
+{
+  @return #{$pixels / $context}rem;
+}
+
+
+@function subRemPx($rems, $pixels, $context: $browser-context)
+{
+  $rem-pixels: $pixels / $context;
+  @return #{$rems - $rem-pixels};
+}

@@ -1,0 +1,21 @@
+<div class="mb-5 snippet-descr-image">
+	<div class="row">
+		<div class="col-12 col-sm-6">
+			<div class="d-flex snippet-descr-image__outer">
+				<div class="snippet-descr-image__inner">
+					<div class="snippet-descr-image__line">
+					</div>
+					<h4 class="text-break snippet-descr-image__title">Катера. Общее название небольших судов или небольших кораблей</h4>
+					<p class="snippet-descr-image__descr text-break">
+						 Судно, предназначенное для спортивных или туристических целей и отдыха
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 col-sm-6 d-flex">
+			<div class="flex-grow-1 overflow-hidden position-relative">
+				<img src="/local/templates/winn_default/snippets/images/ship.jpg" alt="" class="h-auto mb-5 snippet-descr-image__img">
+			</div>
+		</div>
+	</div>
+</div>

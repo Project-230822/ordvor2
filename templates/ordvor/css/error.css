@@ -1,0 +1,25 @@
+#errorbox{display:table;position:relative;float:none;clear:both;padding:17px 36px 23px 36px;margin:0 auto;width:687px;background:#f7f7f7;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border-radius:14px;-webkit-border-radius:14px;-moz-border-radius:14px;-ms-border-radius:14px;-o-border-radius:14px;behavior:url(/lib/PIE.htc);z-index:4000;}
+#boxerror{position:relative;float:left;clear:both;width:100%;}
+#error_title{position:relative;float:left;clear:both;width:100%;font:24px/24px Tahoma, sans-serif;color:#3c3c3c;text-align:center;}
+.error_title{position:relative;float:left;clear:both;margin:27px 0 0 0;font:15px/15px Tahoma, sans-serif;color:#797979;}
+.error_input{position:relative;float:left;clear:both;margin:8px 0 0 0;width:100%;height:24px;}
+.error_input input{padding:5px 5px 5px 5px;width:100%;height:24px;background:#fff;border:1px #c8c8c8 solid;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;font:13px/13px Arial, sans-serif;color:#000;}
+.error_textarea{position:relative;float:left;clear:both;margin:8px 0 0 0;width:100%;height:106px;}
+.error_textarea textarea{padding:10px 5px 10px 5px;width:100%;height:105px;background:#fff;resize:none;border:1px #c8c8c8 solid;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;font:13px/13px Arial, sans-serif;color:#000;}
+#error_info{position:relative;float:left;clear:both;margin:2px 0 0 0;width:100%;}
+.error_info{position:relative;float:left;clear:both;margin:20px 0 0 0;width:100%;height:24px;}
+.error_info_title{position:relative;float:left;clear:both;margin:3px 0 0 0;width:190px;font:15px/15px Tahoma, sans-serif;color:#767676;}
+.error_info_input{position:relative;float:right;clear:none;width:420px;height:24px;}
+.error_info_input input{padding:5px 5px 5px 5px;width:100%;height:24px;background:#fff;border:1px #c8c8c8 solid;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;font:13px/13px Arial, sans-serif;color:#000;}
+#error_captcha{position:relative;float:left;clear:both;margin:33px 0 0 0;width:100%;}
+#error_captcha_title{position:relative;float:left;clear:both;margin:4px 0 0 0;width:115px;font:15px/19px Tahoma, sans-serif;color:#767676;}
+#error_captcha_info{position:relative;float:left;clear:none;width:180px;margin:0 0 0 80px;}
+#error_captcha_image{position:relative;float:left;clear:both;width:100%;height:60px;background:#fff;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border:1px #c8c8c8 solid;}
+#error_captcha_image img{width:100%;height:100%;border:0;}
+#error_captcha_refresh{display:table;position:relative;float:none;clear:both;margin:0 auto 0;padding:3px 0 0 0;text-align:center;}
+#error_captcha_refresh span{display:block;cursor:pointer;font:15px/15px Tahoma, sans-serif;color:#0090ff;}
+#error_captcha_input{position:relative;float:left;clear:both;margin:21px 0 0 0;width:100%;height:24px;}
+#error_captcha_input input{padding:5px 5px 5px 5px;width:100%;height:24px;background:#fff;border:1px #c8c8c8 solid;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;font:13px/13px Arial, sans-serif;color:#000;}
+#error_status{display:table;position:relative;float:left;clear:both;margin:26px 0 0 0;width:350px;height:42px;font:12px/12px Tahoma, sans-serif;color:#ff0000;}
+#error_status span{display:table-cell;vertical-align:middle;text-align:left;}
+#error_enter{display:table;position:relative;float:right;clear:none;margin:26px 0 0 0;padding:10px 0 0 0;background:#003e5e;width:243px;height:42px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;behavior:url(/lib/PIE.htc);font:20px/20px Tahoma, sans-serif;color:#f7f7f7;text-align:center;cursor:pointer;}

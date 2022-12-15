@@ -1,0 +1,75 @@
+@import '../../../../resources/sass/variables';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import '../../../../resources/sass/snippets/all';
+
+$zindex-title-search:					99993;
+
+.search-form {
+	width: 100%;
+	max-width: 60rem;
+	transition: .5s;
+	position: relative;
+
+	&__button {
+		background: transparent;
+		border: 0;
+		bottom: $input-padding-y + $form-group-margin-bottom;
+		outline: 0;
+		position: absolute;
+		right: 0.875rem;
+		top: $bmd-label-top-margin-base + $label-margin-bottom + ($bmd-bmd-label-static-size-ratio * $font-size-base) * $line-height-base + $input-padding-y;
+		font-size: 1.5rem;
+		color: $text-muted;
+	}
+}
+
+.title-search-result
+{
+	display: none;
+	background: white;
+	border: 1px solid $border-color;
+	// color: $white;
+	z-index: $zindex-title-search + 10;
+}
+
+.title-search-overflow {
+	max-height: 29rem;
+	overflow: auto;
+}
+
+.title-search-item
+{
+	display: flex;
+	align-items: center;
+	padding-left: 5rem + map-get($spacers, 5);
+
+	a {
+		// color: $white;
+		text-decoration: none;
+	}
+}
+
+.title-search-item__picture {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 5rem;
+	height: 5rem;
+}
+
+.title-search-item__price {
+	font-size: 75%;
+}
+
+.title-search-item__price-current {
+	font-weight: 600;
+	// color: $white;
+	font-size: 1.125rem;
+}
+
+.title-search-item__price-discount {
+	text-decoration: line-through;
+	font-size: 0.875rem;
+}

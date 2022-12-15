@@ -1,0 +1,26 @@
+@import '../../../../resources/sass/variables';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import '../../../../resources/sass/snippets/all';
+
+.newslist-item {
+
+	&__title {
+		margin-left: map-get($spacers, 6) * -1;
+		padding-left: map-get($spacers, 6);
+		position: relative;
+
+		&:before {
+			background-color: theme-color('primary');
+			content: '';
+			display: inline-block;
+			height: 0.07em;
+			margin: 0.66667em auto;
+			position: absolute;
+			left: 0;
+			width: 1.2em;
+			vertical-align: baseline;
+		}
+	}
+}

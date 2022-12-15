@@ -1,0 +1,13 @@
+<div class="mb-6 snippet-quote1">
+ 	<div class="row">
+		<div class="col-12 col-xl-9">
+			<div class="position-relative snippet-quote__svg"></div>		
+			<p class="snippet-quote__descr1">
+				Одинокий текст очень грустил без своего друга, собрал все свои точки, запятые и знаки
+				вопроса и отправился в приключение на поиски Lora Ipsum. По пути ему встретились
+				Инфографика, Опросы и Комментарии, с которыми 
+			</p>
+			<span class="d-block position-relative snippet-quote__author">Рихард Зорге, основатель компании</span>
+		</div>
+	</div>
+</div>

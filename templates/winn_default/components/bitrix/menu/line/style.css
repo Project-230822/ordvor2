@@ -1,0 +1,16 @@
+.menu-line {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0; }
+  .menu-line > li {
+    display: block;
+    margin: 1rem 0;
+    padding: 0.25rem 0; }
+    @media (min-width: 768px) {
+      .menu-line > li {
+        padding: 0;
+        display: inline-block; }
+        .menu-line > li:not(:last-child) {
+          margin-right: 3rem; } }
+
+/*# sourceMappingURL=style.css.map */

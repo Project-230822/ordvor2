@@ -1,0 +1,18 @@
+%price-old {
+	text-decoration: line-through;
+	white-space: nowrap;
+}
+
+%price-current {
+	white-space: nowrap;
+}
+
+%price-economy {
+	padding: 0 map-get($spacers, 2);
+	white-space: nowrap;
+}
+
+%price-percent {
+	background-color: theme-color('primary');
+	color: #fff;
+}

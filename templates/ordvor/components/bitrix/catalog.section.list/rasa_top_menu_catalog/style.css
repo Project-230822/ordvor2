@@ -1,0 +1,190 @@
+.main-na{
+	background:#005A89;
+}
+.main-na .mobile-menu-btn{
+	display:none;
+}
+.main-na .top-level>.top-item.parent-item>a{
+	display:none;
+}
+.main-na .top-level>.top-item:not(.parent-item){
+	display:none;
+}
+.main-na ul{
+	margin-bottom:0px;
+}
+.main-na li{
+	    list-style: none;
+}
+.main-na a{
+	color:white;
+	white-space: nowrap;
+}
+.main-na .submenu.level2{
+	display:flex;
+}
+.main-na .submenu.level2 .submenu-item.parent-item.left .submenu-container{
+    width: 100%;
+    min-width: 250px;
+	left:0;
+	top: 100%;
+	z-index:1000;	
+	display:none;
+	position:absolute;
+	background:white;
+	color:#000000;
+}
+.main-na .submenu.level2 .submenu-item.parent-item.left:hover .submenu-container{
+	display:block;
+}
+.main-na .submenu.level2 .submenu-item.parent-item.left .submenu.level4{
+    min-height: 100%;
+    height: fit-content;
+	background:white;
+	display:none;
+	position:absolute;
+	left:100%;
+	top:0;
+}
+
+.main-na .submenu.level2 .submenu-item.parent-item.left .picture{
+padding: 8px;
+overflow: hidden;
+position:absolute; 
+top:0; 
+left:100%; 
+background:white; 
+height:calc(100% + 1px);
+border-right: 1px solid #C9C9C9;
+border-bottom: 1px solid #C9C9C9;
+}
+.main-na .submenu.level2 .submenu-item.parent-item.left .picture img{
+
+	display:block!important;
+}
+
+.main-na .submenu.level2 .submenu-item.parent-item.right:hover .submenu-container{
+    width: 100%;
+    min-width: 250px;
+    right:0;
+    	left:auto;
+	top: 100%;
+	z-index:1000;	
+	display:block;
+	position:absolute;
+	background:white;
+	color:#000000;
+}
+.main-na .submenu.level2 .submenu-item.parent-item.right .submenu.level4{
+	left:auto;
+	min-height: 200px;
+    height: fit-content;
+	background:white;
+	display:none;
+	position:absolute;
+	right:100%;
+	top:0;
+}
+.main-na .submenu.level2 .submenu-item.parent-item.right .picture{
+	padding: 8px;
+	overflow: hidden;
+	left:auto;
+	position:absolute; 
+	top:0; 
+	right:100%;
+	background:white;
+	height: calc(100% + 1px);
+	border-left: 1px solid #C9C9C9;
+	border-right:0;
+	border-bottom: 1px solid #C9C9C9;
+}
+
+.main-na .submenu.level2>.submenu-item.parent-item:last-child{	
+	box-shadow:none;
+	position:relative;
+}
+.main-na .submenu.level2>.submenu-item.parent-item{
+	box-shadow:inset -2px 0 0 -1px #1c6c96;
+	position:relative;
+}
+.main-na .submenu.level2>.submenu-item.parent-item>a{
+	text-decoration: none;
+	text-transform: uppercase;
+	width: 100%;	
+    padding: 16px 11px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-na .submenu.level2>.submenu-item.parent-item.off{
+    display: none;}
+.main-na .submenu.level2 .submenu-container{
+	display:none;
+	color:black;
+}
+.main-na .submenu.level2 .submenu-container a{
+	color:black;
+}
+
+.main-na .submenu.level3 a {
+	color:black;
+}
+.main-na .submenu.level3{
+	border-left:1px solid rgba(0, 0, 0, 0.05);
+	border-right:1px solid rgba(0, 0, 0, 0.05);
+}
+.main-na .submenu.level3>.submenu-item.parent-item a{
+	
+	text-decoration: none;
+	width: 100%;	
+	min-width:250px;
+    white-space: inherit;
+    padding: 8px 16px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main-na .submenu.level3>.submenu-item.parent-item:not(last-child) a{
+border-bottom:1px solid rgba(0, 0, 0, 0.05);
+}
+.main-na .submenu.level3>.submenu-item.parent-item:hover .submenu.level4{
+	display:block;
+	border-left: 1px solid #C9C9C9;
+	border-right: 1px solid #C9C9C9;
+	border-bottom: 1px solid #C9C9C9;
+}
+.main-na .submenu.level3>.submenu-item:hover>a{
+	font-weight: 500;
+}
+
+.main-na .submenu.level4>.submenu-item:hover>a{
+	font-weight: 500;
+}
+.main-na .submenu.level2>.submenu-item.parent-item:hover{
+	background:#0C4A6A;
+}
+.main-na .submenu.level4 .submenu-item{
+	background:white;
+}
+.main-na .picture img{
+	width: 230px;background: red;height: 200px;
+}
+@media screen and (max-width:1200px){
+	.main-na .picture img{
+		width: 115px;background: red;height: 100px;
+	}
+	
+}
+@media screen and (max-width: 991px){
+	.main-nav .submenu-container{
+	    min-height: auto!important;
+	    }
+}
+.main-nav.done{
+	display:none!important;
+}
+.main-nav .submenu.level2.submenu-opened>.submenu-item.parent-item:last-child{
+	display:none!important;
+}

@@ -1,0 +1,21 @@
+<div class="row">
+	<div class="col-12">
+		<ul class="mb-5 pl-0 pl-sm-3 ml-0 ml-sm-5 snippet-list-numeric">
+			<li class="d-flex mb-4 snippet-list-numeric__list-element">
+				<span class="align-self-center snippet-list-numeric__line"></span>
+				<span class="ml-2 mr-2 text-center snippet-list-numeric__number">1</span>
+				<span class="align-self-center snippet-list-numeric__text">Прочность</span>
+			</li>
+			<li class="d-flex mb-4 snippet-list-numeric__list-element">
+				<span class="align-self-center snippet-list-numeric__line"></span>
+				<span class="ml-2 mr-2 text-center snippet-list-numeric__number">2</span>
+				<span class="align-self-center snippet-list-numeric__text">Прочность</span>
+			 </li>
+			<li class="d-flex mb-4 snippet-list-numeric__list-element">
+				<span class="align-self-center snippet-list-numeric__line"></span>
+				<span class="ml-2 mr-2 text-center snippet-list-numeric__number">3</span>
+				<span class="align-self-center snippet-list-numeric__text">Прочность</span>
+			 </li>
+		</ul>
+	</div>
+</div>

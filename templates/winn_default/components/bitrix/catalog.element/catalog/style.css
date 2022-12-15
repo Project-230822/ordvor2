@@ -1,0 +1,70 @@
+.product--detail .product__artnum {
+  background-color: #EFEFEF; }
+
+.product--detail .product__head {
+  border-bottom: #D3DAE6;
+  position: relative; }
+  .product--detail .product__head:after {
+    background-color: #3651be;
+    bottom: -1px;
+    content: '';
+    display: inline-block;
+    height: 0.125rem;
+    left: 0;
+    position: absolute;
+    width: 2.25rem; }
+
+@supports (position: sticky) {
+  .product--detail__slider-container {
+    position: sticky;
+    top: 0;
+    z-index: 70; } }
+
+.product--detail__slider-block {
+  border: 1px solid #D3DAE6;
+  position: relative;
+  margin-bottom: 0.5rem; }
+  @media (min-width: 768px) {
+    .product--detail__slider-block {
+      margin-bottom: 1rem; } }
+
+.product--detail__slider-images-container {
+  overflow: hidden; }
+  .product--detail__slider-images-container.owl-loaded {
+    overflow: visible; }
+
+.product--detail__slider-images-container .product--detail__slider-image {
+  cursor: pointer;
+  height: 300px; }
+  .product--detail__slider-images-container .product--detail__slider-image > img {
+    max-height: 300px;
+    max-width: 100%;
+    width: auto; }
+  @media (min-width: 768px) {
+    .product--detail__slider-images-container .product--detail__slider-image {
+      height: 38rem; }
+      .product--detail__slider-images-container .product--detail__slider-image > img {
+        max-height: 38rem; } }
+
+.product--detail__slider-container .product--detail__slider-zoom-btn {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  z-index: 2; }
+
+.bx-touch .product--detail__slider-block:hover .product--detail__slider-zoom-btn,
+.bx-touch .product--detail__slider-images-container.owl-carousel .owl-nav {
+  display: none; }
+
+.product--detail__slider-block:hover .product--detail__slider-zoom-btn {
+  display: block; }
+
+.product--detail__siblings {
+  opacity: .3; }
+
+@media (min-width: 1200px) {
+  .product--detail__preview, .product--detail__props {
+    max-width: 31rem; } }
+
+/*# sourceMappingURL=style.css.map */

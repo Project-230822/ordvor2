@@ -1,0 +1,117 @@
+@import '../variables';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import '../snippets/all';
+
+.product {
+
+	
+	
+	/* Button */
+	&-button-container {
+
+		.btn-rounded {
+			// box-shadow: 0 0 0 6px rgba($light, 0.7);
+			padding: map-get($spacers, 3);
+		}
+
+		.icon-cart {
+			float: left;
+			// font-size: 1.25rem;
+		}
+
+		// .is-incart {
+		// 	.btn-primary,
+		// 	.btn-primary:not(:disabled):not(.disabled):hover,
+		// 	.btn-primary:not(:disabled):not(.disabled):active {
+		// 		background-color: theme-color('dark');
+		// 		border-color: theme-color('dark');
+		// 		color: color-yiq($dark) !important;
+		// 	}
+		// }
+	}
+
+	/*Amount*/
+	&-amount-field-btn-plus,
+	&-amount-field-btn-minus {
+		color: theme-color('primary');
+		cursor: pointer;
+		opacity: .8;
+		transition: color 300ms ease, opacity 300ms ease;
+	}
+
+	&-amount-field-btn-disabled#{&}-amount-field-btn-plus,
+	&-amount-field-btn-disabled#{&}-amount-field-btn-minus {
+		opacity: .3 !important;
+		cursor: default;
+	}
+
+	&-amount-field-btn-disabled#{&}-amount-field-btn-plus:hover,
+	&-amount-field-btn-disabled#{&}-amount-field-btn-minus:hover {
+		color: #f2f2f2;
+	}
+
+
+	&-amount-field-btn-plus:hover,
+	&-amount-field-btn-minus:hover {
+		opacity: 1;
+	}
+
+	&-amount-field {
+
+		&.form-control:focus {
+			border-color: $input-border-color;
+			box-shadow: none;
+		}
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			/* display: none; <- Crashes Chrome on hover */
+			-webkit-appearance: none;
+			margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+		}
+	}
+	
+	&-amount &-amount-field {
+		-moz-appearance: textfield;
+		text-align: center;
+		width: 4.2rem;
+	}
+	
+	&-amount &-amount-field:disabled {
+		background: $input-bg;
+		color: rgba($input-color, .5);
+	}
+	
+	&-amount-field:focus { outline: none !important; }
+
+	.bx-no-touch input#{&}-amount-field::-webkit-outer-spin-button,
+	.bx-no-touch input#{&}-amount-field::-webkit-inner-spin-button {
+		margin: 0;
+		-webkit-appearance: none;
+		appearance: none
+	}
+
+
+	/* Price */
+	&-price-current {
+		@extend %price-current;
+	}
+
+	&-price-old {
+		@extend %price-old;
+	}
+
+	// &-price-percent {
+	// 	background-color: theme-color('primary');
+	// 	color: #fff;
+	// 	display: inline-block;
+	// 	padding: 0 map-get($spacers, 2);
+	// }
+
+	// &-price-economy {
+	// 	display: inline-block;
+	// 	white-space: nowrap;
+	// }
+}

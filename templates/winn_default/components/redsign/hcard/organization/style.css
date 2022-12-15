@@ -1,0 +1,31 @@
+.vcard__descr {
+  background-color: #EFEFEF; }
+
+.vcard__inner {
+  padding: 15.82% 0 15% 11%; }
+
+.vcard__position {
+  color: #6c757d; }
+
+.vcard__photo {
+  width: 100%; }
+  @media (min-width: 576px) {
+    .vcard__photo {
+      height: 100%;
+      left: 0;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      width: 100%; } }
+
+.vcard__phone, .vcard__email {
+  color: #000; }
+  .vcard__phone:hover, .vcard__email:hover {
+    color: #000;
+    text-decoration: none; }
+  .vcard__phone > .icon-svg, .vcard__email > .icon-svg {
+    position: absolute;
+    font-size: 1.5rem;
+    left: -3.25rem; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,44 @@
+@import '../../../../resources/sass/variables';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import '../../../../resources/sass/snippets/all';
+
+.b-news-detail {
+	overflow-x: hidden; 
+
+	&__date {
+		font-size: $font-size-sm;
+		border-right: 1px solid $secondary;
+	}
+
+	&__reading-time {
+		font-size: $font-size-sm;
+	}
+
+	&__photo-description {
+		font-size: $font-size-sm;
+	}
+
+	&__photo-description-line {
+		width: 2.3rem;
+		height: 2px;
+		background: theme-color('primary');
+	}
+
+	&__btn:hover {
+		cursor: pointer;
+	}
+
+	&__btn:hover a {
+		color: $white;
+	}
+
+	&__btn-link {
+		color: $black;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+}

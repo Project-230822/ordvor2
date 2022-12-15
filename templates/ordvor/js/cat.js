@@ -1,0 +1,1 @@
+function cat_hide(){$('#show_box').hide();$('.show_box').hide();}$(function(){$('#show_box').on('click',function(e){if($(e.target).attr('id')=='show_box')cat_hide();if($(e.target).attr('id')=='cat_close')cat_hide();});$(document).on('keydown',function(e){if((e.keyCode==27)&&($('#show_box .cat_box').length==1))cat_hide();});});

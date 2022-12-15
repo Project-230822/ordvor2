@@ -1,0 +1,45 @@
+.side-panel {
+	position: relative;
+	z-index: 99999;
+
+	&__inner {
+		background: $white;
+		width: 0;
+		z-index: 1;
+		right: 0;
+		top: 0;
+		height: auto;
+		overflow: hidden;
+		position: fixed;
+
+	}
+
+	&.is-open &__inner {
+		z-index: 9999;
+		height: 100%;
+		overflow: visible;
+	}
+
+	&.is-open &__inner .side-panel-controls {
+		position: absolute;
+		right: 100%;
+		border-right: 1px solid #dee1e6;
+		box-shadow: none;
+	}
+
+	&__close {
+		background: $primary;
+		border: 0;
+		color: color-yiq($primary);
+		height: 5.5rem;
+		position: absolute;
+		right: 4rem;
+		top: 3rem;
+		width: 5.5rem;
+		z-index: 10;
+
+		&:focus {
+			outline: none;
+		}
+	}
+}

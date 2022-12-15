@@ -1,0 +1,32 @@
+#bx-soa-basket,
+.bx-soa-pickup-preview-img,
+.bx-soa-pickup-l-item-img {
+	display: none !important;
+}
+.bx-soa-pickup-list-item.bx-selected .bx-soa-pickup-l-item-detail,
+.bx-soa-pickup-list-item.bx-selected .bx-soa-pickup-l-item-btn {
+	padding-left: 0 !important;
+}
+.bx-soa-pickup-list .bx-soa-pickup-list-item {
+	cursor: pointer;
+}
+.bx-soa-pickup-list .bx-soa-pickup-list-item:hover {
+	background: #fafcfe;
+}
+.bx-soa-pickup-list-item.bx-selected {
+	cursor: default;
+}
+.bx-soa-pickup-l-item-btn,
+.bx-soa-pickup-list-item.bx-selected .bx-soa-pickup-l-item-btn {
+	display: none;
+}
+.pull-right {
+    font-size: 20px;
+}
+.bx-soa-pp-company,
+input[type=checkbox].bx-soa-pp-company-checkbox {
+	z-index: 1 !important;
+}
+.bx-sls .bx-ui-sls-fake, .bx-sls .bx-ui-sls-route {
+	z-index: 1 !important;
+}

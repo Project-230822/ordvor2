@@ -1,0 +1,177 @@
+
+$bmd-checkbox-size:             1.125em !default;
+$bmd-checkbox-label-padding:       1em !default;
+$bmd-checkbox-border-size:         .125em !default;
+$bmd-checkbox-border-color:       $outline-base !default;
+$bmd-checkbox-border-color-disabled:   $outline-disabled !default;
+$bmd-checkbox-checked-color:       theme-color('primary');
+$bmd-checkbox-animation-check:       .3s !default;
+$bmd-checkbox-color-disabled:        $text-muted !default;
+
+// http://www.google.com/design/spec/components/selection-controls.html#selection-controls-checkbox
+.bmd-custom-checkbox > label,
+label.bmd-custom-checkbox-inline {
+  position: relative;
+  padding-left: $bmd-checkbox-size + $bmd-checkbox-label-padding; // absolutely positioned so add the radio size
+//   line-height: 1.25;
+
+  .checkbox-decorator {
+    position: absolute;
+    left: 0;
+    padding: .7em;
+    margin: -.7em;
+    // margin-top: -.58em;
+    line-height: .7;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 100%;
+
+    .check {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      width: $bmd-checkbox-size;
+      height: $bmd-checkbox-size;
+      // overflow: hidden;
+      // border: $bmd-checkbox-border-size solid $bmd-checkbox-border-color;
+      // border-radius: $border-radius;
+
+      // checkbox outline
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.125em;
+        height: 1.125em;
+        z-index: 0;
+        border: 0.125em solid $bmd-checkbox-border-color;
+        border-radius: 1px;
+        // margin-top: 3px;
+        transition: .2s;
+      }
+
+      &:after {
+        border: 0;
+        transform: scale(0);
+      }
+    }
+  }
+
+  input[type=checkbox] {
+    // Hide native checkbox
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+    pointer-events: none;
+    opacity: 0;
+
+    &:focus + .checkbox-decorator .check::after {
+      opacity: 0.2;
+    }
+
+    &:checked {
+      // FIXME: once working - combine further to reduce code
+      + .checkbox-decorator .check {
+        // color: $bmd-checkbox-checked-color;
+        // border-color: $bmd-checkbox-checked-color;
+      }
+
+      + .checkbox-decorator .check::before {
+        top: -0.25em;
+        left: -0.3125em;
+        width: 0.75em;
+        height: 1.375em;
+        border-top: 0.125em solid transparent;
+        border-left: 0.125em solid transparent;
+        border-right: 0.125em solid $bmd-checkbox-checked-color;
+        border-bottom: 0.125em solid $bmd-checkbox-checked-color;
+        transform: rotate(40deg);
+        backface-visibility: hidden;
+        transform-origin: 100% 100%;
+      }
+    }
+
+    &[disabled],
+    fieldset[disabled] & {
+
+      + .checkbox-decorator .check,
+      .check {
+        border-color: $bmd-checkbox-border-color-disabled;
+
+        &:before {
+          border: none;
+          background-color: $bmd-checkbox-border-color-disabled;
+        }
+      }
+
+      // No ripple on disabled checkboxes
+      + .checkbox-decorator .ripple-container {
+        display: none;
+      }
+    }
+  }
+}
+
+.bmd-custom-checkbox.disabled > label {
+  color: $bmd-checkbox-color-disabled;
+}
+
+@keyframes checkbox-on {
+  0% {
+    box-shadow: 0 0 0 .63em, .63em -.63em 0 .63em, 2em 0 0 1.25em, 0 2em 0 1.25em,
+      -.31em .31em 0 .63em, .94em .13em 0 .69em;
+  }
+
+  50% {
+    box-shadow: 0 0 0 .63em, .63em -.63em 0 .63em, 2em 0 0 1.25em, 0 2em 0 1.25em,
+      -.31em .31em 0 .63em, 1.25em .13em 0 .69em;
+  }
+
+  100% {
+    box-shadow: 0 0 0 .63em, .63em -.63em 0 .63em, 2em 0 0 1.25em, 0 2em 0 1.25em,
+      -.31em .31em 0 .63em, 1.25em -.75em 0 .69em;
+  }
+}
+@keyframes checkbox-off {
+  0% {
+    box-shadow: 0 0 0 .63em, .63em -.63em 0 .63em, 2em 0 0 1.25em, 0 2em 0 1.25em,
+      -.31em .31em 0 .63em, 1.25em -.75em 0 .69em, 0 0 0 0 inset;
+  }
+  25% {
+    box-shadow: 0 0 0 .63em, .63em -.63em 0 .63em, 2em 0 0 1.25em, 0 2em 0 1.25em,
+      -.31em .31em 0 .63em, 1.25em -.75em 0 .69em, 0 0 0 0 inset;
+  }
+  50% {
+    width: 0;
+    height: 0;
+    margin-top: -.25em;
+    margin-left: .38em;
+    box-shadow: 0 0 0 .63em, .63em -.63em 0 .63em, 2em 0 0 1.25em, 0 2em 0 1.25em,
+      -.31em .31em 0 .63em, .94em .13em 0 .69em, 0 0 0 0 inset;
+    transform: rotate(45deg);
+  }
+  51% {
+    width: 1.25em;
+    height: 1.25em;
+    margin-top: -.13em;
+    margin-left: -.13em;
+    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0,
+      0 0 0 .63em inset;
+    transform: rotate(0deg);
+  }
+  100% {
+    width: 1.25em;
+    height: 1.25em;
+    margin-top: -.13em;
+    margin-left: -.13em;
+    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0,
+      0 0 0 0 inset;
+    transform: rotate(0deg);
+  }
+}

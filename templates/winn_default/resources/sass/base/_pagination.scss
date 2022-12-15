@@ -1,0 +1,40 @@
+
+.pagination {
+	margin-bottom: 0;
+
+	.page-item {
+		
+		margin: 0;
+
+		&:first-child {
+			padding-left: 0;
+		}
+	}
+}
+
+.page-link {
+	font-size: $pagination-font-size;
+	height: calc(#{$pagination-line-height * $pagination-font-size} + #{$pagination-padding-y * 2} + #{$pagination-border-width});
+
+	& > .icon-svg {
+		font-size: 1em;
+	}
+
+
+	.page-next > & {
+		padding-right: 1rem;
+
+		& > .icon-svg {
+			margin-left: .75em;
+		}	
+	}
+
+	.page-prev > & {
+		padding-left: 1rem;
+		padding-right: 2rem;
+
+		& > .icon-svg {
+			margin-right: .75em;
+		}	
+	}
+}

@@ -1,0 +1,36 @@
+<div class="row">
+	<div class="col-lg-4">
+		<ul class="ml-2 ml-sm-6 pl-2 pl-sm-3 mb-6 snippet-list-checkbox">
+			<li class="d-flex mb-4 snippet-list-checkbox__list-element">
+				 <span class="position-relative mr-3 snippet-list-checkbox__box">
+					  <span class="d-block position-absolute snippet-list-checkbox__check"></span>
+				 </span>
+				 <span class="text-break align-self-center snippet-list-checkbox__text">Быстрая доставка</span>
+			</li>
+			<li class="d-flex mb-4 snippet-list-checkbox__list-element">
+				 <span class="position-relative mr-3 snippet-list-checkbox__box">
+					  <span class="d-block position-absolute snippet-list-checkbox__check"></span>
+				 </span>
+				 <span class="text-break align-self-center snippet-list-checkbox__text">Низкие цены</span>
+			</li>
+			<li class="d-flex mb-4 snippet-list-checkbox__list-element">
+				 <span class="position-relative mr-3 snippet-list-checkbox__box">
+					  <span class="d-block position-absolute snippet-list-checkbox__check"></span>
+				 </span>
+				 <span class="text-break align-self-center snippet-list-checkbox__text">Широкий ассортимент</span>
+			 </li>
+			<li class="d-flex mb-4 snippet-list-checkbox__list-element">
+				 <span class="position-relative mr-3 snippet-list-checkbox__box">
+					  <span class="d-block position-absolute snippet-list-checkbox__check"></span>
+				 </span>
+				 <span class="text-break align-self-center snippet-list-checkbox__text">Надежные поставщики</span>
+			</li>
+			<li class="d-flex mb-4 snippet-list-checkbox__list-element">
+				 <span class="position-relative mr-3 snippet-list-checkbox__box">
+					  <span class="d-block position-absolute snippet-list-checkbox__check"></span>
+				 </span>
+				 <span class="text-break align-self-center snippet-list-checkbox__text">Бонусы и подарки</span>
+			 </li>
+		</ul>
+	</div>
+</div>

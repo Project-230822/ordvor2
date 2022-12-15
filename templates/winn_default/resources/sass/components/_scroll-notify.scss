@@ -1,0 +1,111 @@
+
+.scroll-notify {
+	display: none;
+		
+	@media (min-width: 1460px) {
+		color: $border-color;
+		display: block;
+		width: 1.3125rem;
+		height: 12rem;
+		position: absolute;
+		right: 5.125rem;
+		top: 50%;
+		margin-top: -6rem;
+		z-index: 2;
+		cursor: pointer;
+
+		
+		.body--light &
+		{
+			color: $border-color;
+		}
+
+		.body--dark &
+		{
+			color: $white;
+		}
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			width: 1px;
+			background: currentColor;
+			// opacity: 0.3;
+			margin-left: -1px;
+		}
+
+		&:before {
+			height: 1.625rem;
+			top: 0;
+			animation: scrollMouseButtonsTop 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+			transform-origin: 50% 0;
+		}
+
+		&:after {
+			height: 8.375rem;
+			bottom: 0;
+			animation: scrollMouseButtonsBottom 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+			transform-origin: 50% 100%;
+		}
+
+		&__toddler {
+			position: absolute;
+			width: 1.3125rem;
+			height: 2rem;
+			top: 1.625rem;
+			left: 0;
+			border: 1px solid;
+			border-radius: 0.5625rem;
+			animation: scrollMouseWheel 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+		
+			&:before {
+				content: '';
+				position: absolute;
+				left: 50%;
+				width: 1px;
+				background: currentColor;
+				height: 0.5rem;
+				margin-left: -1px;
+				top: 0.375rem;
+			}
+		}
+	}
+}
+
+@keyframes scrollMouseWheel {
+	78% {
+		transform: translateY(0);
+	}
+	90% {
+		transform: translateY(6.75rem);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes scrollMouseButtonsTop {
+	78% {
+		transform: scaleY(1);
+	}
+	90% {
+		transform: scaleY(5.153);
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}
+
+@keyframes scrollMouseButtonsBottom {
+	78% {
+		transform: scaleY(1);
+	}
+	90% {
+		transform: scaleY(0.196);
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}

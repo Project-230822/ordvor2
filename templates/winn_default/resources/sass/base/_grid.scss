@@ -1,0 +1,25 @@
+.container-fluid,
+.container {
+	padding-right: 0.9375rem; // 15px
+	padding-left: 0.9375rem; // 15px
+}
+
+@include media-breakpoint-up(lg)
+{
+	.container-fluid,
+	.container {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+
+	.row {
+		margin-right: -0.9375rem; // -15px
+		margin-left: -0.9375rem; // -15px
+	}
+
+	%grid-column {
+		padding-right: 0.9375rem; // 15px
+		padding-left: 0.9375rem; // 15px
+	}
+}

@@ -1,0 +1,36 @@
+@import '../../../../resources/sass/variables';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import '../../../../resources/sass/snippets/all';
+
+.about-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.b-about-achievements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__number {
+        color: $gray-900;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 14px;
+        line-height: 120%;
+    }
+    
+    &__line {
+        width: 36px;
+        height: 2px;
+        background-color: theme-color('primary');
+        margin-bottom: 17px;
+    }
+    
+    &__desc {
+        font-size: 1.175rem;
+        color: #3C3C3C;
+    }
+    
+}

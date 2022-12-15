@@ -1,0 +1,62 @@
+.snippet-quote {
+    background: url("data:image/svg+xml,%3Csvg width='161' height='191' viewBox='0 0 161 191' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.1588 100.944C18.9688 79.6294 39.1853 22.4553 124.632 19.7891C103.305 33.2668 93.0462 46.3158 90.0832 52.9634C124.293 60.6834 145.766 94.6816 138.044 128.901C130.321 163.12 96.329 184.601 62.1191 176.881C27.9093 169.161 6.43675 135.163 14.1588 100.944Z' fill='%23EFEFEF'/%3E%3C/svg%3E%0A") -5px 2% no-repeat, url("data:image/svg+xml,%3Csvg width='161' height='191' viewBox='0 0 161 191' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.1588 100.944C18.9688 79.6294 39.1853 22.4553 124.632 19.7891C103.305 33.2668 93.0462 46.3158 90.0832 52.9634C124.293 60.6834 145.766 94.6816 138.044 128.901C130.321 163.12 96.329 184.601 62.1191 176.881C27.9093 169.161 6.43675 135.163 14.1588 100.944Z' fill='%23EFEFEF'/%3E%3C/svg%3E%0A") no-repeat 145px 2%;
+    @media (max-width: 480px) {
+        background: url("data:image/svg+xml,%3Csvg width='161' height='191' viewBox='0 0 161 191' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.1588 100.944C18.9688 79.6294 39.1853 22.4553 124.632 19.7891C103.305 33.2668 93.0462 46.3158 90.0832 52.9634C124.293 60.6834 145.766 94.6816 138.044 128.901C130.321 163.12 96.329 184.601 62.1191 176.881C27.9093 169.161 6.43675 135.163 14.1588 100.944Z' fill='%23EFEFEF'/%3E%3C/svg%3E%0A") -5px 2% no-repeat, url("data:image/svg+xml,%3Csvg width='161' height='191' viewBox='0 0 161 191' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.1588 100.944C18.9688 79.6294 39.1853 22.4553 124.632 19.7891C103.305 33.2668 93.0462 46.3158 90.0832 52.9634C124.293 60.6834 145.766 94.6816 138.044 128.901C130.321 163.12 96.329 184.601 62.1191 176.881C27.9093 169.161 6.43675 135.163 14.1588 100.944Z' fill='%23EFEFEF'/%3E%3C/svg%3E%0A") no-repeat 105px 2%; 
+    }
+    @media (max-width: 1024px) {
+        height: auto;
+    }
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+    &__descr {
+        max-width: 930px;
+        padding: 64px 110px 0 80px;
+        font-size: $h2-font-size;
+        @media (max-width: 992px) {
+            padding: 34px 0 0 40px;
+        }
+    }
+    &__descr1 {
+        max-width: 930px;
+        padding: 0 110px 0 80px;
+        font-size: $h2-font-size;
+        @media (max-width: 992px) {
+            padding: 34px 0 0 40px;
+        }
+    }
+    &__svg {
+        background: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 161 191' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.1588 100.944C18.9688 79.6294 39.1853 22.4553 124.632 19.7891C103.305 33.2668 93.0462 46.3158 90.0832 52.9634C124.293 60.6834 145.766 94.6816 138.044 128.901C130.321 163.12 96.329 184.601 62.1191 176.881C27.9093 169.161 6.43675 135.163 14.1588 100.944Z' fill='%23E40217'/%3E%3C/svg%3E%0A") -3px 2% no-repeat, url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 161 191' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.1588 100.944C18.9688 79.6294 39.1853 22.4553 124.632 19.7891C103.305 33.2668 93.0462 46.3158 90.0832 52.9634C124.293 60.6834 145.766 94.6816 138.044 128.901C130.321 163.12 96.329 184.601 62.1191 176.881C27.9093 169.161 6.43675 135.163 14.1588 100.944Z' fill='%23E40217'/%3E%3C/svg%3E%0A") 20px 2% no-repeat;
+        width: 53px;
+        height: 30px;
+        top: 35px;
+        left: 10px;
+        @include media-breakpoint-down(xs) {
+            top: 40px;
+            left: 30px;
+        }
+    }
+    &__author {
+        font-size: $font-size-sm;
+        padding-left: 100px;
+        color: $secondary;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 13px;
+            height: 1px;
+            top: 8px;
+            left: 80px;
+            background-color: $secondary;
+            @media (max-width: 480px) {
+                left: 40px;
+            }
+        }
+        @media (max-width: 1024px) {
+            padding-bottom: 20px;
+        }
+        @media (max-width: 480px) {
+            padding-left: 75px;
+        }
+    }
+}

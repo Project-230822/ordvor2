@@ -1,0 +1,14 @@
+#remindmecheckbox{display:table;position:relative;float:none;clear:both;margin:0 auto;z-index:4000;width:495px;}
+#boxremindmecheck{position:relative;float:left;clear:both;padding:23px 40px 28px 40px;width:495px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;background:#f7f7f7;border-radius:8px;-webkit-border-radius:8px;-moz-border-radius:8px;-ms-border-radius:8px;-o-border-radius:8px;behavior:url(/lib/PIE.htc);}
+#remindmecheck_title{position:relative;float:left;clear:both;width:100%;font:24px/24px Tahoma, sans-serif;color:#3c3c3c;text-align:center;}
+#remindmecheck_info{position:relative;float:left;clear:both;margin:22px 0 0 0;width:100%;}
+.remindmecheck_info{position:relative;float:left;clear:both;margin:18px 0 0 0;width:100%;height:20px;}
+.remindmecheck_info_title{position:relative;float:left;clear:both;margin:1px 0 0 0;width:170px;font:15px/15px Tahoma, sans-serif;color:#4d4d4d;}
+.remindmecheck_info_input{position:relative;float:right;clear:none;width:212px;height:20px;}
+.remindmecheck_info_input input{padding:0 5px 0 5px;border:0;width:100%;height:20px;background:#fff;border:1px #9f9f9f solid;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-ms-border-radius:3px;-o-border-radius:3px;behavior:url(/lib/PIE.htc);box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;font:14px Arial, sans-serif;color:#000;}
+.remindmecheck_info_input input::-moz-placeholder, .gb_add_name_input input::-webkit-input-placeholder{color:#000;}
+#remindmecheck_comments{display:table;position:relative;float:none;clear:both;margin:0 auto 0;padding:34px 0 30px 0;width:100%;font:14px/18px Tahoma, sans-serif;color:#504d4d;text-align:center;}
+#remindmecheck_status{display:table;position:relative;float:none;clear:both;margin:0 auto 0;padding:16px 0 16px 0;width:220px;height:12px;font:12px/12px Tahoma, sans-serif;color:#ff0000;}
+#remindmecheck_status span{display:table-cell;vertical-align:middle;text-align:center;}
+#remindmecheck_enter{display:table;position:relative;float:none;clear:both;margin:0 auto 0;padding:10px 0 0 0;background:#003e5e;width:220px;height:42px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;behavior:url(/lib/PIE.htc);font:20px/20px Tahoma, sans-serif;color:#f7f7f7;text-align:center;cursor:pointer;}
+#remindmecheck_enter2{display:table;position:relative;float:none;clear:both;margin:0 auto 0;padding:9px 0 0 0;background:#003e5e;width:114px;height:42px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;-o-border-radius:4px;behavior:url(/lib/PIE.htc);font:24px/24px Tahoma, sans-serif;color:#f7f7f7;text-align:center;cursor:pointer;}

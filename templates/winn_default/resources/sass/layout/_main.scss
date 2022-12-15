@@ -1,0 +1,47 @@
+.l-main {
+	padding-bottom: 6rem;
+	padding-top: 3rem;
+	
+	&--wide-page {
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+
+	&__container {
+		overflow: initial !important;
+		// min-height: 100vh;
+	}
+
+	&__head--dark {
+		color: color-yiq($white);
+	}
+
+	&__head--light a {
+		color: inherit !important;
+	}
+
+	&__head--light {
+		color: color-yiq($black);
+	}
+
+	
+	&__head--min-30 {
+		padding-top: #{map-get($page-header-height, xxs) + map-get($spacers, 6)};
+		padding-bottom: map-get($page-header-height, xxs);
+	}
+
+	@include media-breakpoint-up(lg) {
+	
+		&__head {
+			// display: flex;
+			// align-items: center;
+			padding-bottom: map-get($spacers, 3);
+			margin-bottom: map-get($spacers, 6);
+		}
+
+		&__head--min-30 {
+			min-height: 30rem;
+			padding-top: #{map-get($page-header-height, lg) + map-get($spacers, 6)};
+		}
+	}
+}

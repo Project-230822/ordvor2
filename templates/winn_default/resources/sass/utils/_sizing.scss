@@ -1,0 +1,10 @@
+// stylelint-disable declaration-no-important
+
+// Width and height
+
+@each $prop, $abbrev in (top: top, right: right, bottom: bottom, left: left) {
+  @each $size, $length in (0: 0%, 100: 100%) {
+    .#{$abbrev}-#{$size} { #{$prop}: $length !important; }
+  }
+}
+

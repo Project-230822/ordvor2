@@ -1,0 +1,249 @@
+@import '../../../../resources/sass/variables';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import '../../../../resources/sass/snippets/all';
+
+$product-title-font-size: 1rem;
+
+.product {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	left: 0;
+	// overflow: hidden;
+	
+	transition: none;
+
+	&-info-container#{&}-hidden {
+		display: none;
+		opacity: 0;
+		transition: opacity 300ms ease;
+	}
+
+	.bx-touch &-info-container#{&}-touch-hidden { display: none !important }
+
+	/*Image*/
+	&-image-wrapper {
+		display: block;
+		// padding: map-get($spacers, 3);
+		position: relative;
+		transition: all 300ms ease;
+	}
+
+	&-image-canvas {
+		display: block;
+		padding-bottom: 100%;
+		position: relative;
+	}
+
+	&-image,
+	&-image-slider,
+	&-image-slide,
+	&-image-overlay {
+		bottom: 0;
+		display: block;
+		left: 0;
+		margin: auto;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	&-image {
+		// margin: auto;
+		max-height: 100%;
+		max-width: 100%;
+	}
+
+	&-info-container {
+		margin-bottom: map-get($spacers, 3);
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: map-get($spacers, 5);
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+
+	&-title {
+		font-size: $product-title-font-size;
+
+		@include media-breakpoint-up(md) {
+			font-size: $product-title-font-size * 1.5;
+		}
+	}
+	
+	// card
+	&--card &-title {
+		max-height: 2 * $product-title-font-size * $headings-line-height;
+		overflow: hidden;
+
+		@include media-breakpoint-up(md) {
+			max-height: 2 * $product-title-font-size * 1.5 * $headings-line-height;
+		}
+	}
+
+	
+	// line
+	&--line {
+
+	}
+
+	&--line &__preview {
+		position: relative;
+		overflow: hidden;
+		max-height: #{$line-height-computed * 9};
+	
+		&:after {
+			background: linear-gradient(180deg, rgba($white, 0) 0%, $white 80%, $white 100%);
+			right: 0;
+			content: "";
+			height: $line-height-computed;
+			left: 0;
+			position: absolute;
+			top: #{$line-height-computed * 8};
+			width: 100%;
+		}
+
+		@include media-breakpoint-up(lg) {
+			// max-height: none;
+			padding-bottom: map-get($spacers, 3);
+
+			&:after {
+				// top: auto;
+				// bottom: 0;
+			}
+		}
+	}
+
+	&--line &-info-container {
+		// flex-grow: 1;
+	}
+
+	@include media-breakpoint-up(lg) {
+		&--line &-info-container {
+			// flex: 1 0 0%;
+		}
+
+		&--line &-info-container--shrink {
+			/* flex:1; */
+			// flex: 1 1 1px; /* new */
+			overflow-y: hidden; 
+			flex: 0 1 auto;
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+		// card
+		&--card {
+			// padding: map-get($spacers, 3) map-get($spacers, 3) map-get($spacers, 3) map-get($spacers, 6);
+			padding-left: map-get($spacers, 6);
+		}
+	
+		&--card &-image-wrapper {
+			// border: 1px solid $border-color;
+			// margin: -1*map-get($spacers, 3) -1*map-get($spacers, 3) 0 -1*map-get($spacers, 6);
+			margin-left: -1*map-get($spacers, 6);
+			// padding: 0;
+		}
+
+		&--card &-title,
+		&--line &-title {
+
+			margin-left: map-get($spacers, 6) * -1;
+			padding-left: map-get($spacers, 6);
+			position: relative;
+
+			&:before {
+				background-color: theme-color('primary');
+				content: '';
+				display: inline-block;
+				height: 0.07em;
+				margin: 0.54167em auto;
+				min-height: 2px;
+				position: absolute;
+				left: 0;
+				width: 1.5em;
+				vertical-align: baseline;
+			}
+		}
+
+		// line
+		&--line &-content {
+			padding-left: map-get($spacers, 6);
+		}
+
+		&--line &-image-wrapper {
+			border: 1px solid $border-color;
+		}
+	}
+
+
+	// table
+
+	&--table &-image-wrapper {
+		width: 5.625rem;
+		height: 5.625rem;
+	}
+
+	&--table &-title {
+		font-size: $lead-font-size;
+		font-weight: 500;
+	}
+
+	&--table &-info-container {
+		margin-bottom: map-get($spacers, 3);
+
+		@include media-breakpoint-up(lg) {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&--table &-properties {
+
+		&,
+		& > dt,
+		& > dd {
+			border-bottom: none;
+			display: inline;
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		& > dd {
+			&:after {
+				content: ',';
+				display: inline;
+
+			}
+
+			&:last-child {
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&--table &-button-container .btn {
+		// display: flex;
+		// align-items: center;
+		// height: 3.375rem;
+		// width: 3.375rem;
+	}
+
+
+	
+	// .bx-touch &-info-container#{&}-hidden,
+	&--line &-info-container#{&}-hidden,
+	&--table &-info-container#{&}-hidden {
+		display: block;
+		opacity: 1;
+	}
+}
