@@ -8,7 +8,9 @@ $APPLICATION->SetTitle("Информация о доставке товаров 
 $APPLICATION->SetPageProperty("description", "Информация о доставке товаров - Оружейный двор");
 
 
-?><script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+?>
+	<?php die;?>
+	<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <ul class="nav nav-tabs deliver_tabs">
 	<li class="active"><a data-toggle="tab" href="#menu1">Транспортные компании</a></li>
 	<li><a data-toggle="tab" href="#menu2">Доставка почтой России</a></li>
