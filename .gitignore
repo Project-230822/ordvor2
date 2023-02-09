@@ -64,6 +64,23 @@ ehthumbs.db
 *.psb
 *.sketch
 
+# files ext
+*.tar.gz
+*.mp3
+*.mp4
+*.webm
+*.mov
+*.MOV
+*.wav
+*.flv
+*.db
+*.txt
+*.text
+*.log
+*.config
+*.xml
+*.tbk
+
 # однако храним robots.txt — он нужен
 !/robots.txt
 
