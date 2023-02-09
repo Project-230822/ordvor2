@@ -94,3 +94,4 @@ bower_components
 # composer
 composer.phar
 /vendor/
+/files/
