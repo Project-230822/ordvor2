@@ -85,8 +85,24 @@ foreach($arResult["ITEMS"] as $elem){
 	
 }
 
+if (CModule::IncludeModule('iblock')) {
+    $namesProps = [];
+    $synonymsProps = [];
+    $resNameProps = CIBlockSection::GetList([], ['IBLOCK_ID' => SYNONYMS_IBLOCK_ID]);
+    while ($arNameProps = $resNameProps->GetNext()) {
+        $namesProps[$arNameProps['ID']] = $arNameProps['NAME'];
+    }
 
+    $arSelect = ['NAME', 'IBLOCK_SECTION_ID', 'PROPERTY_WORDS'];
+    $arFilterCombinedBrands = array("IBLOCK_ID" => SYNONYMS_IBLOCK_ID);
+    $resCombinedBrands = CIBlockElement::GetList(array(), $arFilterCombinedBrands, false, false, $arSelect);
+    while ($arFieldsCombinedBrands = $resCombinedBrands->GetNext()) {
+        $propName = $namesProps[$arFieldsCombinedBrands['IBLOCK_SECTION_ID']];
+        $synonymsProps[$propName][$arFieldsCombinedBrands['NAME']]['GROUPS'][] = $arFieldsCombinedBrands['PROPERTY_WORDS_VALUE'];
+    }
 
+    $arResult['SINONYMS_PROPS'] = $synonymsProps;
+}
 
 $arResult['PROPS_ACITVE'] = $properties;
 $arResult['ACTIVE_PROPS2'] = $properties2;

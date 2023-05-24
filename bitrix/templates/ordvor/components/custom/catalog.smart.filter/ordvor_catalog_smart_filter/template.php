@@ -159,6 +159,8 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");
 				$i = 0;
 				foreach($arResult["ITEMS"] as $key=>$arItem)
 				{
+                    // Список синонимов свойства
+                    $sinonymsValues = $arResult['SINONYMS_PROPS'][$arItem['NAME']];
 
 						if(
 							empty($arItem["VALUES"])
@@ -634,8 +636,27 @@ $this->addExternalCss("/bitrix/css/main/font-awesome.css");
 									default://CHECKBOXES
 										?>
 										<div class="col-xs-12">
-											
-											<?foreach($arItem["VALUES"] as $val => $ar):?>
+											<?foreach($arItem["VALUES"] as $val => $ar):
+                                                $ar["VALUE"] = trim($ar["VALUE"]);
+                                                if (!empty($sinonymsValues)) {
+                                                    $isMainSinonyms = isset($sinonymsValues[$ar["VALUE"]]);
+                                                    $isHaveSinonyms = false;
+                                                    foreach ($sinonymsValues as $sinonymsGroup) {
+                                                        foreach ($sinonymsGroup['GROUPS'] as $synonyms) {
+                                                            if ($synonyms == $ar['VALUE']) {
+                                                                $isHaveSinonyms = true;
+                                                                break;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    if (!$isMainSinonyms && $isHaveSinonyms) {
+                                                        continue;
+                                                    }
+                                                    // Уже вывели "основное значение"
+                                                    $sinonymsValues[$ar["VALUE"]]['DISPLAY_MAIN'] = true;
+                                                }
+                                                ?>
 												<div class="checkbox">
 													<label data-role="label_<?=$ar["CONTROL_ID"]?>" class="bx-filter-param-label <? echo $ar["DISABLED"] ? 'disabled': '' ?> styled-checkbox" for="<? echo $ar["CONTROL_ID"] ?>">
 														<span class="bx-filter-input-checkbox">
