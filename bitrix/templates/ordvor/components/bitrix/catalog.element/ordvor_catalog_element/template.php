@@ -923,7 +923,7 @@ while($arStoreProduct = $rsStoreProduct->fetch())
 								<div class="value"><a href="/delivery/">Почта России</a></div>
 							</div>
                     	</div>
-                    	
+                    					<a class="btn btn-link js-ajax-popup" data-url="/ajax/getDeliveryPrice.php" href="javascript:void(0);"><i class="fa fa-truck"></i> <span>Стоимость доставки</span></a>
                     	<?
                         global $arrBannerFilter;
                         $arrBannerFilter = array('PROPERTY_ELEMENTS_ID' => $arResult["IBLOCK_SECTION_ID"]);
