@@ -1,0 +1,66 @@
+.catalog-section-tab__label-list.label-list {
+	display: flex;
+	margin-bottom: 25px;
+}
+
+.label-list__item {
+	cursor: pointer;
+	padding: 8px 12px;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 130%;
+	color: #2C2C2C;
+	transition: .2s ease-out;
+	border-radius: 4px;
+}
+
+.label-list__item_active {
+	box-shadow: inset 0px 0px 0px 2px #EE332A;
+}
+
+.label-list__item:not(:last-child) {
+	margin-right: 8px;
+}
+
+.label-list__item:hover {
+	box-shadow: inset 0px 0px 0px 2px #f3bcba;
+}
+
+.section-containers__element-list {
+	position: relative;
+	display: none;
+	min-height: 300px;
+}
+
+.section-containers__element-list_active {
+	display: block;
+}
+
+.section-containers__element-list::after {
+	background-image: url('/bitrix/components/custom/catalog.section.label/templates/.default/image/loader.gif');
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: block;
+	z-index: 1;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #ffffff;
+	transition: .2s ease-out;
+	visibility: visible;
+	opacity: 1;
+}
+
+.section-containers__element-list_hide-stub::after {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.section-containers__element-list .prev-arrow,
+.section-containers__element-list .next-arrow.slick-arrow {
+	top: 310px;
+}
