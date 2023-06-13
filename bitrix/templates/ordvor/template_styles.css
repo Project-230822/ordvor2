@@ -8192,3 +8192,267 @@ footer .messengers {
 .guarantee-content table td {
 	padding: 0 2px;
 }
+
+/* Страница «Наши Магазины» */
+.our-stores-page:not(:last-child) {
+	margin-bottom: 80px;
+}
+
+.legal-information__header,
+.about-store__header,
+.address-content__header {
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 140%;
+	color: #333333;
+}
+
+.legal-information__header {
+	margin-bottom: 12px;
+}
+
+.about-store__header {
+	margin-bottom: 20px;
+}
+
+.address-content__header {
+	margin-bottom: 24px;
+}
+
+.legal-information__description {
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 130%;
+	margin-bottom: 40px;
+}
+
+.legal-information__wrapper {
+	display: flex;
+}
+
+.legal-information__container {
+	flex-basis: 33.33%;
+}
+
+.legal-information__mailing-address-header,
+.legal-information__email-header,
+.legal-information__phone-number-header,
+.legal-information__requisites-header {
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 140%;
+	margin-bottom: 10px;
+}
+
+.legal-information__container:not(:last-child) {
+	margin-right: 80px;
+}
+
+.legal-information__mailing-address {
+	margin-bottom: 24px;
+}
+
+.legal-information__email-information {
+	color: #e3463f;
+}
+
+.legal-information__phone-number-city:not(:last-child) {
+	margin-bottom: 18px;
+}
+
+.legal-information__phone-number-city-header {
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 140%;
+	color: #444444;
+	margin-bottom: 8px;
+}
+
+.legal-information__phone-number-list>p {
+	margin: 0;
+}
+
+.legal-information__phone-number-list>p:first-child {
+	margin-bottom: 8px;
+}
+
+.legal-information__phone-number-list {
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 140%;
+	color: #3C3C3C;
+}
+
+.legal-information__requisites-information>p:not(:last-child) {
+	margin-bottom: 8px;
+}
+
+.out-store p,
+.legal-information__requisites-information p,
+.about-store p,
+.address-content p {
+	margin: 0;
+}
+
+.about-store__wrapper {
+	display: flex;
+}
+
+.about-store__discription {
+	margin-right: 60px;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 160%;
+	color: #3C3C3C;
+}
+
+.about-store__discription>p:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.address-content__contact-information {
+	display: flex;
+	margin-bottom: 32px;
+}
+
+.address-content__address {
+	margin-right: 26px;
+}
+
+.address-content__address,
+.address-content__phone-number {
+	display: flex;
+	align-items: center;
+}
+
+.address-content__contact-information svg {
+	margin-right: 10px;
+}
+
+.address-content__image-list {
+	display: flex;
+	margin-bottom: 32px;
+}
+
+.address-content__image-list>.address-content__image:not(:last-child) {
+	margin-right: 14px;
+}
+
+.address-content__description {
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 160%;
+	color: #3C3C3C;
+}
+
+.address-content__description>p:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+	.about-store__image {
+		height: 100%;
+	}
+
+	.address-content__image {
+		width: calc(50% - 7px);
+		object-fit: cover;
+	}
+}
+
+@media (max-width: 991px) {
+	.legal-information__container:not(:last-child) {
+		margin-right: 30px;
+	}
+
+	.about-store__wrapper {
+		flex-wrap: wrap;
+	}
+
+	.about-store__discription {
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 767px) {
+
+	.legal-information__header,
+	.about-store__header,
+	.address-content__header {
+		font-size: 22px;
+	}
+
+	.about-store__image {
+		width: 100%;
+	}
+}
+
+@media (max-width: 640px) {
+	.legal-information__wrapper {
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.legal-information__container {
+		flex-basis: calc(50% - 30px);
+	}
+
+	.address-content__image-list {
+		flex-wrap: wrap;
+	}
+
+	.address-content__image {
+		width: 100%;
+	}
+
+	.address-content__image:not(:last-child) {
+		margin-bottom: 19px;
+	}
+
+	.address-content__image-list {
+		flex-wrap: wrap;
+	}
+
+	.legal-information__container:nth-child(2n + 1) {
+		margin-right: 24px;
+	}
+
+	/* TODO 640 */
+}
+
+@media (max-width: 500px) {
+	.our-stores-page:not(:last-child) {
+		margin-bottom: 60px;
+	}
+
+	.legal-information__header {
+		font-size: 24;
+	}
+
+	.legal-information__description {
+		margin-bottom: 32px;
+	}
+
+	.store-listings__store {
+		flex-basis: 100%;
+	}
+
+	.legal-information__container:not(:last-child) {
+		margin-right: 0;
+		margin-bottom: 24px;
+	}
+
+	.about-store__header {
+		margin-bottom: 24px;
+	}
+
+	.legal-information__mailing-address-header,
+	.legal-information__email-header,
+	.legal-information__phone-number-header,
+	.legal-information__requisites-header {
+		margin-bottom: 8px;
+	}
+}
+
+/* === */
