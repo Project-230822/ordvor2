@@ -63,3 +63,12 @@ body.bx-theme-yellow .catalog-block-header{border-color:#f4b236;}
 .container-fluid-element {
 	padding: 0 !important;
 }
+
+.element-sect__title {
+	font-weight: 500;
+	font-size: 28px;
+	line-height: 33px;
+	color: #2C2C2C;
+	margin-bottom: 24px;
+	z-index: 0;
+}

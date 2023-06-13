@@ -269,6 +269,7 @@ if ($curPage == "/index.php") {
 
 
 <div id="panel"><? $APPLICATION->ShowPanel(); ?></div>
+
 <body>
 	<!-- Google Tag Manager (noscript) -->
 	<noscript>
