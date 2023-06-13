@@ -8421,3 +8421,411 @@ footer .messengers {
 }
 
 /* === */
+
+/* Шапка */
+.top_block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 16px 0;
+}
+
+.between_block {
+	display: flex;
+	align-items: center;
+}
+
+.city {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	cursor: pointer;
+	color: #2a65ae;
+	font-family: "Roboto";
+	font-style: normal;
+}
+
+#city_question {
+	position: relative;
+}
+
+.city a.current.ajax-popup {
+	display: flex;
+	align-items: center;
+}
+
+.city a.current.ajax-popup {
+	display: flex;
+	align-items: center;
+}
+
+.city svg {
+	margin-left: 6px;
+}
+
+.work_time {
+	margin-left: 35px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: #050505;
+	display: flex;
+}
+
+.msk_plus {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: #050505;
+	opacity: 0.4;
+	margin-left: 15px;
+}
+
+.mobile-block__top-bottom>.work_time {
+	margin: 0 0 24px;
+	font-size: 15px;
+}
+
+.mobile-block__top-bottom {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.mobile-block__top-bottom>.city {
+	font-size: 15px;
+	line-height: 18px;
+	margin-bottom: 16px;
+}
+
+.mobile-block__top-bottom .msk_plus {
+	font-size: 15px;
+	line-height: 18px;
+	margin-left: 8px;
+}
+
+.mobile-block__top-bottom>.phone_numbers {
+	align-items: flex-start;
+	margin-bottom: 24px;
+}
+
+.mobile-block__top-bottom>.phone_numbers>.number {
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.mobile-block__top-bottom>.phone_numbers>.number:first-child {
+	margin-bottom: 10px;
+}
+
+.between_block.phone_numbers {
+	flex-direction: column;
+}
+
+.between_block.profile-mobile {
+	display: none;
+}
+
+.between_block.mobile-block {
+	display: none;
+}
+
+.mobile_phone {
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	display: none;
+	text-align: right;
+	color: #050505;
+}
+
+.links {
+	justify-content: space-between;
+}
+
+.links_element {
+	display: flex;
+	text-decoration-line: unset;
+}
+
+.link-wa.links_element {
+	margin-right: 10px;
+}
+
+.profile-desctop>noindex {
+	display: flex;
+	align-items: center;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: #2c2c2c;
+	margin-left: 32px;
+}
+
+.profile-desctop a {
+	color: #2c2c2c;
+}
+
+.profile-desctop .item {
+	display: flex;
+}
+
+.profile-desctop .exit {
+	margin-left: 10px;
+}
+
+.top {
+	border-bottom: 1px solid #eeeeee;
+}
+
+.down_block {
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+	padding: 24px 0px;
+}
+
+.mobile-block__button-show {
+	margin-right: 28px;
+	cursor: pointer;
+}
+
+.mobile-block__body {
+	position: fixed;
+	z-index: 101;
+	background-color: #ffffff;
+	bottom: 0;
+	top: 0;
+	left: -900px;
+	padding: 30px 20px;
+	width: 90%;
+	transition: 0.4s ease-in-out;
+}
+
+.mobile-block_show>.mobile-block__body {
+	left: 0;
+}
+
+.mobile-block_show>.mobile-block__background {
+	opacity: 1;
+	z-index: 100;
+}
+
+.mobile-block__background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #787878;
+	z-index: -1;
+	transition: 0.5s ease-out;
+	overflow: hidden;
+	opacity: 0;
+}
+
+.mobile-block__top-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 36px;
+}
+
+.down__right-block {
+	display: flex;
+	justify-content: space-between;
+	flex-basis: 100%;
+	margin-left: 48px;
+	align-items: center;
+}
+
+.phone_numbers .number {
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 26px;
+	color: #050505;
+	display: block;
+}
+
+span.mobile-block__hiding-button {
+	position: relative;
+	z-index: 1000;
+	display: flex;
+}
+
+.compare-block-counter {
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	margin-left: 10px;
+	float: left;
+}
+
+.compare-block-counter .link-compare {
+	color: #000;
+	text-transform: none;
+	position: relative;
+	display: block;
+}
+
+.compare-block-counter .link-compare:before {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	display: inline-block;
+	font-family: "icomoon" !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.compare-block-counter .link-compare:before {
+	content: "\e90b";
+	font-size: 18px;
+}
+
+.compare-block-counter .link-compare .counter {
+	width: 18px;
+	height: 18px;
+	line-height: 19px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 50%;
+	background: #e3e3e3;
+	position: absolute;
+	top: -10px;
+	left: 9px;
+}
+
+.compare-block-counter {
+	display: none;
+}
+
+@media (max-width: 1200px) {
+	.msk_plus {
+		margin-left: 0;
+		margin-top: 5px;
+		display: inline-block;
+	}
+
+	.work_time {
+		margin-left: 25px;
+		font-size: 12px;
+		flex-wrap: wrap;
+	}
+
+	.compare-block-counter {
+		margin: 0;
+	}
+}
+
+@media (max-width: 1199px) {
+	.compare-block-counter {
+		margin-right: 5px;
+	}
+}
+
+@media (max-width: 991px) {
+	.work_time {
+		margin-left: 25px;
+		font-size: 12px;
+	}
+
+	.profile-desctop {
+		font-size: 12px;
+	}
+
+	.compare-block-counter {
+		float: unset;
+		margin-right: 20px;
+	}
+}
+
+@media (max-width: 767px) {
+	.icon svg {
+		width: 120px;
+		height: 32px;
+	}
+
+	.top_block {
+		padding-bottom: 0;
+	}
+
+	.top_block>.between_block.links {
+		display: none;
+	}
+
+	.top_block>.between_block.top-menu {
+		display: none;
+	}
+
+	.top_block>.between_block.profile-desctop {
+		display: none;
+	}
+
+	.top_block>.between_block.top-menu {
+		display: none;
+	}
+
+	.top_block>.work_time {
+		display: none;
+	}
+
+	.mobile_phone {
+		display: block;
+	}
+
+	.top {
+		border: 0;
+	}
+
+	.down_block {
+		padding: 14px 0px;
+	}
+
+	.down__left-block {
+		display: flex;
+		align-items: center;
+	}
+
+	.msk_plus {
+		margin-top: 0;
+		margin-left: 20px;
+	}
+
+	.between_block.mobile-block {
+		display: flex;
+	}
+
+	.down__right-block>.between_block {
+		margin-left: 24px;
+	}
+
+	.down__right-block>.between_block:first-child {
+		margin-left: 0;
+	}
+
+	.down__right-block {
+		justify-content: right;
+		margin-left: 20px;
+	}
+
+	.down__right-block .between_block.phone_numbers {
+		display: none;
+	}
+
+	.between_block.profile-mobile {
+		display: flex;
+	}
+}
+
+@media (max-width: 365px) {
+	.compare-block-counter {
+		display: none !important;
+	}
+}
+/* === */
