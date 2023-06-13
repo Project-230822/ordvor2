@@ -1,0 +1,257 @@
+.search {
+	max-width: 372px;
+}
+
+.search-shell {
+	display: flex;
+	align-items: center;
+}
+
+#title-search>.search-shell>.group {
+	padding: 0 0 0 10px;
+	background-color: #ffffff;
+	border: 2px solid #ee332a;
+	border-radius: 4px;
+	z-index: 2;
+	transition: 0.2s ease;
+	flex-basis: 90%;
+	margin-right: 16px;
+}
+
+.group {
+	position: relative;
+	display: flex;
+}
+
+.search .group input {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: #2c2c2c;
+	outline: none;
+	height: 42px;
+	width: 100%;
+	border: 0;
+}
+
+.group .search_btn {
+	position: absolute;
+	right: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+	font-size: 0;
+	border: none;
+	background: none;
+	transition: .2s ease-out;
+}
+
+.group .search_btn:hover {
+	opacity: .7;
+}
+
+.search-mobile {
+	display: none;
+}
+
+.title-search-result {
+	border: 1px solid #c6c6c6;
+	overflow: hidden;
+	z-index: 205;
+	background: #fff;
+}
+
+.title-search-result {
+	border-collapse: collapse;
+	border: none;
+	width: 100%;
+}
+
+.title-search-result th {
+	background-color: #f7f7f7;
+	border-right: 1px solid #e8e8e8;
+	color: #949494;
+	font-weight: normal;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 14px;
+	padding-right: 12px;
+	text-align: right;
+	vertical-align: top;
+	white-space: nowrap;
+	width: 1%;
+}
+
+.title-search-result td {
+	background-color: white;
+	color: black;
+	font-weight: normal;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.title-search-result td.title-search-item {
+	padding-left: 8px;
+	padding-right: 15px;
+}
+
+.title-search-result td.title-search-item a {
+	padding-left: 4px;
+	padding-right: 15px;
+	text-decoration: none;
+	color: black;
+	vertical-align: top;
+	display: block;
+}
+
+.title-search-result td.title-search-item img {
+	vertical-align: top;
+}
+
+.title-search-result td.title-search-item b {
+	color: #cf0000;
+	font-weight: normal;
+}
+
+.title-search-result tr.title-search-selected td,
+.title-search-result tr.title-search-selected a,
+.title-search-result tr.title-search-selected td.title-search-more a {
+	background-color: #fff2be;
+}
+
+.title-search-result td.title-search-more {
+	font-size: 11px;
+	font-weight: normal;
+	padding-right: 15px;
+	padding-left: 24px;
+	padding-top: 0px;
+}
+
+.title-search-result td.title-search-more a {
+	padding-left: 12px;
+	padding-right: 15px;
+	text-decoration: none;
+	color: #999999;
+}
+
+.title-search-result td.title-search-all {
+	padding-left: 24px;
+	padding-right: 15px;
+}
+
+.title-search-result td.title-search-all a {
+	padding-left: 4px;
+	text-decoration: none;
+	color: #808080;
+}
+
+.title-search-result td.title-search-separator,
+.title-search-result th.title-search-separator {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-size: 4px;
+}
+
+.search-hide {
+	display: none;
+}
+
+.help_btn {
+	background: rgba(238, 51, 42, 0.08);
+	border-radius: 4px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 120%;
+	text-align: center;
+	padding: 6px 20px;
+	box-sizing: border-box;
+	max-width: 107px;
+	cursor: pointer;
+}
+
+.help_btn a {
+	color: #ee332a;
+	text-decoration: none;
+}
+
+@media (max-width: 991px) {
+	.search-mobile {
+		display: block;
+		cursor: pointer;
+		transition: 0.2s ease-out;
+	}
+
+	.search-mobile:hover {
+		opacity: .7;
+	}
+
+	#title-search>.search-shell {
+		position: absolute;
+		top: -100px;
+		width: 80%;
+		left: 5%;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	#title-search.title-search-show>.search-shell {
+		top: 70px;
+	}
+
+	.search-hide {
+		display: block;
+		position: absolute;
+		right: -45px;
+		bottom: -10px;
+	}
+
+	.search-hide>svg {
+		width: 30px;
+		display: inline-block;
+		margin-left: 10px;
+	}
+
+	.search-shell .help_btn {
+		background: #feefee;
+		max-width: 170px;
+		margin-top: 8px;
+	}
+
+	.title-search-show>.search-bg {
+		opacity: 0.7;
+		z-index: 1;
+		overflow: visible;
+	}
+
+	.search-bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: #000000f2;
+		z-index: -1;
+		opacity: 0;
+		overflow: hidden;
+		transition: 0.1s ease;
+	}
+
+	div.title-search-result {
+		border: 1px solid #c6c6c6;
+		display: none;
+		overflow: hidden;
+		z-index: 205;
+		background: #fff;
+		position: fixed !important;
+		left: 5% !important;
+		width: 75% !important;
+		top: 116px !important;
+	}
+}

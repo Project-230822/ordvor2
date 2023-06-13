@@ -375,34 +375,6 @@ body {
 	text-decoration: none;
 }
 
-.top-menu {
-	display: inline-block;
-	vertical-align: top;
-	padding-right: 45px;
-	border-right: 1px solid #e6e6e6;
-}
-
-.top-menu ul {
-	list-style: none;
-	margin: 0 -10px;
-	padding: 0;
-	font-size: 0;
-}
-
-.top-menu li {
-	list-style: none;
-	display: inline-block;
-	vertical-align: top;
-	font-size: 13px;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-.top-menu li a {
-	color: #000;
-	text-decoration: none;
-}
-
 .main {
 	margin-bottom: 50px;
 	min-height: 300px;
@@ -859,13 +831,6 @@ body {
 
 #main_recycle {
 	text-decoration: none;
-	display: block;
-}
-
-.basket-block {
-	display: inline-block;
-	vertical-align: top;
-	text-align: left;
 }
 
 .basket-top {

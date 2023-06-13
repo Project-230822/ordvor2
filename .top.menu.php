@@ -1,53 +1,59 @@
 <?
-$aMenuLinks = Array(
-	Array(
-		"Новости", 
-		"/events/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"О магазине", 
-		"/about/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Доставка", 
-		"/delivery/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Оплата", 
-		"/payment/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Гарантия", 
-		"/guarantee/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Покупай в рассрочку", 
-		"/pokupai-v-rassrochku/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Контакты", 
-		"/address/", 
-		Array(), 
-		Array(), 
-		"" 
-	)
-);
-?>
+$aMenuLinks = [
+	[
+		"Новости",
+		"/events/",
+		[],
+		["FROM_IBLOCK" => "0", "IS_PARENT" => "0", "DEPTH_LEVEL" => "1"],
+		""
+	],
+	[
+		"О магазине",
+		"/about/",
+		[],
+		["FROM_IBLOCK" => "0", "IS_PARENT" => "0", "DEPTH_LEVEL" => "1"],
+		""
+	],
+	[
+		"Условия работы",
+		"/#/",
+		[],
+		["FROM_IBLOCK" => "0", "IS_PARENT" => "1", "DEPTH_LEVEL" => "1"],
+		""
+	],
+	[
+		"Доставка",
+		"/delivery/",
+		[],
+		["FROM_IBLOCK" => "0", "IS_PARENT" => "0", "DEPTH_LEVEL" => "2"],
+		""
+	],
+	[
+		"Оплата",
+		"/payment/",
+		[],
+		["FROM_IBLOCK" => "0", "IS_PARENT" => "0", "DEPTH_LEVEL" => "2"],
+		""
+	],
+	[
+		"Гарантия",
+		"/guarantee/",
+		[],
+		["FROM_IBLOCK" => "0", "IS_PARENT" => "0", "DEPTH_LEVEL" => "2"],
+		""
+	],
+	[
+		"Рассрочка",
+		"/pokupai-v-rassrochku/",
+		[],
+		["FROM_IBLOCK" => "0", "IS_PARENT" => "0", "DEPTH_LEVEL" => "2"],
+		""
+	],
+	[
+		"Наши магазины",
+		"/address/",
+		[],
+		[],
+		""
+	]
+];
