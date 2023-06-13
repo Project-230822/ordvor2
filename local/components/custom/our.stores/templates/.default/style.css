@@ -1,0 +1,114 @@
+.store-listings__list-of-cities {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -6px;
+	margin-bottom: 40px;
+}
+
+.store-listings__city {
+	background-color: #FFFFFF;
+	box-shadow: 0px 0px 0px 1px #EEEEEE;
+	border-radius: 4px;
+	padding: 12px 24px;
+	margin: 6px;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 140%;
+	color: #333333;
+	transition: .2s ease-out;
+}
+
+.store-listings__city_active {
+	box-shadow: 0px 0px 0px 2px #EE332A !important;
+}
+
+.store-listings__city:hover {
+	box-shadow: 0px 0px 0px 1px #EE332A;
+}
+
+.store-listings__list-of-store {
+	display: flex;
+	flex-wrap: wrap;
+	opacity: 0;
+	visibility: hidden;
+	transition: .2s ease-out;
+	height: 0;
+	margin: 0px -13px;
+}
+
+.store-listings__list-of-store_active {
+	visibility: visible;
+	opacity: 1;
+	height: auto;
+}
+
+.store-listings__store {
+	display: flex;
+	align-items: baseline;
+	flex-basis: calc(33.33% - 26px);
+	margin: 13px;
+}
+
+.store-listings__icon {
+	margin-right: 14px;
+	max-width: 14px;
+	width: 100%;
+}
+
+.store-listings__information {
+	font-size: 15px;
+	line-height: 140%;
+}
+
+.store-listings__address {
+	color: #333333;
+	font-weight: 600;
+}
+
+.store-listings__information>div:not(:last-child) {
+	margin-bottom: 8px;
+}
+
+.store-listings__name-of-shop {
+	color: #606060;
+}
+
+.store-listings__link-top-map {
+	color: #2a65ae;
+	cursor: pointer;
+	transition: .2s ease-out;
+	border-bottom: 1px dashed;
+	display: inline-block;
+}
+
+.store-listings__link-top-map:hover {
+	opacity: 0.7;
+}
+
+@media(max-width:767px) {
+	.store-listings__list-of-cities {
+		flex-wrap: nowrap;
+		overflow: hidden;
+		overflow-x: scroll;
+		white-space: nowrap;
+		margin-bottom: 32px;
+	}
+
+	.store-listings__list-of-cities::-webkit-scrollbar {
+		height: 0;
+		width: 0;
+	}
+}
+
+@media(max-width:640px) {
+	.store-listings__store {
+		flex-basis: calc(50% - 26px);
+	}
+}
+
+@media(max-width:500px) {
+	.store-listings__store {
+		flex-basis: 100%;
+	}
+}
