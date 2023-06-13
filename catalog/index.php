@@ -326,7 +326,8 @@ else
 		"USE_PRODUCT_QUANTITY" => "Y",
 		"USE_REVIEW" => "Y",
 		"USE_SALE_BESTSELLERS" => "Y",
-		"USE_STORE" => "Y"
+		"USE_STORE" => "Y",
+		"HIDE_SUBSECTIONS_ON_ITEM_LIST_PAGE" => "Y"
 	),
 false,
 Array(
