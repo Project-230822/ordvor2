@@ -69,7 +69,7 @@ $menuBlockId = "catalog_menu_" . $this->randString(); ?>
 								<? if ($existPictureDescColomn) : ?>
 									<div class="bx-nav-list-2-lvl bx-nav-catinfo dbg" data-role="desc-img-block">
 										<a class="bx-nav-2-lvl-link-image" href="<?= $arResult["ALL_ITEMS"][$itemID]["LINK"] ?>">
-											<img src="<?= $arResult["ALL_ITEMS"][$itemID]["PARAMS"]["picture_src"] ?>" alt="">
+											<img src="<?= $arResult["ALL_ITEMS"][$itemID]["PARAMS"]["detail_picture_src"] ?>" alt="">
 										</a>
 									</div>
 								<? endif ?>

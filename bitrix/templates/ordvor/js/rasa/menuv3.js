@@ -74,20 +74,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-	//function resize_menu() {
-	//	let a = document.querySelector('.main-na') || document.querySelector('.main-nav');
-	//	if (window.innerWidth <= 990) {
-	//		a.classList = "main-nav";
-	//	}
-	//	else {
+	function resize_menu() {
+		let a = document.querySelector('.main-na') || document.querySelector('.main-nav');
+		if (window.innerWidth <= 990) {
+			a.classList = "main-nav";
+		}
+		else {
 
-	//		setTimeout(() => { menu(); }, 100);
-	//		a.classList = "main-na";
-	//	}
-	//}
-	//resize_menu();
-	//window.onresize = () => {
-	//	resize_menu();
-	//};
+			setTimeout(() => { menu(); }, 100);
+			a.classList = "main-na";
+		}
+	}
+	resize_menu();
+	window.onresize = () => {
+		resize_menu();
+	};
 	menu();
 });
