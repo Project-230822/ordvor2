@@ -26,6 +26,8 @@
 		this.itemDataEntity = params.container || '';
 		this.showMoreButton = null;
 		this.showMoreButtonMessage = null;
+		this.numberSlidesToShow = params.numberSlidesToShow;
+		this.itemsInCart = params.itemsInCart;
 
 		if (this.bigData.enabled && BX.util.object_keys(this.bigData.rows).length > 0) {
 			BX.cookie_prefix = this.bigData.js.cookiePrefix || '';
@@ -48,6 +50,8 @@
 			this.showMoreButtonMessage = this.showMoreButton.innerHTML;
 			BX.bind(this.showMoreButton, 'click', BX.proxy(this.showMore, this));
 		}
+
+		//debugger
 	};
 
 	window.JCCatalogSectionComponent.prototype =
@@ -310,7 +314,7 @@
 			$(this.container).slick({
 				infinite: true,
 				slidesToScroll: 1,
-				slidesToShow: 4,
+				slidesToShow: (this.numberSlidesToShow ? this.numberSlidesToShow : '4'),
 				prevArrow: '<div class="prev-arrow fade-out"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.75 16.5L8.25 11L13.75 5.5" stroke="#404040" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
 				nextArrow: '<div class="next-arrow fade-out"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.25 16.5L13.75 11L8.25 5.5" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>',
 				responsive: [
@@ -432,5 +436,9 @@ $(function () {
 			$(".product-count").addClass("chosen-with-drop");
 			$(".product-count").addClass("chosen-container-active");
 		}
+	});
+
+	$('.items-list').on('click', (e) => {
+		$(e.target).closest('.js-add-basket').addClass('in-the-cart')
 	});
 });

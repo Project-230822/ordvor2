@@ -433,7 +433,8 @@
 
 .product-item-info-container .js-add-basket:active,
 .product-item-info-container .js-add-basket:focus,
-.product-item-info-container .js-add-basket:focus-within {
+.product-item-info-container .js-add-basket:focus-within,
+.js-add-basket.in-the-cart {
 	outline: none;
 	box-shadow: none;
 	border: none;
@@ -442,7 +443,8 @@
 
 .product-item-info-container .js-add-basket:active svg>path,
 .product-item-info-container .js-add-basket:focus svg>path,
-.product-item-info-container .js-add-basket:focus-within svg>path {
+.product-item-info-container .js-add-basket:focus-within svg>path,
+.js-add-basket.in-the-cart svg>path {
 	stroke: #EE332A;
 }
 
@@ -603,6 +605,10 @@
 	background-position: center;
 }
 
+.universal_slider .slick-track {
+	margin: unset;
+}
+
 @media(max-width:1300px) and (min-width:1200px) {
 	.prev-arrow.slick-arrow {
 		left: -30px;
@@ -647,6 +653,7 @@
 		margin-top: -10px;
 		opacity: 1;
 		visibility: visible;
+		z-index: 1;
 	}
 
 	.product-item-hidden.sku-block .product-item-info-container {

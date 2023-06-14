@@ -20,8 +20,37 @@ use \Bitrix\Main\Localization\Loc;
  * |	<!-- component-end -->
  */
 
+use Bitrix\Sale;
+
 $this->setFrameMode(true);
 $this->addExternalCss('/bitrix/css/main/bootstrap.css');
+
+//$fuser = Sale\Fuser::getId();
+//$basketRes = Sale\Internals\BasketTable::getList(array(
+//	'filter' => array(
+//		'FUSER_ID' => $fuser,
+//		'ORDER_ID' => null,
+//		'LID' => SITE_ID,
+//		'CAN_BUY' => 'Y',
+//	)
+//));
+
+//while ($item = $basketRes->fetch()) {
+//	$itemsInCart[] = $item["PRODUCT_ID"];
+//}
+$fuser = Sale\Fuser::getId();
+$basketRes = Sale\Internals\BasketTable::getList(array(
+	'filter' => array(
+		'FUSER_ID' => $fuser,
+		'ORDER_ID' => null,
+		'LID' => SITE_ID,
+		'CAN_BUY' => 'Y',
+	)
+));
+
+while ($item = $basketRes->fetch()) {
+	$itemsInCart[] = $item["PRODUCT_ID"];
+}
 
 if (!empty($arResult['NAV_RESULT'])) {
 	$navParams =  array(
@@ -142,8 +171,10 @@ $generalParams = array(
 	'MESS_NOT_AVAILABLE' => $arParams['~MESS_NOT_AVAILABLE'],
 	'IBLOCK_ID' => $arParams['IBLOCK_ID'],
 	'IBLOCK_TYPE' => $arParams['IBLOCK_TYPE'],
-	"PARENT_COMPONENT_NAME" => $arParams["PARENT_COMPONENT_NAME"]
+	'PARENT_COMPONENT_NAME' => $arParams["PARENT_COMPONENT_NAME"],
+	//'ITEMS_IN_THE_CART' => $itemsInCart
 );
+
 
 $obName = 'ob' . preg_replace('/[^a-zA-Z0-9_]/', 'x', $this->GetEditAreaId($navParams['NavNum']));
 $containerName = 'container-' . $navParams['NavNum'];
@@ -898,6 +929,8 @@ $signedParams = $signer->sign(base64_encode(serialize($arResult['ORIGINAL_PARAME
 		parameters: '<?= CUtil::JSEscape($signedParams) ?>',
 		displayProductsInSlider: '<?= $arParams['DISPLAY_PRODUCTS_IN_SLIDER'] ?>',
 		container: '<?= $containerName ?>',
+		//itemsInCart: <?//= CUtil::PhpToJSObject($itemsInCart) ?>,
+		numberSlidesToShow: '<?= $arParams["NUMBER_SLIDES_TO_SHOW"] ?>'
 	});
 </script>
 <!-- component-end -->
