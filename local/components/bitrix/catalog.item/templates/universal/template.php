@@ -15,38 +15,42 @@ use \Bitrix\Main;
 
 $this->setFrameMode(true);
 
-if (isset($arResult['ITEM']))
-{
+$idList = strval($arResult['ITEM']['ID']);
+foreach ($arResult['ITEM']['OFFERS'] as $key => $value) {
+	$idList .= ", " . strval($value['ID']);
+}
+
+if (isset($arResult['ITEM'])) {
 	$item = $arResult['ITEM'];
 	$areaId = $arResult['AREA_ID'];
 	$itemIds = array(
 		'ID' => $areaId,
-		'PICT' => $areaId.'_pict',
-		'SECOND_PICT' => $areaId.'_secondpict',
-		'PICT_SLIDER' => $areaId.'_pict_slider',
-		'STICKER_ID' => $areaId.'_sticker',
-		'SECOND_STICKER_ID' => $areaId.'_secondsticker',
-		'QUANTITY' => $areaId.'_quantity',
-		'QUANTITY_DOWN' => $areaId.'_quant_down',
-		'QUANTITY_UP' => $areaId.'_quant_up',
-		'QUANTITY_MEASURE' => $areaId.'_quant_measure',
-		'QUANTITY_LIMIT' => $areaId.'_quant_limit',
-		'BUY_LINK' => $areaId.'_buy_link',
-		'BASKET_ACTIONS' => $areaId.'_basket_actions',
-		'NOT_AVAILABLE_MESS' => $areaId.'_not_avail',
-		'SUBSCRIBE_LINK' => $areaId.'_subscribe',
-		'COMPARE_LINK' => $areaId.'_compare_link',
-		'PRICE' => $areaId.'_price',
-		'PRICE_OLD' => $areaId.'_price_old',
-		'PRICE_TOTAL' => $areaId.'_price_total',
-		'DSC_PERC' => $areaId.'_dsc_perc',
-		'SECOND_DSC_PERC' => $areaId.'_second_dsc_perc',
-		'PROP_DIV' => $areaId.'_sku_tree',
-		'PROP' => $areaId.'_prop_',
-		'DISPLAY_PROP_DIV' => $areaId.'_sku_prop',
-		'BASKET_PROP_DIV' => $areaId.'_basket_prop',
+		'PICT' => $areaId . '_pict',
+		'SECOND_PICT' => $areaId . '_secondpict',
+		'PICT_SLIDER' => $areaId . '_pict_slider',
+		'STICKER_ID' => $areaId . '_sticker',
+		'SECOND_STICKER_ID' => $areaId . '_secondsticker',
+		'QUANTITY' => $areaId . '_quantity',
+		'QUANTITY_DOWN' => $areaId . '_quant_down',
+		'QUANTITY_UP' => $areaId . '_quant_up',
+		'QUANTITY_MEASURE' => $areaId . '_quant_measure',
+		'QUANTITY_LIMIT' => $areaId . '_quant_limit',
+		'BUY_LINK' => $areaId . '_buy_link',
+		'BASKET_ACTIONS' => $areaId . '_basket_actions',
+		'NOT_AVAILABLE_MESS' => $areaId . '_not_avail',
+		'SUBSCRIBE_LINK' => $areaId . '_subscribe',
+		'COMPARE_LINK' => $areaId . '_compare_link',
+		'PRICE' => $areaId . '_price',
+		'PRICE_OLD' => $areaId . '_price_old',
+		'PRICE_TOTAL' => $areaId . '_price_total',
+		'DSC_PERC' => $areaId . '_dsc_perc',
+		'SECOND_DSC_PERC' => $areaId . '_second_dsc_perc',
+		'PROP_DIV' => $areaId . '_sku_tree',
+		'PROP' => $areaId . '_prop_',
+		'DISPLAY_PROP_DIV' => $areaId . '_sku_prop',
+		'BASKET_PROP_DIV' => $areaId . '_basket_prop',
 	);
-	$obName = 'ob'.preg_replace("/[^a-zA-Z0-9_]/", "x", $areaId);
+	$obName = 'ob' . preg_replace("/[^a-zA-Z0-9_]/", "x", $areaId);
 	$isBig = isset($arResult['BIG']) && $arResult['BIG'] === 'Y';
 
 	$productTitle = isset($item['IPROPERTY_VALUES']['ELEMENT_PAGE_TITLE']) && $item['IPROPERTY_VALUES']['ELEMENT_PAGE_TITLE'] != ''
@@ -60,26 +64,20 @@ if (isset($arResult['ITEM']))
 	$skuProps = array();
 
 	$haveOffers = !empty($item['OFFERS']);
-	if ($haveOffers)
-	{
+	if ($haveOffers) {
 		$actualItem = isset($item['OFFERS'][$item['OFFERS_SELECTED']])
 			? $item['OFFERS'][$item['OFFERS_SELECTED']]
 			: reset($item['OFFERS']);
-	}
-	else
-	{
+	} else {
 		$actualItem = $item;
 	}
 
-	if ($arParams['PRODUCT_DISPLAY_MODE'] === 'N' && $haveOffers)
-	{
+	if ($arParams['PRODUCT_DISPLAY_MODE'] === 'N' && $haveOffers) {
 		$price = $item['ITEM_START_PRICE'];
 		$minOffer = $item['OFFERS'][$item['ITEM_START_PRICE_SELECTED']];
 		$measureRatio = $minOffer['ITEM_MEASURE_RATIOS'][$minOffer['ITEM_MEASURE_RATIO_SELECTED']]['RATIO'];
 		$morePhoto = $item['MORE_PHOTO'];
-	}
-	else
-	{
+	} else {
 		$price = $actualItem['ITEM_PRICES'][$actualItem['ITEM_PRICE_SELECTED']];
 		$measureRatio = $price['MIN_QUANTITY'];
 		$morePhoto = $actualItem['MORE_PHOTO'];
@@ -102,14 +100,12 @@ if (isset($arResult['ITEM']))
 	$itemHasDetailUrl = isset($item['DETAIL_PAGE_URL']) && $item['DETAIL_PAGE_URL'] != '';
 	?>
 
-	<div class="product-item-container<?=(isset($arResult['SCALABLE']) && $arResult['SCALABLE'] === 'Y' ? ' product-item-scalable-card' : '')?>"
-		id="<?=$areaId?>" data-entity="item">
+	<div class="product-item-container<?= (isset($arResult['SCALABLE']) && $arResult['SCALABLE'] === 'Y' ? ' product-item-scalable-card' : '') ?>" id="<?= $areaId ?>" data-entity="item" data-item-id="<?= $idList ?>">
 		<?
 		$documentRoot = Main\Application::getDocumentRoot();
-		$templatePath = strtolower($arResult['TYPE']).'/template.php';
-		$file = new Main\IO\File($documentRoot.$templateFolder.'/'.$templatePath);
-		if ($file->isExists())
-		{
+		$templatePath = strtolower($arResult['TYPE']) . '/template.php';
+		$file = new Main\IO\File($documentRoot . $templateFolder . '/' . $templatePath);
+		if ($file->isExists()) {
 			include($file->getPath());
 		}
 
@@ -119,8 +115,7 @@ if (isset($arResult['ITEM']))
 		];
 		$arParamsSigned = \Bitrix\Main\Component\ParameterSigner::signParameters($arParams['PARENT_COMPONENT_NAME'], $serializedData);
 
-		if (!$haveOffers)
-		{
+		if (!$haveOffers) {
 			$jsParams = array(
 				'PARENT_COMPONENT_NAME' => $arParams['PARENT_COMPONENT_NAME'],
 				'SERIALIZED_DATA' => $arParamsSigned,
@@ -185,9 +180,7 @@ if (isset($arResult['ITEM']))
 					'SUBSCRIBE_ID' => $itemIds['SUBSCRIBE_LINK']
 				)
 			);
-		}
-		else
-		{
+		} else {
 			$jsParams = array(
 				'PARENT_COMPONENT_NAME' => $arParams['PARENT_COMPONENT_NAME'],
 				'SERIALIZED_DATA' => $arParamsSigned,
@@ -257,8 +250,7 @@ if (isset($arResult['ITEM']))
 				'TREE_PROPS' => array()
 			);
 
-			if ($arParams['PRODUCT_DISPLAY_MODE'] === 'Y' && !empty($item['OFFERS_PROP']))
-			{
+			if ($arParams['PRODUCT_DISPLAY_MODE'] === 'Y' && !empty($item['OFFERS_PROP'])) {
 				$jsParams['SHOW_QUANTITY'] = $arParams['USE_PRODUCT_QUANTITY'];
 				$jsParams['SHOW_SKU_PROPS'] = $item['OFFERS_PROPS_DISPLAY'];
 				$jsParams['OFFERS'] = $item['JS_OFFERS'];
@@ -267,8 +259,7 @@ if (isset($arResult['ITEM']))
 			}
 		}
 
-		if ($arParams['DISPLAY_COMPARE'])
-		{
+		if ($arParams['DISPLAY_COMPARE']) {
 			$jsParams['COMPARE'] = array(
 				'COMPARE_URL_TEMPLATE' => $arParams['~COMPARE_URL_TEMPLATE'],
 				'COMPARE_DELETE_URL_TEMPLATE' => $arParams['~COMPARE_DELETE_URL_TEMPLATE'],
@@ -276,8 +267,7 @@ if (isset($arResult['ITEM']))
 			);
 		}
 
-		if ($item['BIG_DATA'])
-		{
+		if ($item['BIG_DATA']) {
 			$jsParams['PRODUCT']['RCM_ID'] = $item['RCM_ID'];
 		}
 
@@ -298,11 +288,12 @@ if (isset($arResult['ITEM']))
 			)
 		);
 		?>
-		
+
 	</div>
+
 	<script>
-		  var <?=$obName?> = new JCCatalogItem(<?=CUtil::PhpToJSObject($jsParams, false, true)?>);
+		var <?= $obName ?> = new JCCatalogItem(<?= CUtil::PhpToJSObject($jsParams, false, true) ?>);
 	</script>
-	<?
+<?
 	unset($item, $actualItem, $minOffer, $itemIds, $jsParams);
 }

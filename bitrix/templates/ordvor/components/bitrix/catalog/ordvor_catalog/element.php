@@ -683,7 +683,8 @@ $arParams['DETAIL_PROPERTY_CODE'] = $arProps;
 						<div class="element-sect__title">
 							Вы смотрели
 						</div>
-						<? $APPLICATION->IncludeComponent(
+						<?
+						$APPLICATION->IncludeComponent(
 							'bitrix:catalog.products.viewed',
 							'ordvor_catalog_products_viewed_2',
 							array(

@@ -42,6 +42,7 @@ use \Bitrix\Main\Localization\Loc;
  * @var CatalogSectionComponent $component
  */
 
+global $USER;
 
 if ($item['PROPERTIES']['PROTSENT_SKIDKI']['VALUE']) {
 	$price['PERCENT'] = floatval($item["PROPERTIES"]["PROTSENT_SKIDKI"]["VALUE"]);
@@ -49,7 +50,18 @@ if ($item['PROPERTIES']['PROTSENT_SKIDKI']['VALUE']) {
 	$discountPrint = CurrencyFormat($discountVal, "RUB");
 	$price["RATIO_PRICE"] = $discountVal;
 	$price["PRINT_RATIO_PRICE"] = $discountPrint;
-} ?>
+}
+
+//$itemInCart = '';
+//foreach ($arParams["ITEMS_IN_THE_CART"] as $key => $value) {
+//	if ($arResult["ITEM"]["ID"] == $value) $itemInCart = ' in-the-cart';
+
+//	foreach ($arResult["ITEM"]["OFFERS"] as $key => $valueItem) {
+//		if ($valueItem["ID"] == $value) $itemInCart = ' in-the-cart';
+//	}
+//}
+?>
+
 
 <div class="product-item main_catalog_popular_item">
 
@@ -195,7 +207,7 @@ if ($item['PROPERTIES']['PROTSENT_SKIDKI']['VALUE']) {
 							<? if (!$haveOffers) {
 								if ($actualItem['CAN_BUY']) { ?>
 									<div class="product-item-button-container product-item-button-container-2" id="<?= $itemIds['BASKET_ACTIONS'] ?>">
-										<a class="js-add-basket fade-out" id="<?= $itemIds['BUY_LINK'] ?>" href="javascript:void(0)" rel="nofollow">
+										<a class="js-add-basket<?= $itemInCart ?>" id="<?= $itemIds['BUY_LINK'] ?>" href="javascript:void(0)" rel="nofollow">
 											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M2.5 2.50005H4.28333C4.4843 2.49778 4.67932 2.56822 4.83246 2.69838C4.9856 2.82855 5.08653 3.00968 5.11667 3.20839L5.51667 5.83339L6.66667 13.3334L15.8333 12.5001L17.5 5.83339H5.51667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 												<path d="M6.125 17.083H6.20833" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
@@ -251,7 +263,7 @@ if ($item['PROPERTIES']['PROTSENT_SKIDKI']['VALUE']) {
 											Под заказ
 										</a>
 										<div class="product-item-button-container buy-btn" id="<?= $itemIds['BASKET_ACTIONS'] ?>" <?= ($actualItem['CAN_BUY'] ? '' : 'style="display: none;"') ?>>
-											<a class="js-add-basket fade-out <?= $buttonSizeClass ?>" id="<?= $itemIds['BUY_LINK'] ?>" href="javascript:void(0)" rel="nofollow">
+											<a class="js-add-basket <?= $buttonSizeClass ?><?= $itemInCart ?>" id="<?= $itemIds['BUY_LINK'] ?>" href="javascript:void(0)" rel="nofollow">
 												<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path d="M2.5 2.50005H4.28333C4.4843 2.49778 4.67932 2.56822 4.83246 2.69838C4.9856 2.82855 5.08653 3.00968 5.11667 3.20839L5.51667 5.83339L6.66667 13.3334L15.8333 12.5001L17.5 5.83339H5.51667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 													<path d="M6.125 17.083H6.20833" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />

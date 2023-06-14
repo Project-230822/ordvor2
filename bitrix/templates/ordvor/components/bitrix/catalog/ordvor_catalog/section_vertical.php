@@ -606,7 +606,8 @@ if ($isFilter || $isSidebar): ?>
 								'DISABLE_INIT_JS_IN_COMPONENT' => (isset($arParams['DISABLE_INIT_JS_IN_COMPONENT']) ? $arParams['DISABLE_INIT_JS_IN_COMPONENT'] : ''),
 								"DISPLAY_PRODUCTS_IN_SLIDER" => "Y",
 								"NUMBER_PRODUCTS_IN_ROW" => "ROW_3",
-								'HIDE_SORTING' => 'Y'
+								'HIDE_SORTING' => 'Y',
+								'NUMBER_SLIDES_TO_SHOW' => 3
 							),
 							$component
 						);

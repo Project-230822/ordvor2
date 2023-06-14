@@ -307,6 +307,6 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 	),
 false,
 Array(
-	'HIDE_ICONS' => 'Y'
+	'HIDE_ICONS' => 'N'
 )
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

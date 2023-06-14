@@ -1639,7 +1639,6 @@
 				this.quantitySet(index);
 				this.setPrice();
 				this.setCompared(this.offers[index].COMPARED);
-
 				this.offerNum = index;
 			}
 		},
@@ -2256,12 +2255,11 @@
 				contentColor: 'white',
 				className: this.templateTheme ? 'bx-' + this.templateTheme : ''
 			});
+		},
+
+		itemInCart: function () {
+			this.obBuyBtn = BX(this.visual.BUY_ID);
+			BX.addClass(this.obBuyBtn, ' in-the-cart')
 		}
 	};
 })(window);
-
-//$('.items-list').slick({
-//	infinite: true,
-//	slidesToShow: 3,
-//	slidesToScroll: 3
-//});

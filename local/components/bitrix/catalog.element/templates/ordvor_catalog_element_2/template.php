@@ -415,7 +415,6 @@ while ($arStoreProduct = $rsStoreProduct->fetch()) {
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="product-item-detail-pay-block" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-					<div class="catch_up">Скидка 7% за самовывоз</div>
 					<? foreach ($arParams['PRODUCT_PAY_BLOCK_ORDER'] as $blockName) { ?>
 						<? if ($blockName === 'price') : ?>
 							<? if ($arResult["PROPERTIES"]["NE_DLYA_PRODAZHI"]["VALUE"] != "false") { ?>
@@ -552,76 +551,73 @@ while ($arStoreProduct = $rsStoreProduct->fetch()) {
 							} ?>
 						<? endif; ?>
 
-						<? if ($blockName === 'quantity&buttons') : ?>
-							<div class="product-item-detail-info-container">
-								<div class="product-item-detail-active-container">
-									<? if ($arParams['USE_PRODUCT_QUANTITY']) { ?>
-										<div class="product-item-detail-quantity-container" style="<?= (!$actualItem['CAN_BUY'] ? 'display: none;' : '') ?>" data-entity="quantity-block">
-											<div class="product-item-amount" <?php if ($arResult["PROPERTIES"]["NE_DLYA_PRODAZHI"]["VALUE"] != "false") echo "style='display: none;'"; ?>>
-												<div class="product-item-amount-field-container">
-													<span class="product-item-amount-field-btn-minus no-select" id="<?= $itemIds['QUANTITY_DOWN_ID'] ?>">
-														<svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M1.58334 1H14.4167" stroke="#717171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-														</svg>
-													</span>
-													<input class="product-item-amount-field" id="<?= $itemIds['QUANTITY_ID'] ?>" type="number" value="<?= $price['MIN_QUANTITY'] ?>">
-													<span class="product-item-amount-field-btn-plus no-select" id="<?= $itemIds['QUANTITY_UP_ID'] ?>">
-														<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M11 4.58301V17.4163" stroke="#717171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-															<path d="M4.58333 11H17.4167" stroke="#717171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-														</svg>
-													</span>
-												</div>
-												<div class="product-item-amount-description-container">
-													<span id="<?= $itemIds['QUANTITY_MEASURE'] ?>">
-														<?= $actualItem['ITEM_MEASURE']['TITLE'] ?>
-													</span>
-													<span id="<?= $itemIds['PRICE_TOTAL'] ?>"></span>
-												</div>
-											</div>
+						<? if ($arParams['USE_PRODUCT_QUANTITY'] && $blockName === 'quantity') { ?>
+							<div class="product-item-detail-quantity-container" style="<?= (!$actualItem['CAN_BUY'] ? 'display: none;' : '') ?>" data-entity="quantity-block">
+								<div class="product-item-amount" <?php if ($arResult["PROPERTIES"]["NE_DLYA_PRODAZHI"]["VALUE"] != "false") echo "style='display: none;'"; ?>>
+									<div class="product-item-amount-field-container">
+										<span class="product-item-amount-field-btn-minus no-select" id="<?= $itemIds['QUANTITY_DOWN_ID'] ?>">
+											<svg width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M1.58334 1H14.4167" stroke="#717171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</span>
+										<input class="product-item-amount-field" id="<?= $itemIds['QUANTITY_ID'] ?>" type="number" value="<?= $price['MIN_QUANTITY'] ?>">
+										<span class="product-item-amount-field-btn-plus no-select" id="<?= $itemIds['QUANTITY_UP_ID'] ?>">
+											<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M11 4.58301V17.4163" stroke="#717171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+												<path d="M4.58333 11H17.4167" stroke="#717171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</span>
+									</div>
+									<div class="product-item-amount-description-container">
+										<span id="<?= $itemIds['QUANTITY_MEASURE'] ?>">
+											<?= $actualItem['ITEM_MEASURE']['TITLE'] ?>
+										</span>
+										<span id="<?= $itemIds['PRICE_TOTAL'] ?>"></span>
+									</div>
+								</div>
+							</div>
+						<? } ?>
+
+						<? if ($arResult["PROPERTIES"]["NE_DLYA_PRODAZHI"]["VALUE"] == "false" && $blockName === 'buttons') { ?>
+							<div data-entity="main-button-container">
+								<div id="<?= $itemIds['BASKET_ACTIONS_ID'] ?>" style="display: <?= ($actualItem['CAN_BUY'] ? '' : 'none') ?>;">
+									<? if ($showAddBtn) { ?>
+										<div class="product-item-detail-info-container catalog-buy">
+											<a class="btn <?= $showButtonClassName ?> product-item-detail-buy-button" id="<?= $itemIds['ADD_BASKET_LINK'] ?>" href="javascript:void(0);">
+												<?/*=$arParams['MESS_BTN_ADD_TO_BASKET']*/ ?>
+												<span class="btn-caption">
+													В корзину
+												</span>
+											</a>
+										</div>
+									<? }
+									if ($showBuyBtn) { ?>
+										<div class="product-item-detail-info-container">
+											<a class="btn <?= $buyButtonClassName ?> product-item-detail-buy-button" id="<?= $itemIds['BUY_LINK'] ?>" href="javascript:void(0);">
+												<span><?= $arParams['MESS_BTN_BUY'] ?></span>
+											</a>
 										</div>
 									<? } ?>
-
-									<? if ($arResult["PROPERTIES"]["NE_DLYA_PRODAZHI"]["VALUE"] == "false") { ?>
-										<div data-entity="main-button-container">
-											<div id="<?= $itemIds['BASKET_ACTIONS_ID'] ?>" style="display: <?= ($actualItem['CAN_BUY'] ? '' : 'none') ?>;">
-												<? if ($showAddBtn) { ?>
-													<div class="product-item-detail-info-container catalog-buy">
-														<a class="btn <?= $showButtonClassName ?> product-item-detail-buy-button" id="<?= $itemIds['ADD_BASKET_LINK'] ?>" href="javascript:void(0);">
-															<?/*=$arParams['MESS_BTN_ADD_TO_BASKET']*/ ?>
-															<span class="btn-caption">
-																В корзину
-															</span>
-														</a>
-													</div>
-												<? }
-												if ($showBuyBtn) { ?>
-													<div class="product-item-detail-info-container">
-														<a class="btn <?= $buyButtonClassName ?> product-item-detail-buy-button" id="<?= $itemIds['BUY_LINK'] ?>" href="javascript:void(0);">
-															<span><?= $arParams['MESS_BTN_BUY'] ?></span>
-														</a>
-													</div>
-												<? } ?>
-											</div>
-											<? if ($showSubscribe) { ?>
-												<div class="product-item-detail-info-container">
-													<? $APPLICATION->IncludeComponent(
-														'bitrix:catalog.product.subscribe',
-														'',
-														array(
-															'CUSTOM_SITE_ID' => isset($arParams['CUSTOM_SITE_ID']) ? $arParams['CUSTOM_SITE_ID'] : null,
-															'PRODUCT_ID' => $arResult['ID'],
-															'BUTTON_ID' => $itemIds['SUBSCRIBE_LINK'],
-															'BUTTON_CLASS' => 'btn btn-default product-item-detail-buy-button',
-															'DEFAULT_DISPLAY' => !$actualItem['CAN_BUY'],
-															'MESS_BTN_SUBSCRIBE' => $arParams['~MESS_BTN_SUBSCRIBE'],
-														),
-														$component,
-														array('HIDE_ICONS' => 'Y')
-													); ?>
-												</div>
-											<? } ?>
-											<?php /* ?>
+								</div>
+								<? if ($showSubscribe) { ?>
+									<div class="product-item-detail-info-container">
+										<? $APPLICATION->IncludeComponent(
+											'bitrix:catalog.product.subscribe',
+											'',
+											array(
+												'CUSTOM_SITE_ID' => isset($arParams['CUSTOM_SITE_ID']) ? $arParams['CUSTOM_SITE_ID'] : null,
+												'PRODUCT_ID' => $arResult['ID'],
+												'BUTTON_ID' => $itemIds['SUBSCRIBE_LINK'],
+												'BUTTON_CLASS' => 'btn btn-default product-item-detail-buy-button',
+												'DEFAULT_DISPLAY' => !$actualItem['CAN_BUY'],
+												'MESS_BTN_SUBSCRIBE' => $arParams['~MESS_BTN_SUBSCRIBE'],
+											),
+											$component,
+											array('HIDE_ICONS' => 'Y')
+										); ?>
+									</div>
+								<? } ?>
+								<?php /* ?>
 											<div class="product-item-detail-info-container">
 												<a class="btn btn-link product-item-detail-buy-button" id="<?=$itemIds['NOT_AVAILABLE_MESS']?>"
 													href="javascript:void(0)"
@@ -630,11 +626,8 @@ while ($arStoreProduct = $rsStoreProduct->fetch()) {
 												</a>
 											</div>
 											<?php */ ?>
-										</div>
-									<? } ?>
-								</div>
 							</div>
-						<? endif; ?>
+						<? } ?>
 					<? } ?>
 					<a class="product-item-detail-installment-plan" href="/pokupai-v-rassrochku/" target="_blank">
 						<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">

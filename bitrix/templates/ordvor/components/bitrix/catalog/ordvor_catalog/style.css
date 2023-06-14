@@ -72,3 +72,8 @@ body.bx-theme-yellow .catalog-block-header{border-color:#f4b236;}
 	margin-bottom: 24px;
 	z-index: 0;
 }
+
+.universal_slider .slick-list {
+	margin: 0 -15px;
+	height: 100%!important;
+}

@@ -3022,6 +3022,13 @@
 				this.incViewedCounter();
 			}
 		},
+
+		itemInCart: function () {
+			this.obBuyBtn = BX(this.visual.ADD_BASKET_LINK);
+			let childItem = BX.findChildren(this.obBuyBtn, {className: 'btn-caption'});
+			BX.adjust(childItem[0], {text: 'В корзине'});
+			BX.addClass(this.obBuyBtn, ' in-the-cart')
+		}
 	}
 })(window);
 
