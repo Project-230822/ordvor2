@@ -467,25 +467,60 @@ if ($curPage == "/index.php") {
 			</div>
 		</div>
 		<? global $arrFilterSect; ?>
-		<? $APPLICATION->IncludeComponent(
-			"bitrix:menu",
-			"ordvor_desctop_2",
+		<?
+		//$APPLICATION->IncludeComponent(
+		//	"bitrix:menu",
+		//	"ordvor_desctop_2",
+		//	array(
+		//		"ROOT_MENU_TYPE" => "main",
+		//		"MAX_LEVEL" => "3",
+		//		"CHILD_MENU_TYPE" => "main",
+		//		"USE_EXT" => "Y",
+		//		"DELAY" => "N",
+		//		"ALLOW_MULTI_SELECT" => "Y",
+		//		"MENU_CACHE_TYPE" => "N",
+		//		"MENU_CACHE_TIME" => "3600",
+		//		"MENU_CACHE_USE_GROUPS" => "Y",
+		//		"MENU_CACHE_GET_VARS" => array(),
+		//		"COMPONENT_TEMPLATE" => "ordvor_desctop_2",
+		//		"MENU_THEME" => "site"
+		//	),
+		//	false
+		//);
+
+		$APPLICATION->IncludeComponent(
+			"bitrix:catalog.section.list",
+			"rasa_main_menu",
 			array(
-				"ROOT_MENU_TYPE" => "main",
-				"MAX_LEVEL" => "3",
-				"CHILD_MENU_TYPE" => "main",
-				"USE_EXT" => "Y",
-				"DELAY" => "N",
-				"ALLOW_MULTI_SELECT" => "Y",
-				"MENU_CACHE_TYPE" => "N",
-				"MENU_CACHE_TIME" => "3600",
-				"MENU_CACHE_USE_GROUPS" => "Y",
-				"MENU_CACHE_GET_VARS" => array(),
-				"COMPONENT_TEMPLATE" => "ordvor_desctop_2",
-				"MENU_THEME" => "site"
+				"ADD_SECTIONS_CHAIN" => "N",
+				"CACHE_FILTER" => "N",
+				"CACHE_GROUPS" => "Y",
+				"CACHE_TIME" => "36000000",
+				"CACHE_TYPE" => "A",
+				"COMPONENT_TEMPLATE" => "rasa_main_menu",
+				"COUNT_ELEMENTS" => "N",
+				"FILTER_NAME" => "arrFilterSect",
+				"HIDE_SECTION_NAME" => "N",
+				"IBLOCK_ID" => "18",
+				"IBLOCK_TYPE" => "1c_catalog",
+				"SECTION_CODE" => "",
+				"SECTION_FIELDS" => array(
+					0 => "",
+					1 => "",
+				),
+				"SECTION_ID" => $_REQUEST["SECTION_ID"],
+				"SECTION_URL" => "",
+				"SECTION_USER_FIELDS" => array(
+					0 => "",
+					1 => "",
+				),
+				"SHOW_PARENT_NAME" => "Y",
+				"TOP_DEPTH" => "3",
+				"VIEW_MODE" => "LIST"
 			),
 			false
-		); ?>
+		);
+		?>
 	</header>
 	<?php if ($curPage !== "/index.php") : ?>
 		<div class="main">
