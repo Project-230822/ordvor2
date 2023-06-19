@@ -8,21 +8,26 @@ $description = "Магазины Оружейный двор Мир приклю
 $APPLICATION->SetPageProperty("description", $description); ?>
 <? $APPLICATION->GetTitle(false) ?>
 <h1 class="page-title"><? $APPLICATION->ShowTitle(false); ?></h1>
-<div class="our-stores-page">
-	<? $APPLICATION->IncludeComponent(
-		"custom:our.stores",
-		".default",
-		array(
-			"CACHE_TIME" => "3600",
-			"CACHE_TYPE" => "A",
-			"IBLOCK_ID" => "35",
-			"IBLOCK_TYPE" => "content",
-			"WRITE_YOUR_TITLE" => "",
-			"COMPONENT_TEMPLATE" => ".default"
-		),
-		false
-	); ?>
-</div>
+<?
+global $USER;
+if ($USER->IsAdmin()) { ?>
+	<div class="our-stores-page">
+		<? $APPLICATION->IncludeComponent(
+			"custom:our.stores",
+			".default",
+			array(
+				"CACHE_TIME" => "3600",
+				"CACHE_TYPE" => "A",
+				"IBLOCK_ID" => "35",
+				"IBLOCK_TYPE" => "content",
+				"WRITE_YOUR_TITLE" => "",
+				"COMPONENT_TEMPLATE" => ".default"
+			),
+			false
+		); ?>
+	</div>
+<? } ?>
+
 <? $APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"",
