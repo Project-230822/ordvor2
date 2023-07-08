@@ -8808,20 +8808,19 @@ span.mobile-block__hiding-button {
 							 "top-menu top-menu links";
 	}
 
-	.top_block_grid > .profile-desctop,, .top_block_grid .work_time, .top_block_grid .top-menu{
-											 display: block !important;
-										 }
+	.top_block_grid > .profile-desctop,.top_block_grid .work_time, .top_block_grid .top-menu{
+		display: block !important;
+	}
 
 	.top_block_grid .work_time{
 		min-width: auto;
 	}
 
 	.top_block_grid .links{
-		display: flex;
+		display: flex !important;
 		align-items: end;
 		justify-content: end;
 	}
-
 	.top_block_grid .mobile_phone{
 		display: none;
 	}
