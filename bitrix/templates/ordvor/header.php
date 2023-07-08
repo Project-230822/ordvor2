@@ -279,66 +279,74 @@ if ($curPage == "/index.php") {
 	<header>
 		<div class="top">
 			<div class="container">
-				<div class="top_block">
-					<div class="between_block">
-						<div class="city">
-							<? $APPLICATION->IncludeFile(SITE_DIR . "include/city-identifier.php", array(), array("MODE" => "php")); ?>
-						</div>
-						<div class="work_time">
-							<? $APPLICATION->IncludeFile(SITE_DIR . "include/time_working.php", array(), array("MODE" => "php")); ?>
-						</div>
-					</div>
-					<div class="between_block top-menu">
-						<? $APPLICATION->IncludeComponent(
-							"bitrix:menu",
-							"top_menu_2",
-							array(
-								"ALLOW_MULTI_SELECT" => "N",
-								"CHILD_MENU_TYPE" => "top",
-								"COMPONENT_TEMPLATE" => "top_menu_2",
-								"DELAY" => "N",
-								"MAX_LEVEL" => "2",
-								"MENU_CACHE_GET_VARS" => array(),
-								"MENU_CACHE_TIME" => "360000",
-								"MENU_CACHE_TYPE" => "A",
-								"MENU_CACHE_USE_GROUPS" => "Y",
-								"ROOT_MENU_TYPE" => "top",
-								"USE_EXT" => "N"
-							),
-							false
-						); ?>
-					</div>
-					<div class="between_block links">
-						<? $APPLICATION->IncludeFile(SITE_DIR . "include/social-networks.php", array(), array("MODE" => "php")); ?>
-					</div>
-					<div class="between_block profile-desctop">
-						<noindex class="profile-desctop">
-							<?php if ($USER->IsAuthorized()) : ?>
-								<a class="personal-area" href="/personal/">
-									<div class="item"><?= $USER->GetEmail(); ?></div>
-								</a>
-								<a class="exit fade-out" href="<?= $APPLICATION->GetCurPageParam('logout=yes') ?>">
-									<div class="item">
-										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 30 30">
-											<path class="st0" d="M14.13 25.9H3.53c-.65 0-1.18-.53-1.18-1.18V3.53c0-.65.53-1.18 1.18-1.18h10.59c.65 0 1.18-.53 1.18-1.18C15.3.53 14.78 0 14.13 0H3.53C1.58 0 0 1.58 0 3.53v21.19c0 1.95 1.58 3.53 3.53 3.53h10.59c.65 0 1.18-.53 1.18-1.18 0-.65-.52-1.17-1.17-1.17z" fill="#000000" />
-											<path class="st0" d="M28 13.29l-7.16-7.06c-.46-.46-1.21-.45-1.66.01-.46.46-.45 1.21.01 1.66l5.11 5.05H10.59c-.65 0-1.18.53-1.18 1.18s.53 1.18 1.18 1.18H24.3l-5.11 5.05c-.46.46-.47 1.2-.01 1.66.23.23.53.35.84.35.3 0 .6-.11.83-.34L28 14.96c.22-.22.35-.52.35-.84s-.13-.61-.35-.83z" fill="#000000" />
-										</svg>
-									</div>
-								</a>
-							<?php else : ?>
-								<a href="/login/">
-									<div class="join">Вход</div>
-								</a>/
-								<a href="/login/index.php?register=yes">
-									<div class="register">Регистрация</div>
-								</a>
-							<?php endif; ?>
-						</noindex>
-					</div>
-					<div class="between_block mobile_phone">
-						<? $APPLICATION->IncludeFile(SITE_DIR . "include/contacts-phone-mobile.php", array(), array("MODE" => "php")); ?>
-					</div>
-				</div>
+                <div class="top_block top_block_grid">
+                    <div class="city">
+                        <? $APPLICATION->IncludeFile(SITE_DIR . "include/city-identifier.php", array(), array("MODE" => "php")); ?>
+                    </div>
+                    <div class="work_time">
+                        <div class="work-time-inline-box work-time-hour-box">
+                            <span class="no-wrap">
+                                <? $APPLICATION->IncludeFile(SITE_DIR . "include/time_working.php", array(), array("MODE" => "text")); ?>
+                            </span>
+                            <span class="no-wrap">
+                                <? $APPLICATION->IncludeFile(SITE_DIR . "include/time_working_2.php", array(), array("MODE" => "text")); ?>
+                            </span>
+                        </div>
+                        <div class="work-time-inline-box">
+                            <span class="timezone">МСК+7</span>
+                        </div>
+                    </div>
+                    <div class="between_block top-menu">
+                        <? $APPLICATION->IncludeComponent(
+                            "bitrix:menu",
+                            "top_menu_2",
+                            array(
+                                "ALLOW_MULTI_SELECT" => "N",
+                                "CHILD_MENU_TYPE" => "top",
+                                "COMPONENT_TEMPLATE" => "top_menu_2",
+                                "DELAY" => "N",
+                                "MAX_LEVEL" => "2",
+                                "MENU_CACHE_GET_VARS" => array(),
+                                "MENU_CACHE_TIME" => "360000",
+                                "MENU_CACHE_TYPE" => "A",
+                                "MENU_CACHE_USE_GROUPS" => "Y",
+                                "ROOT_MENU_TYPE" => "top",
+                                "USE_EXT" => "N"
+                            ),
+                            false
+                        ); ?>
+                    </div>
+                    <div class="between_block links">
+                        <? $APPLICATION->IncludeFile(SITE_DIR . "include/social-networks.php", array(), array("MODE" => "php"), ); ?>
+                    </div>
+                    <div class="between_block profile-desctop">
+                        <noindex class="profile-desctop">
+                            <?php if ($USER->IsAuthorized()) : ?>
+                                <a class="personal-area" href="/personal/">
+                                    <div class="item"><?= $USER->GetEmail(); ?></div>
+                                </a>
+                                <a class="exit fade-out" href="<?= $APPLICATION->GetCurPageParam('logout=yes') ?>">
+                                    <div class="item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 30 30">
+                                            <path class="st0" d="M14.13 25.9H3.53c-.65 0-1.18-.53-1.18-1.18V3.53c0-.65.53-1.18 1.18-1.18h10.59c.65 0 1.18-.53 1.18-1.18C15.3.53 14.78 0 14.13 0H3.53C1.58 0 0 1.58 0 3.53v21.19c0 1.95 1.58 3.53 3.53 3.53h10.59c.65 0 1.18-.53 1.18-1.18 0-.65-.52-1.17-1.17-1.17z" fill="#000000" />
+                                            <path class="st0" d="M28 13.29l-7.16-7.06c-.46-.46-1.21-.45-1.66.01-.46.46-.45 1.21.01 1.66l5.11 5.05H10.59c-.65 0-1.18.53-1.18 1.18s.53 1.18 1.18 1.18H24.3l-5.11 5.05c-.46.46-.47 1.2-.01 1.66.23.23.53.35.84.35.3 0 .6-.11.83-.34L28 14.96c.22-.22.35-.52.35-.84s-.13-.61-.35-.83z" fill="#000000" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            <?php else : ?>
+                                <a href="/login/">
+                                    <div class="join">Вход</div>
+                                </a>/
+                                <a href="/login/index.php?register=yes">
+                                    <div class="register">Регистрация</div>
+                                </a>
+                            <?php endif; ?>
+                        </noindex>
+                    </div>
+                    <div class="between_block mobile_phone">
+                        <? $APPLICATION->IncludeFile(SITE_DIR . "include/contacts-phone-mobile.php", array(), array("MODE" => "php")); ?>
+                    </div>
+                </div>
 			</div>
 		</div>
 		<div class="down">
