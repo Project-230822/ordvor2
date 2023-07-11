@@ -8809,7 +8809,7 @@ span.mobile-block__hiding-button {
 	}
 
 	.top_block_grid > .profile-desctop,.top_block_grid .work_time, .top_block_grid .top-menu{
-		display: block !important;
+		display: block;
 	}
 
 	.top_block_grid .work_time{
@@ -8817,10 +8817,11 @@ span.mobile-block__hiding-button {
 	}
 
 	.top_block_grid .links{
-		display: flex !important;
+		display: flex;
 		align-items: end;
 		justify-content: end;
 	}
+
 	.top_block_grid .mobile_phone{
 		display: none;
 	}
@@ -8842,6 +8843,11 @@ span.mobile-block__hiding-button {
 		grid-template-areas: "city city"
 							 "work-time mobile_phone";
 		gap: 0;
+	}
+
+
+	.top_block_grid > .profile-desctop,.top_block_grid .top-menu, .top_block_grid .links{
+		display: none;
 	}
 
 	.top_block_grid .mobile_phone{
