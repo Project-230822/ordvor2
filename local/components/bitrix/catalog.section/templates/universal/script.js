@@ -126,7 +126,7 @@
 				});
 			}, this);
 			//
-			debugger;
+
 			BX.ajax({
 				method: 'GET',
 				dataType: 'json',
