@@ -20,9 +20,9 @@ $this->setFrameMode(true);
 			<div class="container">
 				<div class="title"></div>
 				<?php if ($arItem["PROPERTIES"]["LINK"]["VALUE"] && $arItem["PROPERTIES"]["BUTTON_TEXT"]["VALUE"]) : ?>
-					<!--<a class="slider-link" href="<?= $arItem["PROPERTIES"]["LINK"]["VALUE"] ?>" tabindex="0">
-						<?//= $arItem["PROPERTIES"]["BUTTON_TEXT"]["VALUE"] ?>
-					</a>-->
+					<a class="slider-link" href="<?= $arItem["PROPERTIES"]["LINK"]["VALUE"] ?>" tabindex="0">
+						<?=$arItem["PROPERTIES"]["BUTTON_TEXT"]["VALUE"] ?>
+					</a>
 				<?php endif; ?>
 			</div>
 		</div>
