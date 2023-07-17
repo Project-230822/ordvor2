@@ -50,8 +50,6 @@
 			this.showMoreButtonMessage = this.showMoreButton.innerHTML;
 			BX.bind(this.showMoreButton, 'click', BX.proxy(this.showMore, this));
 		}
-
-		//debugger
 	};
 
 	window.JCCatalogSectionComponent.prototype =
@@ -94,7 +92,6 @@
 		},
 
 		showMore: function () {
-
 			if (this.navParams.NavPageNomer < this.navParams.NavPageCount) {
 				var data = {};
 				data['action'] = 'showMore';
@@ -129,6 +126,7 @@
 				});
 			}, this);
 			//
+
 			BX.ajax({
 				method: 'GET',
 				dataType: 'json',
@@ -140,7 +138,6 @@
 		},
 
 		deferredLoad: function () {
-
 			this.sendRequest({ action: 'deferredLoad' });
 		},
 
@@ -171,6 +168,7 @@
 						false,
 						BX.delegate(function () { this.showAction(result, data); }, this)
 					);
+					this.heightAlignment();
 				}, this)
 			});
 		},
@@ -275,10 +273,10 @@
 		},
 
 		showHeader: function (animate) {
-			if (this.bigData.count === "0" && this.displayProductsInSlider === "Y") {
+			if ((this.bigData.count === "0" || this.bigData.count === undefined) && this.displayProductsInSlider === "Y") {
 				this.sliderForItemList();
-				this.heightAlignment();
 			}
+			this.heightAlignment();
 			var parentNode = BX.findParent(this.container, { attr: { 'data-entity': 'parent-container' } }),
 				header;
 
@@ -373,7 +371,7 @@
 				}
 
 				// Складываем полученые высоты
-				overallHeight = highestItem + highestSkuBlock;
+				overallHeight = highestItem + highestSkuBlock + 1;
 
 				// Присваиваем полученую высоту обертке для слайдера + отрицательный margin
 				for (var parentNode of parentNodesSlider) {

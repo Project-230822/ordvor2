@@ -654,6 +654,7 @@
 		opacity: 1;
 		visibility: visible;
 		z-index: 1;
+		padding-top: 10px;
 	}
 
 	.product-item-hidden.sku-block .product-item-info-container {

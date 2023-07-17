@@ -189,7 +189,7 @@ if ($curPage == "/index.php") {
 
 	<? $APPLICATION->ShowHead(); ?>
 
-	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+	<!--<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">-->
 
 	<? if (!isLighthouse()) { ?>
 		<!-- Google Tag Manager -->
