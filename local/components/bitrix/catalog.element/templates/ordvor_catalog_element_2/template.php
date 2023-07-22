@@ -1773,6 +1773,9 @@ if ($arParams['DISPLAY_COMPARE']) {
 		'COMPARE_PATH' => $arParams['COMPARE_PATH']
 	);
 }
+
+$jsParams['TEMPLATE_PATH'] = $this->GetFolder();
+$jsParams['COMPONENT_PATH'] = $this->getComponent()->getPath();
 ?>
 <script>
 	BX.message({

@@ -19,7 +19,8 @@
 
 	window.JCCatalogElement = function (arParams) {
 		this.productType = 0;
-
+		this.templatePath = arParams.TEMPLATE_PATH;
+		this.componentPath = arParams.COMPONENT_PATH;
 		this.config = {
 			useCatalog: true,
 			showQuantity: true,
@@ -1564,8 +1565,8 @@
 
 		quantityUp: function () {
 			var curValue = 0,
-				boolSet = true;
-
+				boolSet = true, index;
+			index = this.detectCurrentElement();
 			if (this.errorCode === 0 && this.config.showQuantity && this.canBuy && !this.isGift) {
 				curValue = this.isDblQuantity ? parseFloat(this.obQuantity.value) : parseInt(this.obQuantity.value, 10);
 				if (!isNaN(curValue)) {
@@ -1581,9 +1582,10 @@
 						if (this.isDblQuantity) {
 							curValue = Math.round(curValue * this.precisionFactor) / this.precisionFactor;
 						}
-
+						//debugger;
 						this.obQuantity.value = curValue;
-
+						if (this.offers.length) this.offers[index].QUANTITY_IN_BASKET = curValue;
+						//this.requestForQuantity('quantityUp');
 						this.setPrice();
 					}
 				}
@@ -1592,8 +1594,8 @@
 
 		quantityDown: function () {
 			var curValue = 0,
-				boolSet = true;
-
+				boolSet = true, index;
+			index = this.detectCurrentElement();
 			if (this.errorCode === 0 && this.config.showQuantity && this.canBuy && !this.isGift) {
 				curValue = (this.isDblQuantity ? parseFloat(this.obQuantity.value) : parseInt(this.obQuantity.value, 10));
 				if (!isNaN(curValue)) {
@@ -1609,9 +1611,10 @@
 						if (this.isDblQuantity) {
 							curValue = Math.round(curValue * this.precisionFactor) / this.precisionFactor;
 						}
-
+						//debugger;
 						this.obQuantity.value = curValue;
-
+						if (this.offers.length) this.offers[index].QUANTITY_IN_BASKET = curValue;
+						//this.requestForQuantity('quantityDown');
 						this.setPrice();
 					}
 				}
@@ -1620,7 +1623,8 @@
 
 		quantityChange: function () {
 			var curValue = 0,
-				intCount;
+				intCount, index;
+			index = this.detectCurrentElement();
 
 			if (this.errorCode === 0 && this.config.showQuantity) {
 				if (this.canBuy) {
@@ -1645,8 +1649,10 @@
 						if (curValue < this.minQuantity) {
 							curValue = this.minQuantity;
 						}
-
+						//this.requestForQuantity('', curValue);
+						//debugger
 						this.obQuantity.value = curValue;
+						if (this.offers.length) this.offers[index].QUANTITY_IN_BASKET = curValue;
 					}
 					else {
 						this.obQuantity.value = this.minQuantity;
@@ -1658,6 +1664,22 @@
 
 				this.setPrice();
 			}
+		},
+
+		requestForQuantity: function (action, quantity = 1) {
+
+			//debugger
+			BX.ajax({
+				url: this.componentPath + '/ajax.php',
+				method: 'POST',
+				dataType: 'json',
+				data: {
+					operation: 'quantityChange',
+					action: action,
+					quantity: quantity,
+					productId: this.product.id
+				}
+			})
 		},
 
 		quantitySet: function (index) {
@@ -2221,14 +2243,20 @@
 					}
 				}
 
+				//debugger
+				if (this.offers[index].IN_BASKET === true) {
+					BX.addClass(BX(this.visual.ADD_BASKET_LINK), ' in-the-cart');
+				} else {
+					BX.removeClass(BX(this.visual.ADD_BASKET_LINK), ' in-the-cart');
+				}
+
 				this.quantitySet(index);
 				this.setPrice();
+				if (this.offers[index].QUANTITY_IN_BASKET ? this.setQuantity(this.offers[index].QUANTITY_IN_BASKET) : this.setQuantity(1));
 				this.setCompared(this.offers[index].COMPARED);
-
 				this.offerNum = index;
 				this.setAnalyticsDataLayer('showDetail');
 				this.incViewedCounter();
-
 				eventData.newId = this.offers[this.offerNum].ID;
 				// only for compatible catalog.store.amount custom templates
 				BX.onCustomEvent('onCatalogStoreProductChange', [this.offers[this.offerNum].ID]);
@@ -2423,6 +2451,7 @@
 		},
 
 		checkQuantityControls: function () {
+			//debugger
 			if (!this.obQuantity)
 				return;
 
@@ -2534,6 +2563,12 @@
 					}
 				}
 			}
+		},
+
+		setQuantity: function (productQuantity) {
+			//debugger;
+			BX(this.visual.QUANTITY_ID).value = productQuantity;
+			this.checkQuantityControls();
 		},
 
 		compare: function (event) {
@@ -2832,6 +2867,24 @@
 		},
 
 		add2Basket: function () {
+			//debugger
+			if (this.offers.length) {
+				let index;
+				index = this.detectCurrentElement();
+				//if (this.offers[index].QUANTITY_IN_BASKET) {
+				//	this.obQuantity.value = 1;
+				//	this.offers[index].QUANTITY_IN_BASKET = 1;
+				//} else {
+				//	this.obQuantity.value = 1;
+				//	this.offers[index].QUANTITY_IN_BASKET = 1;
+				//}
+
+				//this.obQuantity.value = 1;
+				//this.offers[index].QUANTITY_IN_BASKET = 1;
+				this.offers[index].IN_BASKET = true;
+				BX.addClass(this.parentContainerBuyBtn, ' in-the-cart');
+			}
+
 			this.basketMode = 'ADD';
 			this.basket();
 		},
@@ -3025,9 +3078,25 @@
 
 		itemInCart: function () {
 			this.obBuyBtn = BX(this.visual.ADD_BASKET_LINK);
-			let childItem = BX.findChildren(this.obBuyBtn, {className: 'btn-caption'});
-			BX.adjust(childItem[0], {text: 'В корзине'});
+			let childItem = BX.findChildren(this.obBuyBtn, { className: 'btn-caption' });
+			BX.adjust(childItem[0], { text: 'В корзине' });
 			BX.addClass(this.obBuyBtn, ' in-the-cart')
+		},
+		detectCurrentElement: function () {
+			////debugger;
+			let i = 0, j, index;
+			for (i = 0; i < this.offers.length; i++) {
+				for (j in this.selectedValues) {
+					if (this.selectedValues[j] == this.offers[i].TREE[j]) {
+						return i;
+					}
+				}
+			}
+		},
+		addDataSku: function (data, keyItem) {
+			////debugger;
+			this.offers[keyItem].IN_BASKET = true;
+			this.offers[keyItem].QUANTITY_IN_BASKET = data.QUANTITY_IN_BASKET;
 		}
 	}
 })(window);
@@ -3038,6 +3107,10 @@ if (window.innerWidth <= 991) {
 		smallCharacteristics = document.querySelector('.product-item-detail-small-characteristics');
 	payBlock.after(smallCharacteristics);
 }
+
+$('.product-item-detail-buy-button').on('click', (e) => {
+	$(e.target).closest('.product-item-detail-buy-button').addClass('in-the-cart')
+});
 
 function showAjaxPopup(dataObject) {
 	let hashCode = function (s) {

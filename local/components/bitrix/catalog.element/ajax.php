@@ -1,46 +1,42 @@
 <?
+
 /** @global CMain $APPLICATION */
 define('STOP_STATISTICS', true);
 define('PUBLIC_AJAX_MODE', true);
 define('NOT_CHECK_PERMISSIONS', true);
 
 use Bitrix\Main,
-	Bitrix\Catalog;
+	Bitrix\Catalog,
+	Bitrix\Sale;
 
-require($_SERVER['DOCUMENT_ROOT'].'/bitrix/modules/main/include/prolog_before.php');
-if (isset($_POST['AJAX']) && $_POST['AJAX'] == 'Y')
-{
-	if (Main\Loader::includeModule('catalog') && !Catalog\Product\Basket::isNotCrawler())
-	{
+require($_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/prolog_before.php');
+if (isset($_POST['AJAX']) && $_POST['AJAX'] == 'Y') {
+	if (Main\Loader::includeModule('catalog') && !Catalog\Product\Basket::isNotCrawler()) {
 		$APPLICATION->RestartBuffer();
 		header('Content-Type: application/json');
 		echo Main\Web\Json::encode(array("STATUS" => "ERROR", "TEXT" => "SEARCHER"));
 		die();
 	}
 
-	if (isset($_POST['PRODUCT_ID']) && isset($_POST['SITE_ID']))
-	{
+	if (isset($_POST['PRODUCT_ID']) && isset($_POST['SITE_ID'])) {
 		$productID = (int)$_POST['PRODUCT_ID'];
 		$parentID = (isset($_POST['PARENT_ID']) ? (int)$_POST['PARENT_ID'] : 0);
 		$siteID = '';
 		if (preg_match('/^[a-z0-9_]{2}$/i', (string)$_POST['SITE_ID']) === 1)
 			$siteID = (string)$_POST['SITE_ID'];
-		if ($productID > 0 && $siteID !== '' && Main\Loader::includeModule('catalog') && Main\Loader::includeModule('sale'))
-		{
+		if ($productID > 0 && $siteID !== '' && Main\Loader::includeModule('catalog') && Main\Loader::includeModule('sale')) {
 			// check if there was a recommendation
 			$recommendationId = '';
 			$recommendationCookie = $APPLICATION->get_cookie(Bitrix\Main\Analytics\Catalog::getCookieLogName());
 
-			if (!empty($recommendationCookie))
-			{
+			if (!empty($recommendationCookie)) {
 				$recommendations = \Bitrix\Main\Analytics\Catalog::decodeProductLog($recommendationCookie);
 
 				if (is_array($recommendations) && isset($recommendations[$parentID]))
 					$recommendationId = $recommendations[$parentID][0];
 			}
 
-			if ((string)Main\Config\Option::get('catalog', 'enable_viewed_products') !== 'N')
-			{
+			if ((string)Main\Config\Option::get('catalog', 'enable_viewed_products') !== 'N') {
 				// add record
 				Catalog\CatalogViewedProductTable::refresh(
 					$productID,
@@ -53,13 +49,48 @@ if (isset($_POST['AJAX']) && $_POST['AJAX'] == 'Y')
 			$APPLICATION->RestartBuffer();
 			header('Content-Type: application/json');
 			echo Main\Web\Json::encode(array("STATUS" => "SUCCESS"));
-		}
-		else
-		{
+		} else {
 			$APPLICATION->RestartBuffer();
 			header('Content-Type: application/json');
 			echo Main\Web\Json::encode(array("STATUS" => "ERROR", "TEXT" => "UNDEFINED PRODUCT"));
 		}
 	}
 	die();
+}
+
+$request = Main\Application::getInstance()->getContext()->getRequest();
+$operation = $request->getPost('operation');
+if ($operation == 'quantityChange') {
+	$action = $request->getPost('action');
+	$quantity = $request->getPost('quantity');
+	$productId = $request->getPost('productId');
+
+	$basket = Sale\Basket::loadItemsForFUser(
+		Sale\Fuser::getId(),
+		Main\Context::getCurrent()->getSite()
+	);
+
+	foreach ($basket as $basketItem) {
+		if ($productId == $basketItem->getField('PRODUCT_ID')) $productItemId = $basketItem->getField('ID');
+	}
+
+	if ($item = $basket->getItemById($productItemId)) {
+		if ($action == 'quantityDown') {
+			$actionString = $item->getQuantity() - (int)$quantity;
+		} else if ($action == 'quantityUp') {
+			$actionString = $item->getQuantity() + (int)$quantity;
+		} else {
+			$actionString = (int)$quantity;
+		}
+		$item->setField('QUANTITY', $actionString);
+	} else {
+		$item = $basket->createItem('catalog', $productId);
+		$item->setFields([
+			'QUANTITY' => (int)$quantity,
+			'CURRENCY' => \Bitrix\Currency\CurrencyManager::getBaseCurrency(),
+			'LID' => \Bitrix\Main\Context::getCurrent()->getSite(),
+			'PRODUCT_PROVIDER_CLASS' => \Bitrix\Catalog\Product\Basket::getDefaultProviderName(),
+		]);
+	}
+	$basket->save();
 }

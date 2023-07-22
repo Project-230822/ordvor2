@@ -1,7 +1,10 @@
 <? if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 
-use Bitrix\Main\Loader,
-	Bitrix\Iblock;
+use Bitrix\Main\Loader;
+use Bitrix\Iblock;
+use Bitrix\Sale;
+use \Bitrix\Main;
+
 
 /**
  * @var array $templateData
@@ -11,8 +14,6 @@ use Bitrix\Main\Loader,
  */
 
 global $APPLICATION;
-
-
 
 if ($arResult['DETAIL_PAGE_URL'] && ($APPLICATION->GetCurPage(false) !== $arResult['DETAIL_PAGE_URL'])) {
 	localredirect($arResult['DETAIL_PAGE_URL'], false, '301 Moved permanently');
@@ -127,7 +128,7 @@ if (isset($templateData['JS_OBJ'])) {
 				}
 			});
 		</script>
-	<?
+		<?
 	}
 }
 
@@ -164,38 +165,57 @@ $APPLICATION->SetPageProperty("keywords", $keywords);
 // End SEO //
 */
 
-$fuser = Bitrix\Sale\Fuser::getId();
-$basketRes = Bitrix\Sale\Internals\BasketTable::getList(array(
-	'filter' => array(
-		'FUSER_ID' => $fuser,
-		'ORDER_ID' => null,
-		'LID' => SITE_ID,
-		'CAN_BUY' => 'Y',
-	)
-));
 
-while ($item = $basketRes->fetch()) {
 
-	if ($item["PRODUCT_ID"] == $templateData['ITEM']["ID"]) { ?>
-		<script>
-			BX.ready(BX.defer(function() {
-				if (!!window.<?= $templateData['JS_OBJ'] ?>) {
-					window.<?= $templateData['JS_OBJ'] ?>.itemInCart();
-				}
-			}));
-		</script>
-	<? } ?>
-	<? if ($templateData['ITEM']["JS_OFFERS"]) {
-		foreach ($templateData['ITEM']["JS_OFFERS"] as $key => $value) {
-			if ($item["PRODUCT_ID"] == $value['ID']) { ?>
+$basket = Sale\Basket::loadItemsForFUser(
+	Sale\Fuser::getId(),
+	Main\Context::getCurrent()->getSite()
+);
+
+if ($templateData['ITEM']['JS_OFFERS']) {
+	foreach ($templateData['ITEM']['JS_OFFERS'] as $keyOffer => $valueOffer) {
+		foreach ($basket as $basketItem) {
+			if ($valueOffer['ID'] == $basketItem->getField('PRODUCT_ID')) {
+				$productItemId = $basketItem->getField('ID');
+				$currentQuantity = $basket->getItemById($productItemId)->getQuantity();
+				$valueOffer['QUANTITY_IN_BASKET'] = $currentQuantity; ?>
 				<script>
 					BX.ready(BX.defer(function() {
 						if (!!window.<?= $templateData['JS_OBJ'] ?>) {
 							window.<?= $templateData['JS_OBJ'] ?>.itemInCart();
+							window.<?= $templateData['JS_OBJ'] ?>.addDataSku(
+								<?= CUtil::PhpToJSObject($valueOffer, false, true) ?>,
+								<?= $keyOffer ?>
+							);
 						}
 					}));
 				</script>
-			<? } ?>
-		<? } ?>
-	<? } ?>
-<? } ?>
+
+				<? if ($keyOffer === 0) { ?>
+					<script>
+						BX.ready(BX.defer(function() {
+							if (!!window.<?= $templateData['JS_OBJ'] ?>) {
+								window.<?= $templateData['JS_OBJ'] ?>.setQuantity(<?= $currentQuantity ?>);
+							}
+						}));
+					</script>
+				<? }
+			}
+		}
+	}
+} else {
+	foreach ($basket as $basketItem) {
+		if ($item['ID'] == $basketItem->getField('PRODUCT_ID')) {
+			$productItemId = $basketItem->getField('ID');
+			$price['CURRENT_QUANTITY'] = $basket->getItemById($productItemId)->getQuantity(); ?>
+			<script>
+				BX.ready(BX.defer(function() {
+					if (!!window.<?= $templateData['JS_OBJ'] ?>) {
+						window.<?= $templateData['JS_OBJ'] ?>.itemInCart();
+						window.<?= $templateData['JS_OBJ'] ?>.setQuantity(<?= $price['CURRENT_QUANTITY'] ?>);
+					}
+				}));
+			</script>
+<? }
+	}
+}
