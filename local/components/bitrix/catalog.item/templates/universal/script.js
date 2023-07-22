@@ -22,6 +22,8 @@
 	window.JCCatalogItem = function (arParams) {
 		this.serializedData = arParams.SERIALIZED_DATA;
 		this.parentComponentName = arParams.PARENT_COMPONENT_NAME;
+		this.templatePath = arParams.TEMPLATE_PATH;
+		this.componentPath = arParams.COMPONENT_PATH;
 		this.productType = 0;
 		this.showQuantity = true;
 		this.showAbsent = true;
@@ -143,6 +145,7 @@
 		this.obPrice = null;
 		this.obTree = null;
 		this.obBuyBtn = null;
+		this.parentContainerBuyBtn = null;
 		this.obBasketActions = null;
 		this.obNotAvail = null;
 		this.obSubscribe = null;
@@ -363,6 +366,8 @@
 				}
 			}
 		}
+
+		this.parentContainerBuyBtn = BX.findParent(BX(this.visual.BUY_ID), { "class": "buttons-block" });
 
 		if (this.errorCode === 0) {
 			BX.ready(BX.delegate(this.init, this));
@@ -773,10 +778,11 @@
 			clearInterval(this.quantityTimer);
 		},
 
+		// TODO Увеличить количество товара
 		quantityUp: function () {
 			var curValue = 0,
-				boolSet = true;
-
+				boolSet = true, index;
+			index = this.detectCurrentElement();
 			if (this.errorCode === 0 && this.showQuantity && this.canBuy) {
 				curValue = (this.isDblQuantity ? parseFloat(this.obQuantity.value) : parseInt(this.obQuantity.value, 10));
 				if (!isNaN(curValue)) {
@@ -791,19 +797,21 @@
 						if (this.isDblQuantity) {
 							curValue = Math.round(curValue * this.precisionFactor) / this.precisionFactor;
 						}
-
+						//debugger;
 						this.obQuantity.value = curValue;
-
+						if(this.offers.length) this.offers[index].QUANTITY_IN_BASKET = curValue;
+						this.requestForQuantity('quantityUp');
 						this.setPrice();
 					}
 				}
 			}
 		},
 
+		// TODO Уменьшить количестов товара
 		quantityDown: function () {
 			var curValue = 0,
-				boolSet = true;
-
+				boolSet = true, index;
+			index = this.detectCurrentElement();
 			if (this.errorCode === 0 && this.showQuantity && this.canBuy) {
 				curValue = (this.isDblQuantity ? parseFloat(this.obQuantity.value) : parseInt(this.obQuantity.value, 10));
 				if (!isNaN(curValue)) {
@@ -819,9 +827,11 @@
 						if (this.isDblQuantity) {
 							curValue = Math.round(curValue * this.precisionFactor) / this.precisionFactor;
 						}
+						//debugger;
 
 						this.obQuantity.value = curValue;
-
+						if(this.offers.length) this.offers[index].QUANTITY_IN_BASKET = curValue;
+						this.requestForQuantity('quantityDown');
 						this.setPrice();
 					}
 				}
@@ -830,7 +840,8 @@
 
 		quantityChange: function () {
 			var curValue = 0,
-				intCount;
+				intCount, index;
+				index = this.detectCurrentElement();
 
 			if (this.errorCode === 0 && this.showQuantity) {
 				if (this.canBuy) {
@@ -853,8 +864,10 @@
 						if (curValue < this.minQuantity) {
 							curValue = this.minQuantity;
 						}
-
+						this.requestForQuantity('', curValue);
+						//debugger
 						this.obQuantity.value = curValue;
+						if(this.offers.length) this.offers[index].QUANTITY_IN_BASKET = curValue;
 					}
 					else {
 						this.obQuantity.value = this.minQuantity;
@@ -866,6 +879,21 @@
 
 				this.setPrice();
 			}
+		},
+
+		requestForQuantity: function (action, quantity = 1) {
+			let productId = (this.offers.length ? this.offers[this.offerNum].ID : this.product.id)
+			BX.ajax({
+				url: this.componentPath + '/ajax.php',
+				method: 'POST',
+				dataType: 'json',
+				data: {
+					operation: 'quantityChange',
+					action: action,
+					quantity: quantity,
+					productId: productId
+				}
+			})
 		},
 
 		quantitySet: function (index) {
@@ -1612,7 +1640,7 @@
 						else if (this.offers[index].PREVIEW_PICTURE.SRC)
 						{
 							BX.adjust(this.obSecondPict, {style: {backgroundImage: 'url(\'' + this.offers[index].PREVIEW_PICTURE.SRC + '\')'}});
-						}
+						}\
 						else if (this.defaultPict.secondPict)
 						{
 							BX.adjust(this.obSecondPict, {style: {backgroundImage: 'url(\'' + this.defaultPict.secondPict.SRC + '\')'}});
@@ -1635,10 +1663,17 @@
 						BX.adjust(this.obSkuProps, { style: { display: 'none' }, html: '' });
 					}
 				}
+				//debugger
+				if (this.offers[index].IN_BASKET === true) {
+					BX.addClass(this.parentContainerBuyBtn, ' in-the-cart');
+				} else {
+					BX.removeClass(this.parentContainerBuyBtn, ' in-the-cart');
+				}
 
 				this.quantitySet(index);
 				this.setPrice();
-				this.setCompared(this.offers[index].COMPARED);
+				if (this.offers[index].QUANTITY_IN_BASKET) this.setQuantity(this.offers[index].QUANTITY_IN_BASKET);
+				this.setCompared(this.offers[index].QUANTITY_IN_BASKET);
 				this.offerNum = index;
 			}
 		},
@@ -1729,7 +1764,6 @@
 
 		setPrice: function () {
 			var obData, price;
-
 			if (this.obQuantity) {
 				this.checkPriceRange(this.obQuantity.value);
 			}
@@ -1802,6 +1836,11 @@
 					}
 				}
 			}
+		},
+
+		setQuantity: function (productQuantity) {
+			//debugger;
+			BX(this.visual.QUANTITY_ID).value = productQuantity;
 		},
 
 		compare: function (event) {
@@ -2066,6 +2105,16 @@
 		},
 
 		add2Basket: function () {
+			//debugger
+			if (this.offers.length) {
+				let index;
+				index = this.detectCurrentElement();
+				this.offers[index].IN_BASKET = true;
+				this.obQuantity.value = 1;
+				this.offers[index].QUANTITY_IN_BASKET = 1;
+				BX.addClass(this.parentContainerBuyBtn, ' in-the-cart');
+			}
+
 			this.basketMode = 'ADD';
 			this.basket();
 		},
@@ -2258,8 +2307,26 @@
 		},
 
 		itemInCart: function () {
+			//debugger
 			this.obBuyBtn = BX(this.visual.BUY_ID);
-			BX.addClass(this.obBuyBtn, ' in-the-cart')
+			BX.addClass(this.parentContainerBuyBtn, ' in-the-cart');
+		},
+
+		detectCurrentElement: function () {
+			//debugger;
+			let i = 0, j, index;
+			for (i = 0; i < this.offers.length; i++) {
+				for (j in this.selectedValues) {
+					if (this.selectedValues[j] == this.offers[i].TREE[j]) {
+						return i;
+					}
+				}
+			}
+		},
+		addDataSku: function (data, keyItem) {
+			//debugger;
+			this.offers[keyItem].IN_BASKET = true;
+			this.offers[keyItem].QUANTITY_IN_BASKET = data.QUANTITY_IN_BASKET;
 		}
 	};
 })(window);

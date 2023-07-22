@@ -8636,6 +8636,13 @@ input[type="number"] {
 	margin-bottom: 50px;
 }
 
+.bx-section-desc-post {
+	color: #3C3C3C;
+	font-size: 15px;
+	line-height: 160%;
+	margin-top: 60px;
+}
+
 @media (max-width: 1200px) {
 	.msk_plus {
 		margin-left: 0;

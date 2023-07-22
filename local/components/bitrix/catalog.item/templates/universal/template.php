@@ -13,6 +13,8 @@ use \Bitrix\Main;
  * @var string $templateFolder
  */
 
+use Bitrix\Sale;
+
 $this->setFrameMode(true);
 
 $idList = strval($arResult['ITEM']['ID']);
@@ -22,6 +24,7 @@ foreach ($arResult['ITEM']['OFFERS'] as $key => $value) {
 
 if (isset($arResult['ITEM'])) {
 	$item = $arResult['ITEM'];
+
 	$areaId = $arResult['AREA_ID'];
 	$itemIds = array(
 		'ID' => $areaId,
@@ -75,13 +78,50 @@ if (isset($arResult['ITEM'])) {
 	if ($arParams['PRODUCT_DISPLAY_MODE'] === 'N' && $haveOffers) {
 		$price = $item['ITEM_START_PRICE'];
 		$minOffer = $item['OFFERS'][$item['ITEM_START_PRICE_SELECTED']];
-		$measureRatio = $minOffer['ITEM_MEASURE_RATIOS'][$minOffer['ITEM_MEASURE_RATIO_SELECTED']]['RATIO'];
+		$measureRatio = ($minOffer['ITEM_MEASURE_RATIOS'][$minOffer['ITEM_MEASURE_RATIO_SELECTED']]['RATIO'] ?: $price['MIN_QUANTITY']);
 		$morePhoto = $item['MORE_PHOTO'];
 	} else {
 		$price = $actualItem['ITEM_PRICES'][$actualItem['ITEM_PRICE_SELECTED']];
 		$measureRatio = $price['MIN_QUANTITY'];
 		$morePhoto = $actualItem['MORE_PHOTO'];
 	}
+
+	//$basket = Sale\Basket::loadItemsForFUser(
+	//	Sale\Fuser::getId(),
+	//	Main\Context::getCurrent()->getSite()
+	//);
+
+	//if ($item['JS_OFFERS']) {
+	//	foreach ($item['JS_OFFERS'] as $keyOffer => $valueOffer) {
+	//		$item['JS_OFFERS'][$keyOffer]['IN_BASKET'] = false;
+	//		$item['JS_OFFERS'][$keyOffer]['QUANTITY_IN_BASKET'] = 1;
+
+	//		foreach ($basket as $basketItem) {
+	//			if ($valueOffer['ID'] == $basketItem->getField('PRODUCT_ID')) {
+	//				$productItemId = $basketItem->getField('ID');
+	//				$item['JS_OFFERS'][$keyOffer]['IN_BASKET'] = true;
+	//				if ($keyOffer === 0) {
+	//					$price['CURRENT_QUANTITY'] = $basket->getItemById($productItemId)->getQuantity();
+	//				}
+	//				$item['JS_OFFERS'][$keyOffer]['QUANTITY_IN_BASKET'] = $basket->getItemById($productItemId)->getQuantity();
+	//			}
+	//		}
+	//	}
+	//} else {
+	//	foreach ($basket as $basketItem) {
+	//		if ($item['ID'] == $basketItem->getField('PRODUCT_ID')) {
+	//			$productItemId = $basketItem->getField('ID');
+	//			$price['CURRENT_QUANTITY'] = $basket->getItemById($productItemId)->getQuantity();
+	//		}
+	//	}
+	//}
+
+	//if ($item['JS_OFFERS']) {
+	//	foreach ($item['JS_OFFERS'] as $keyOffer => $valueOffer) {
+	//		$item['JS_OFFERS'][$keyOffer]['IN_BASKET'] = false;
+	//		$item['JS_OFFERS'][$keyOffer]['QUANTITY_IN_BASKET'] = 1;
+	//	}
+	//}
 
 	$showSlider = is_array($morePhoto) && count($morePhoto) > 1;
 	$showSubscribe = $arParams['PRODUCT_SUBSCRIPTION'] === 'Y' && ($item['CATALOG_SUBSCRIBE'] === 'Y' || $haveOffers);
@@ -98,7 +138,7 @@ if (isset($arResult['ITEM'])) {
 
 	$buttonSizeClass = isset($arResult['BIG_BUTTONS']) && $arResult['BIG_BUTTONS'] === 'Y' ? 'btn-md' : 'btn-sm';
 	$itemHasDetailUrl = isset($item['DETAIL_PAGE_URL']) && $item['DETAIL_PAGE_URL'] != '';
-	?>
+?>
 
 	<div class="product-item-container<?= (isset($arResult['SCALABLE']) && $arResult['SCALABLE'] === 'Y' ? ' product-item-scalable-card' : '') ?>" id="<?= $areaId ?>" data-entity="item" data-item-id="<?= $idList ?>">
 		<?
@@ -277,6 +317,8 @@ if (isset($arResult['ITEM'])) {
 		$jsParams['BRAND_PROPERTY'] = !empty($item['DISPLAY_PROPERTIES'][$arParams['BRAND_PROPERTY']])
 			? $item['DISPLAY_PROPERTIES'][$arParams['BRAND_PROPERTY']]['DISPLAY_VALUE']
 			: null;
+		$jsParams['TEMPLATE_PATH'] = $this->GetFolder();
+		$jsParams['COMPONENT_PATH'] = $this->getComponent()->getPath();
 
 		$templateData = array(
 			'JS_OBJ' => $obName,
