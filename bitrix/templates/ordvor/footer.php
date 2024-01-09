@@ -355,7 +355,7 @@ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = 
 
 
 
-<script type="text/javascript">privacy({company: 'ИП Моисеев Павел Михайлович', date: '«08»  июня 2017 г.'});</script>
+<script type="text/javascript">privacy({company: 'ИП Лычик Полина Михайловна', date: '«08»  июня 2017 г.'});</script>
 
 <!--<div class="mfp-hide white-popup js-notice-popup" id="notice-popup">
     <div class="notice-popup ">
